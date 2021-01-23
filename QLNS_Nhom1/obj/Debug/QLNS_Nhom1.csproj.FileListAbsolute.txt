@@ -1,0 +1,14 @@
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\QLNS_Nhom1.exe.config
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\QLNS_Nhom1.exe
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\QLNS_Nhom1.pdb
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csprojAssemblyReference.cache
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.Properties.Resources.resources
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.GenerateResource.cache
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.CoreCompileInputs.cache
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.exe
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.pdb
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\Dapper.dll
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\Dapper.xml
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.fLogin.resources
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.fMain.resources
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.CopyComplete
