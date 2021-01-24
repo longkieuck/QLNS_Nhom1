@@ -82,6 +82,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -135,7 +136,7 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(121, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(467, 40);
+            this.label1.Size = new System.Drawing.Size(388, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phầm mềm quản lý nhân sự";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

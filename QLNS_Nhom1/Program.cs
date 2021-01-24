@@ -23,13 +23,13 @@ namespace QLNS_Nhom1
             IDbConnection dbConnection = new SqlConnection(connectionString);
 
             // Khởi tạo commadText
-            var customers = dbConnection.Query<Employee>("Select * From [Employee]");
+            //var customers = dbConnection.Query<Employee>("Select * From [Employee]");
 
             // Trả về dữ liệu 
  
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fMain());
+            Application.Run(new fLogin());
         }
     }
 }

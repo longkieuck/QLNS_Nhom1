@@ -21,5 +21,13 @@ namespace QLNS_Nhom1
         {
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            frmDelete frm = new frmDelete();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

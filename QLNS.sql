@@ -39,15 +39,17 @@ CREATE TABLE Employee
 
 Create table Account
 (
-			username varchar(50),
-			pass varchar(50)
+			UserName varchar(50),
+			Password varchar(50)
 )
+
+Go
 
 CREATE PROC QLNS_Login
 @username nvarchar(50), @pass nvarchar(50)
 AS
 BEGIN
-	SELECT * FROM dbo.Account WHERE username = @username AND pass = @pass
+	SELECT * FROM dbo.Account WHERE UserName = @username AND Password = @pass
 END
 GO
 
