@@ -52,6 +52,12 @@
   <ItemGroup>
     <Compile Include="DataAcessLayer\DataProvider.cs" />
     <Compile Include="DataAcessLayer\AccountDAL.cs" />
+    <Compile Include="fCreateEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCreateEmployee.Designer.cs">
+      <DependentUpon>fCreateEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     <Compile Include="Models\Salary.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fCreateEmployee.resx">
+      <DependentUpon>fCreateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
