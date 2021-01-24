@@ -21,5 +21,12 @@ namespace QLNS_Nhom1
         {
 
         }
+
+        private void danhSáchNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

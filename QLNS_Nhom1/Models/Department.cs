@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace QLNS_Nhom1.Models
 {
+    /// <summary>
+    /// Phòng Ban 
+    /// CreatedBy : Nguyễn Văn Hiến
+    /// </summary>
     class Department
     {
         // Mã phòng ban
