@@ -15,15 +15,17 @@ namespace QLNS_Nhom1
         public fRepairEmployee()
         {
             InitializeComponent();
+            LoadList();
         }
-        private void fCreateEmployee_Load(object sender, EventArgs e)
+        
+
+        /// <summary>
+        /// đổ dữ liệu vào girdview
+        /// created by dat
+        /// </summary>
+        void LoadList()
         {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
+            dtgvNV.DataSource = EmployeeDAO.Instance.GetListFood();
         }
     }
 }

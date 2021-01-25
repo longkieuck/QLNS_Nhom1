@@ -295,7 +295,7 @@
             this.label12.Size = new System.Drawing.Size(157, 24);
             this.label12.TabIndex = 0;
             this.label12.Text = "SỬA NHÂN VIÊN";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+           
             // 
             // Thêm
             // 
@@ -368,7 +368,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fRepairEmployee";
             this.Text = "Sửa Nhân Viên ";
-            this.Load += new System.EventHandler(this.fCreateEmployee_Load);
+           
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNV)).EndInit();

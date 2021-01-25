@@ -79,7 +79,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(700, 125);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 22);
+            this.textBox1.Size = new System.Drawing.Size(116, 20);
             this.textBox1.TabIndex = 4;
             // 
             // panel4
@@ -108,6 +108,7 @@
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel3
             // 
@@ -143,7 +144,7 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(191, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(467, 40);
+            this.label1.Size = new System.Drawing.Size(388, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phầm mềm quản lý nhân sự";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,38 +160,38 @@
             this.DangXuat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1051, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1051, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // TrangChu
             // 
             this.TrangChu.Name = "TrangChu";
-            this.TrangChu.Size = new System.Drawing.Size(93, 24);
+            this.TrangChu.Size = new System.Drawing.Size(76, 20);
             this.TrangChu.Text = "Trang Chủ ";
             // 
             // ThongTinLuongNV
             // 
             this.ThongTinLuongNV.Name = "ThongTinLuongNV";
-            this.ThongTinLuongNV.Size = new System.Drawing.Size(207, 24);
+            this.ThongTinLuongNV.Size = new System.Drawing.Size(167, 20);
             this.ThongTinLuongNV.Text = "Thông Tin Lương Nhân Viên";
             // 
             // TaoHoSo
             // 
             this.TaoHoSo.Name = "TaoHoSo";
-            this.TaoHoSo.Size = new System.Drawing.Size(127, 24);
+            this.TaoHoSo.Size = new System.Drawing.Size(100, 20);
             this.TaoHoSo.Text = "Tạo Hồ Sơ Mới ";
             // 
             // HuongDan
             // 
             this.HuongDan.Name = "HuongDan";
-            this.HuongDan.Size = new System.Drawing.Size(104, 24);
+            this.HuongDan.Size = new System.Drawing.Size(83, 20);
             this.HuongDan.Text = "Hướng Dẫn ";
             // 
             // DangXuat
             // 
             this.DangXuat.Name = "DangXuat";
-            this.DangXuat.Size = new System.Drawing.Size(93, 24);
+            this.DangXuat.Size = new System.Drawing.Size(74, 20);
             this.DangXuat.Text = "Đăng Xuât";
             // 
             // directorySearcher1
