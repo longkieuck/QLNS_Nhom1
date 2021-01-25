@@ -20,7 +20,7 @@ namespace QLNS_Nhom1.DataAcessLayer
         
         private DataProvider() { }
 
-        private string connectionSTR = "Data Source=.\\sqlexpress01;Initial Catalog=QLNS;Integrated Security=True";
+        private string connectionSTR = "Data Source=LAPTOP-SCOJ079I;Initial Catalog=QLNS;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
