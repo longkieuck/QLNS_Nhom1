@@ -45,7 +45,7 @@
             this.HuongDan = new System.Windows.Forms.ToolStripMenuItem();
             this.DangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -55,7 +55,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbDepartment);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.panel4);
@@ -202,13 +202,13 @@
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // comboBox1
+            // cbDepartment
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(547, 124);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 6;
+            this.cbDepartment.FormattingEnabled = true;
+            this.cbDepartment.Location = new System.Drawing.Point(547, 124);
+            this.cbDepartment.Name = "cbDepartment";
+            this.cbDepartment.Size = new System.Drawing.Size(121, 21);
+            this.cbDepartment.TabIndex = 6;
             // 
             // fMain
             // 
@@ -250,7 +250,7 @@
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbDepartment;
     }
 }
 

@@ -14,6 +14,12 @@ namespace QLNS_Nhom1.Models
     class Department
     {
         private DataRow dataRow;
+
+        public Department(string departmentid, string departmentname)
+        {
+            this.DepartmentId = departmentid;
+            this.DepartmentIdName = departmentname;
+        }
         public Department(DataRow dataRow)
         {
             this.dataRow = dataRow;

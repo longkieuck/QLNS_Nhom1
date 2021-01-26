@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLNS_Nhom1.DataAcessLayer;
+using QLNS_Nhom1.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,5 +29,23 @@ namespace QLNS_Nhom1
         {
             //test
         }
+
+        void LoadDepartment()
+        {
+            List<Department> listDepartment = DepartmentDAL.Instance.GetListDepartment();
+            cbDepartment.DataSource = listDepartment;
+        }
+
+        void LoadEmployeeListByDepartmentId(int id)
+        {
+            List<Employee> listEmployee = EmployeeDAL.Instance.GetEmployeeByDepartmentID(id);
+            
+        }
+
+        public void Search()
+        {
+
+        }
+
     }
 }

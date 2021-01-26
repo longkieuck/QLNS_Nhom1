@@ -18,6 +18,20 @@ namespace QLNS_Nhom1.Models
         {
 
         }
+
+        public Employee(int id, string name, string gender, string phonenumber, string address, DateTime dateofbirth, string positionid,
+            string departmentid, string salaryid)
+        {
+            this.Id = id;
+            this.FullName = name;
+            this.Gender = gender;
+            this.PhoneNumber = phonenumber;
+            this.Address = address;
+            this.DateOfBirth = dateofbirth;
+            this.PositionId = positionid;
+            this.DepartmentId = departmentid;
+            this.SalaryId = salaryid;
+        }
         public Employee(DataRow dataRow)
         {
             this.dataRow = dataRow;

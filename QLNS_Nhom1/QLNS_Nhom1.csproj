@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="DataAcessLayer\DataProvider.cs" />
     <Compile Include="DataAcessLayer\AccountDAL.cs" />
+    <Compile Include="DataAcessLayer\DepartmentDAL.cs" />
+    <Compile Include="DataAcessLayer\EmployeeDAL.cs" />
     <Compile Include="fCreateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
