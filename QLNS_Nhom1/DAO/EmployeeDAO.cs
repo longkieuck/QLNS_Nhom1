@@ -1,4 +1,5 @@
-﻿using QLNS_Nhom1.DataAcessLayer;
+﻿using Dapper;
+using QLNS_Nhom1.DataAcessLayer;
 using QLNS_Nhom1.Models;
 using System;
 using System.Collections.Generic;
@@ -63,6 +64,17 @@ namespace QLNS_Nhom1.DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query,new object[] {employee.Id,employee.FullName,
                 employee.Gender,employee.PhoneNumber,employee.Address,employee.DateOfBirth,employee.PositionId,employee.DepartmentId,employee.SalaryId});
             return result > 0;
+        }
+
+        public List<Employee> GetEmployees()
+        {
+            var employees = new List<Employee>();
+            string connectionString = "Server=DESKTOP-6N6LFDC\\SQLEXPRESS;Database=QLNS;User ID=nhom1;pwd=nhom1";
+            IDbConnection dbConnection = new SqlConnection(connectionString);
+
+            employees = dbConnection.Query<Employee>("Select * from Employee").ToList();
+
+            return employees;
         }
 
     }
