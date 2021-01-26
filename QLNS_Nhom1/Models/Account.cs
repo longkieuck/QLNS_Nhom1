@@ -16,6 +16,6 @@ namespace QLNS_Nhom1.Models
         public string UserName { get; set; }
         // Mật khẩu đăng nhập
         public string Password { get; set; }
-
+        
     }
 }
