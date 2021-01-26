@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Dapper;
+using QLNS_Nhom1.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -12,6 +14,15 @@ namespace QLNS_Nhom1.DataAcessLayer
     {
         private static DataProvider instance; // Ctrl + R + E
 
+        /// <summary>
+        /// Đây là connection String phù hợp với máy của hiến
+        /// </summary>
+        private string connectionString = "Server=DESKTOP-6N6LFDC\\SQLEXPRESS;Database=QLNS;User ID=nhom1;pwd=nhom1";
+
+        /// <summary>
+        /// Long
+        /// </summary>
+        private string connectionSTR = "Data Source=.\\sqlexpress01;Initial Catalog=QLNS;Integrated Security=True";
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
@@ -19,19 +30,24 @@ namespace QLNS_Nhom1.DataAcessLayer
         }
         
         private DataProvider() { }
-
-        private string connectionSTR = "Data Source=.\\sqlexpress01;Initial Catalog=QLNS;Integrated Security=True";
-
+        /// <summary>
+        /// ExcuteQuery lấy dữ liệu dạng bảng : Datatable 
+        /// </summary>
+        /// <param name="query">truy vấn sql</param>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
 
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
                 SqlCommand command = new SqlCommand(query, connection);
 
+                // khi parameter khác null 
+                // sử lí tách query lấy ra các parameter
                 if (parameter != null)
                 {
                     string[] listPara = query.Split(' ');
@@ -58,7 +74,7 @@ namespace QLNS_Nhom1.DataAcessLayer
         {
             int data = 0;
 
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
@@ -90,7 +106,7 @@ namespace QLNS_Nhom1.DataAcessLayer
         {
             object data = 0;
 
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
@@ -109,7 +125,6 @@ namespace QLNS_Nhom1.DataAcessLayer
                         }
                     }
                 }
-
                 data = command.ExecuteScalar();
 
                 connection.Close();
@@ -118,5 +133,6 @@ namespace QLNS_Nhom1.DataAcessLayer
             return data;
         }
     }
+
 
 }

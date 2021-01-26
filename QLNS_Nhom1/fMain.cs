@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNS_Nhom1.DataAcessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,5 @@ namespace QLNS_Nhom1
 
             InitializeComponent();
         }
-
-        private void fMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
