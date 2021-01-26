@@ -17,7 +17,7 @@ namespace QLNS_Nhom1.DataAcessLayer
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
             private set { DataProvider.instance = value; }
         }
-
+        
         private DataProvider() { }
 
         private string connectionSTR = "Data Source=.\\sqlexpress01;Initial Catalog=QLNS;Integrated Security=True";
@@ -45,7 +45,6 @@ namespace QLNS_Nhom1.DataAcessLayer
                         }
                     }
                 }
-
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
 
                 adapter.Fill(data);
@@ -55,7 +54,6 @@ namespace QLNS_Nhom1.DataAcessLayer
 
             return data;
         }
-
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;

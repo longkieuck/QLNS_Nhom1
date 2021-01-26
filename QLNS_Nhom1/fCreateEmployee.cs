@@ -10,18 +10,15 @@ using System.Windows.Forms;
 
 namespace QLNS_Nhom1
 {
-    public partial class fMain : Form
+    public partial class fCreateEmployee : Form
     {
-        public fMain()
+        public fCreateEmployee()
         {
-
             InitializeComponent();
         }
-
-        private void fMain_Load(object sender, EventArgs e)
+        private void fCreateEmployee_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }
