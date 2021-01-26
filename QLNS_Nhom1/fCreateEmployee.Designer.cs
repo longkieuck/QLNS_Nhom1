@@ -1,4 +1,8 @@
-﻿namespace QLNS_Nhom1
+﻿using QLNS_Nhom1.DAO;
+using QLNS_Nhom1.Models;
+using System.Collections.Generic;
+
+namespace QLNS_Nhom1
 {
     partial class fCreateEmployee
     {
@@ -28,64 +32,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtEmployeeId = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txtFullName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeDOB = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.Thêm = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.cbSalaryId = new System.Windows.Forms.ComboBox();
+            this.cbPositionId = new System.Windows.Forms.ComboBox();
+            this.cbDepartmentId = new System.Windows.Forms.ComboBox();
+            this.cbGender = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtEmployeeId
             // 
-            this.textBox1.Location = new System.Drawing.Point(211, 122);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 33);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.UseWaitCursor = true;
+            this.txtEmployeeId.Location = new System.Drawing.Point(211, 122);
+            this.txtEmployeeId.Multiline = true;
+            this.txtEmployeeId.Name = "txtEmployeeId";
+            this.txtEmployeeId.Size = new System.Drawing.Size(192, 33);
+            this.txtEmployeeId.TabIndex = 0;
+            this.txtEmployeeId.UseWaitCursor = true;
             // 
-            // textBox2
+            // txtAddress
             // 
-            this.textBox2.Location = new System.Drawing.Point(211, 277);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(192, 33);
-            this.textBox2.TabIndex = 1;
+            this.txtAddress.Location = new System.Drawing.Point(211, 277);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(192, 33);
+            this.txtAddress.TabIndex = 1;
             // 
-            // textBox3
+            // txtPhoneNumber
             // 
-            this.textBox3.Location = new System.Drawing.Point(211, 225);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(192, 33);
-            this.textBox3.TabIndex = 2;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(211, 225);
+            this.txtPhoneNumber.Multiline = true;
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(192, 33);
+            this.txtPhoneNumber.TabIndex = 2;
             // 
-            // textBox4
+            // txtFullName
             // 
-            this.textBox4.Location = new System.Drawing.Point(211, 173);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(192, 33);
-            this.textBox4.TabIndex = 3;
+            this.txtFullName.Location = new System.Drawing.Point(211, 173);
+            this.txtFullName.Multiline = true;
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(192, 33);
+            this.txtFullName.TabIndex = 3;
             // 
             // label1
             // 
@@ -143,22 +146,6 @@
             this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.label4.UseCompatibleTextRendering = true;
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(603, 174);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(192, 33);
-            this.textBox5.TabIndex = 8;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(211, 337);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(192, 33);
-            this.textBox6.TabIndex = 9;
-            // 
             // label5
             // 
             this.label5.AutoEllipsis = true;
@@ -215,32 +202,12 @@
             this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.label8.UseCompatibleTextRendering = true;
             // 
-            // checkBox1
+            // dateTimeDOB
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(603, 238);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(59, 21);
-            this.checkBox1.TabIndex = 20;
-            this.checkBox1.Text = "Nam";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(747, 238);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(48, 21);
-            this.checkBox2.TabIndex = 21;
-            this.checkBox2.Text = "Nữ";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(603, 288);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(192, 22);
-            this.dateTimePicker1.TabIndex = 22;
+            this.dateTimeDOB.Location = new System.Drawing.Point(603, 288);
+            this.dateTimeDOB.Name = "dateTimeDOB";
+            this.dateTimeDOB.Size = new System.Drawing.Size(192, 22);
+            this.dateTimeDOB.TabIndex = 22;
             // 
             // label11
             // 
@@ -274,65 +241,88 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "THÊM NHÂN VIÊN";
             // 
-            // Thêm
+            // btnCreate
             // 
-            this.Thêm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thêm.Location = new System.Drawing.Point(310, 415);
-            this.Thêm.Name = "Thêm";
-            this.Thêm.Size = new System.Drawing.Size(93, 35);
-            this.Thêm.TabIndex = 25;
-            this.Thêm.Text = "Thêm";
-            this.Thêm.UseVisualStyleBackColor = true;
+            this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.Location = new System.Drawing.Point(310, 415);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(93, 35);
+            this.btnCreate.TabIndex = 25;
+            this.btnCreate.Text = "Thêm";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(-2, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 33);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Quay Lại";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(-2, 0);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(116, 33);
+            this.btnBack.TabIndex = 26;
+            this.btnBack.Text = "Quay Lại";
+            this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbSalaryId
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(603, 131);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 24);
-            this.comboBox1.TabIndex = 27;
+            this.cbSalaryId.FormattingEnabled = true;
+            this.cbSalaryId.Location = new System.Drawing.Point(603, 131);
+            this.cbSalaryId.Name = "cbSalaryId";
+            this.cbSalaryId.Size = new System.Drawing.Size(192, 24);
+            this.cbSalaryId.TabIndex = 27;
+            // 
+            // cbPositionId
+            // 
+            this.cbPositionId.FormattingEnabled = true;
+            this.cbPositionId.Location = new System.Drawing.Point(603, 182);
+            this.cbPositionId.Name = "cbPositionId";
+            this.cbPositionId.Size = new System.Drawing.Size(192, 24);
+            this.cbPositionId.TabIndex = 29;
+            // 
+            // cbDepartmentId
+            // 
+            this.cbDepartmentId.FormattingEnabled = true;
+            this.cbDepartmentId.Location = new System.Drawing.Point(211, 343);
+            this.cbDepartmentId.Name = "cbDepartmentId";
+            this.cbDepartmentId.Size = new System.Drawing.Size(192, 24);
+            this.cbDepartmentId.TabIndex = 30;
+            // 
+            // cbGender
+            // 
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Location = new System.Drawing.Point(603, 232);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(192, 24);
+            this.cbGender.TabIndex = 31;
             // 
             // fCreateEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 853);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.Thêm);
+            this.Controls.Add(this.cbGender);
+            this.Controls.Add(this.cbDepartmentId);
+            this.Controls.Add(this.cbPositionId);
+            this.Controls.Add(this.cbSalaryId);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.dateTimeDOB);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFullName);
+            this.Controls.Add(this.txtPhoneNumber);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtEmployeeId);
             this.Name = "fCreateEmployee";
             this.Text = "Thêm Nhân Viên ";
-            this.Load += new System.EventHandler(this.fCreateEmployee_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -342,28 +332,94 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtEmployeeId;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimeDOB;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button Thêm;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ComboBox cbSalaryId;
+        private System.Windows.Forms.ComboBox cbPositionId;
+        private System.Windows.Forms.ComboBox cbDepartmentId;
+
+
+        /// <summary>
+        /// Thêm data vào combox Position : trên UI
+        /// Created By : Nguyễn Văn Hiến
+        /// </summary>
+        private void AddComboboxPosition()
+        {
+            var positions = new List<Position>();
+            // lấy dữ liệu 
+            positions = PositonDAO.Instance.GetPositions();
+
+            // Đẩy dữ liệu vào combobox
+            foreach (var item in positions)
+            {
+                cbPositionId.Items.Add(item.PositionId.ToString());
+            }
+        }
+        /// <summary>
+        /// Thêm data vào combobox department :trên UI
+        /// Created By : Nguyễn Văn Hiến
+        /// </summary>
+        private void AddComboboxDepartment()
+        {
+            var deparments = new List<Department>();
+            // lấy dữ liệu 
+            deparments = DepartmentDAO.Instance.GetDepartments();
+
+            // Đẩy dữ liệu vào combobox
+            foreach (var item in deparments)
+            {
+                cbDepartmentId.Items.Add(item.DepartmentId.ToString());
+            }
+        }
+        /// <summary>
+        /// Thêm data vào combobox salary : trên UI
+        /// </summary>
+        private void AddComboboxSalary()
+        {
+            var salaries = new List<Salary>();
+            // lấy dữ liệu 
+            salaries = SalaryDAO.Instance.GetSalaries();
+
+            // Đẩy dữ liệu vào combobox
+            foreach (var item in salaries)
+            {
+                cbSalaryId.Items.Add(item.SalaryId.ToString());
+            }
+        }
+        private void AddComboboxGender()
+        {
+            cbGender.Items.Add("Nam");
+            cbGender.Items.Add("Nữ");
+            cbGender.Items.Add("Khác");
+        }
+
+        // Thêm dữ liệu vào combobox
+        public void AddCombobox()
+        {
+            AddComboboxPosition();
+            AddComboboxDepartment();
+            AddComboboxSalary();
+            AddComboboxGender();
+        }
+
+        private System.Windows.Forms.ComboBox cbGender;
     }
+    
+    
 }
