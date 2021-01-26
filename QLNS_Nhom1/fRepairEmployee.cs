@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace QLNS_Nhom1
 {
     public partial class fRepairEmployee : Form
@@ -15,17 +17,75 @@ namespace QLNS_Nhom1
         public fRepairEmployee()
         {
             InitializeComponent();
-            LoadList();
+            Load();
         }
         
-
+        void Load()
+        {
+            LoadListEmployee();
+            LoadIntoCbxDepartmentId(cbxDepartmentId);
+            LoadIntoCbxPositionId(cbxPositionId);
+            LoadIntoCbxSalaryId(cbxSalaryId);
+            AddBindingEmployee();
+            
+        }
         /// <summary>
         /// đổ dữ liệu vào girdview
         /// created by dat
         /// </summary>
-        void LoadList()
+        void LoadListEmployee()
         {
-            dtgvNV.DataSource = EmployeeDAO.Instance.GetListFood();
+            dtgvNV.DataSource = EmployeeDAO.Instance.GetListEmployee();
+        }
+
+
+        /// <summary>
+        /// load combobox
+        /// created by dat
+        /// </summary>
+        /// <param name="cb"></param>
+        void LoadIntoCbxDepartmentId(ComboBox cb)
+        {
+            cb.DataSource = EmployeeDAO.Instance.GetListDepartmentId();
+            cb.DisplayMember = "DepartmentId";
+        }
+
+        void LoadIntoCbxPositionId(ComboBox cb)
+        {
+            cb.DataSource = EmployeeDAO.Instance.GetListPositiontId();
+            cb.DisplayMember = "PositiontId";
+        }
+
+        void LoadIntoCbxSalaryId(ComboBox cb)
+        {
+            cb.DataSource = EmployeeDAO.Instance.GetListSalaryId();
+            cb.DisplayMember = "SalaryId";
+        }
+        /// <summary>
+        /// lấy dữ liệu khi trỏ chuột trong gridview
+        /// created by dat
+        /// </summary>
+        void AddBindingEmployee()
+        {
+            txtID.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "ID", true, DataSourceUpdateMode.Never));
+            txtFullName.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "FullName", true, DataSourceUpdateMode.Never));
+            txtAddress.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "Address", true, DataSourceUpdateMode.Never));
+            cbxDepartmentId.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "DepartmentId", true, DataSourceUpdateMode.Never));
+            txtPhoneNumber.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "PhoneNumber", true, DataSourceUpdateMode.Never));
+            cbxPositionId.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "PositionId", true, DataSourceUpdateMode.Never));
+            cbxSalaryId.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "SalaryId", true, DataSourceUpdateMode.Never));
+            dtpDateOfBirth.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "DateOfBirth", true, DataSourceUpdateMode.Never));
+            var fmaleBinding = new Binding("Checked", dtgvNV.DataSource, "Gender", true, DataSourceUpdateMode.Never);
+            // when Formatting (reading from datasource), return true for Female, else false
+            fmaleBinding.Format += (s, args) => args.Value = ((string)args.Value) == "nu ";
+            // when Parsing (writing to datasource), return "Male" for true, else "Fmale"
+            fmaleBinding.Parse += (s, args) => args.Value = (bool)args.Value ? "nu " : "nam";
+            // add the binding
+            radNu.DataBindings.Add(fmaleBinding);
+
+            // you don't need to bind the Male radiobutton, just make it do the opposite
+            // of Male by handling the CheckedChanged event on Male:
+            radNu.CheckedChanged += (s, args) => radNam.Checked = !radNu.Checked;
         }
     }
 }
