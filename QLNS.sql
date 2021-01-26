@@ -1,4 +1,4 @@
-CREATE DATABASE QLNS
+﻿CREATE DATABASE QLNS
 GO
 
 
@@ -52,5 +52,33 @@ BEGIN
 	SELECT * FROM dbo.Account WHERE UserName = @username AND Password = @pass
 END
 GO
+
+CREATE PROC InsertEmployee
+@id int,@fullName nvarchar(20),@gender nchar(3),@phoneNumber char(10),@address nvarchar(50),@dateOfBirth date
+,@positionId varchar(10),@departmentId varchar(10), @salaryId varchar(10) 
+AS
+BEGIN
+	Insert into Employee 
+	Values(@id,@fullName,@gender,@phoneNumber,@address,@dateOfBirth,@positionId,@departmentId,@salaryId) 
+END
+GO
+EXEC InsertEmployee 2,'hien','nam','00000000000','hanoi','04/08/2000','1','1','1'
+
+
+
+---------------- Insert 
+--- Cteated By : Nguyễn Văn Hiến
+insert into Department values('1',N'Giám Đốc')
+insert into Department values('2',N'Kế Toán')
+insert into Department values('3',N'Nhân Sự')
+go
+insert into Position values('1',N'Giám Đốc')
+insert into Position values('2',N'Quản Lí')
+insert into Position values('3',N'Nhân Viên')
+go
+insert into Salary values('1',1000,2.0)
+insert into Salary values('2',1000,3.0)
+insert into Salary values('3',1000,4.0)
+go
 
 
