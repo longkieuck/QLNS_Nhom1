@@ -20,7 +20,12 @@ namespace QLNS_Nhom1
         }
 
         private EmployeeDAO() { }
-        public List<Employee> GetListFood()
+
+        /// <summary>
+        /// lay ra danh sach nhan vien
+        /// </summary>
+        /// <returns></returns>
+        public List<Employee> GetListEmployee()
         {
             List<Employee> list = new List<Employee>();
 
@@ -35,6 +40,57 @@ namespace QLNS_Nhom1
             }
 
             return list;
+        }
+
+        /// <summary>
+        /// lay ds ma phong ban
+        /// created by dat
+        /// </summary>
+        /// <returns></returns>
+        public List<Department> GetListDepartmentId()
+        {
+            List<Department> List = new List<Department>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT DepartmentId FROM Department");
+            foreach (DataRow item in data.Rows)
+            {
+                Department DepartmentId = new Department(item);
+                List.Add(DepartmentId);
+            }
+            return List;
+        }
+
+        /// <summary>
+        /// lay ds ma chuc vu
+        /// created by dat
+        /// </summary>
+        /// <returns></returns>
+        public List<Position> GetListPositiontId()
+        {
+            List<Position> List = new List<Position>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT PositionId FROM Position");
+            foreach (DataRow item in data.Rows)
+            {
+                Position PositiontId = new Position(item);
+                List.Add(PositiontId);
+            }
+            return List;
+        }
+
+        /// <summary>
+        /// lay ds ma luong
+        /// created by dat
+        /// </summary>
+        /// <returns></returns>
+        public List<Salary> GetListSalaryId()
+        {
+            List<Salary> List = new List<Salary>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT SalaryId FROM Salary");
+            foreach (DataRow item in data.Rows)
+            {
+                Salary SalaryId = new Salary(item);
+                List.Add(SalaryId);
+            }
+            return List;
         }
     }
 }
