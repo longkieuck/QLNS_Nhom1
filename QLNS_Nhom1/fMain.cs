@@ -36,16 +36,10 @@ namespace QLNS_Nhom1
             cbDepartment.DataSource = listDepartment;
         }
 
-        void LoadEmployeeListByDepartmentId(int id)
+        void LoadEmployeeListByDepartmentId(string id)
         {
             List<Employee> listEmployee = EmployeeDAL.Instance.GetEmployeeByDepartmentID(id);
-            
-        }
-
-        public void Search()
-        {
 
         }
-
     }
 }

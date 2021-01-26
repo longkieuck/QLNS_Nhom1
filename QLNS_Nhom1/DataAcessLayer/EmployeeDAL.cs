@@ -20,7 +20,7 @@ namespace QLNS_Nhom1.DataAcessLayer
 
         private EmployeeDAL() { }
 
-        public List<Employee> GetEmployeeByDepartmentID(int id)
+        public List<Employee> GetEmployeeByDepartmentID(string id)
         {
             List<Employee> list = new List<Employee>();
             string query = "select * from Employee where DepartmentId = " + id;
