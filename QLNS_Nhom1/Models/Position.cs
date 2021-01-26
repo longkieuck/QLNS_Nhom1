@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,5 +19,16 @@ namespace QLNS_Nhom1.Models
         // Tên chức vụ
         public string PositionName { get; set; }
 
+        public Position(string PositionId)
+        {
+            this.PositionId = PositionId;
+        }
+        public Position(DataRow row)
+        {
+            this.PositionId = row["PositionId"].ToString();
+        }
+
     }
+
+    
 }
