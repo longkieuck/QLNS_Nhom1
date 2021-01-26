@@ -23,5 +23,16 @@ namespace QLNS_Nhom1
 
         }
 
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormHelp formhelp = new FormHelp();
+            formhelp.Show();
+        }
+
+        private void cácMẹoKhiSửDụngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTip formtip = new FormTip();
+            formtip.Show();
+        }
     }
 }

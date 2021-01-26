@@ -27,3 +27,18 @@ C:\Users\Dell\Desktop\Thuc tap Nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.c
 C:\Users\Dell\Desktop\Thuc tap Nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.exe
 C:\Users\Dell\Desktop\Thuc tap Nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.pdb
 C:\Users\Dell\Desktop\Thuc tap Nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.fCreateEmployee.resources
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\QLNS_Nhom1.exe.config
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\QLNS_Nhom1.exe
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\QLNS_Nhom1.pdb
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\Dapper.dll
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\Dapper.xml
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csprojAssemblyReference.cache
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.fCreateEmployee.resources
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.fLogin.resources
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.fMain.resources
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.Properties.Resources.resources
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.GenerateResource.cache
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.CoreCompileInputs.cache
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.CopyComplete
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.exe
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.pdb

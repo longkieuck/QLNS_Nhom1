@@ -45,6 +45,8 @@
             this.HuongDan = new System.Windows.Forms.ToolStripMenuItem();
             this.DangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cácMẹoKhiSửDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -79,7 +81,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(700, 125);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 22);
+            this.textBox1.Size = new System.Drawing.Size(116, 20);
             this.textBox1.TabIndex = 4;
             // 
             // panel4
@@ -143,7 +145,7 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(191, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(467, 40);
+            this.label1.Size = new System.Drawing.Size(388, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phầm mềm quản lý nhân sự";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,38 +161,41 @@
             this.DangXuat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1051, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1051, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // TrangChu
             // 
             this.TrangChu.Name = "TrangChu";
-            this.TrangChu.Size = new System.Drawing.Size(93, 24);
+            this.TrangChu.Size = new System.Drawing.Size(76, 20);
             this.TrangChu.Text = "Trang Chủ ";
             // 
             // ThongTinLuongNV
             // 
             this.ThongTinLuongNV.Name = "ThongTinLuongNV";
-            this.ThongTinLuongNV.Size = new System.Drawing.Size(207, 24);
+            this.ThongTinLuongNV.Size = new System.Drawing.Size(167, 20);
             this.ThongTinLuongNV.Text = "Thông Tin Lương Nhân Viên";
             // 
             // TaoHoSo
             // 
             this.TaoHoSo.Name = "TaoHoSo";
-            this.TaoHoSo.Size = new System.Drawing.Size(127, 24);
+            this.TaoHoSo.Size = new System.Drawing.Size(100, 20);
             this.TaoHoSo.Text = "Tạo Hồ Sơ Mới ";
             // 
             // HuongDan
             // 
+            this.HuongDan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem,
+            this.cácMẹoKhiSửDụngToolStripMenuItem});
             this.HuongDan.Name = "HuongDan";
-            this.HuongDan.Size = new System.Drawing.Size(104, 24);
+            this.HuongDan.Size = new System.Drawing.Size(83, 20);
             this.HuongDan.Text = "Hướng Dẫn ";
             // 
             // DangXuat
             // 
             this.DangXuat.Name = "DangXuat";
-            this.DangXuat.Size = new System.Drawing.Size(93, 24);
+            this.DangXuat.Size = new System.Drawing.Size(74, 20);
             this.DangXuat.Text = "Đăng Xuât";
             // 
             // directorySearcher1
@@ -198,6 +203,20 @@
             this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.helpToolStripMenuItem.Text = "các chức năng của mục";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // cácMẹoKhiSửDụngToolStripMenuItem
+            // 
+            this.cácMẹoKhiSửDụngToolStripMenuItem.Name = "cácMẹoKhiSửDụngToolStripMenuItem";
+            this.cácMẹoKhiSửDụngToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.cácMẹoKhiSửDụngToolStripMenuItem.Text = "các mẹo khi sử dụng";
+            this.cácMẹoKhiSửDụngToolStripMenuItem.Click += new System.EventHandler(this.cácMẹoKhiSửDụngToolStripMenuItem_Click);
             // 
             // fMain
             // 
@@ -240,6 +259,8 @@
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cácMẹoKhiSửDụngToolStripMenuItem;
     }
 }
 
