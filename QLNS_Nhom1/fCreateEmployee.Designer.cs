@@ -384,7 +384,7 @@ namespace QLNS_Nhom1
             // Đẩy dữ liệu vào combobox
             foreach (var item in deparments)
             {
-                cbDepartmentId.Items.Add(item.DepartmentId.ToString());
+                cbDepartmentId.Items.Add(item.DepartmentId);
             }
         }
         /// <summary>
