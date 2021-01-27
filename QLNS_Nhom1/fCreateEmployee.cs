@@ -1,4 +1,4 @@
-﻿using QLNS_Nhom1.DAO;
+﻿using QLNS_Nhom1.DataAcessLayer;
 using QLNS_Nhom1.Models;
 using System;
 using System.Collections.Generic;
@@ -37,14 +37,14 @@ namespace QLNS_Nhom1
             employee.Gender = cbGender.SelectedItem.ToString();
             employee.DateOfBirth = dateTimeDOB.Value;
 
-            if (EmployeeDAO.Instance.InsertEmployee(employee))
-            {
-                MessageBox.Show("Thêm Thành Công");
-            }
-            else
-            {
-                MessageBox.Show("Lỗi Trong quá trình thêm");
-            }
+            //if (DataAcessLayer.Instance.InsertEmployee(employee))
+            //{
+            //    MessageBox.Show("Thêm Thành Công");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Lỗi Trong quá trình thêm");
+            //}
 
         }
     }

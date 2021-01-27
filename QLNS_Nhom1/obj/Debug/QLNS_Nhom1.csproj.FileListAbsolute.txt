@@ -36,3 +36,9 @@ C:\Users\Levi Ackerman\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.Generat
 C:\Users\Levi Ackerman\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.CoreCompileInputs.cache
 C:\Users\Levi Ackerman\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.exe
 C:\Users\Levi Ackerman\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.pdb
+C:\Users\Levi Ackerman\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\QLNS_Nhom1.exe.config
+C:\Users\Levi Ackerman\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\QLNS_Nhom1.exe
+C:\Users\Levi Ackerman\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\QLNS_Nhom1.pdb
+C:\Users\Levi Ackerman\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\Dapper.dll
+C:\Users\Levi Ackerman\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\Dapper.xml
+C:\Users\Levi Ackerman\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.CopyComplete

@@ -1,4 +1,4 @@
-﻿using QLNS_Nhom1.DAO;
+﻿using QLNS_Nhom1.DataAcessLayer;
 using QLNS_Nhom1.Models;
 using System.Collections.Generic;
 
@@ -363,7 +363,7 @@ namespace QLNS_Nhom1
         {
             var positions = new List<Position>();
             // lấy dữ liệu 
-            positions = PositonDAO.Instance.GetPositions();
+            //positions = PositonDAO.Instance.GetPositions();
 
             // Đẩy dữ liệu vào combobox
             foreach (var item in positions)
@@ -379,7 +379,7 @@ namespace QLNS_Nhom1
         {
             var deparments = new List<Department>();
             // lấy dữ liệu 
-            deparments = DepartmentDAO.Instance.GetDepartments();
+            //deparments = DepartmentDAO.Instance.GetDepartments();
 
             // Đẩy dữ liệu vào combobox
             foreach (var item in deparments)
@@ -394,7 +394,7 @@ namespace QLNS_Nhom1
         {
             var salaries = new List<Salary>();
             // lấy dữ liệu 
-            salaries = SalaryDAO.Instance.GetSalaries();
+            //salaries = SalaryDAO.Instance.GetSalaries();
 
             // Đẩy dữ liệu vào combobox
             foreach (var item in salaries)

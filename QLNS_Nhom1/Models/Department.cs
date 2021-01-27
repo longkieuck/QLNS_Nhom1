@@ -22,7 +22,8 @@ namespace QLNS_Nhom1.Models
         }
         public Department(DataRow dataRow)
         {
-            this.dataRow = dataRow;
+            this.DepartmentId = DepartmentId;
+            this.DepartmentIdName = DepartmentIdName;
         }
         public Department()
         {

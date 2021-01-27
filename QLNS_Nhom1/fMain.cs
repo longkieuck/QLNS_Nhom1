@@ -18,6 +18,8 @@ namespace QLNS_Nhom1
         {
 
             InitializeComponent();
+            LoadDepartment();
+
         }
 
         private void fMain_Load(object sender, EventArgs e)
@@ -34,12 +36,29 @@ namespace QLNS_Nhom1
         {
             List<Department> listDepartment = DepartmentDAL.Instance.GetListDepartment();
             cbDepartment.DataSource = listDepartment;
+            cbDepartment.DisplayMember = "DepartmentIdName";
         }
 
         void LoadEmployeeListByDepartmentId(string id)
         {
             List<Employee> listEmployee = EmployeeDAL.Instance.GetEmployeeByDepartmentID(id);
+            //
+        }
 
+        private void cbDepartment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string id = "";
+
+            ComboBox cb = sender as ComboBox;
+
+            if (cb.SelectedItem == null)
+                return;
+
+            Department selected = cb.SelectedItem as Department;
+
+            id = selected.DepartmentId;
+
+            LoadEmployeeListByDepartmentId(id);
         }
     }
 }

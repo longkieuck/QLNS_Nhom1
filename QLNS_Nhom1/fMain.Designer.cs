@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Mã NV"}, -1, System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Control, null);
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Họ Tên");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Giới Tính");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Ngày Sinh");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Địa Chỉ");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -45,7 +53,6 @@
             this.HuongDan = new System.Windows.Forms.ToolStripMenuItem();
             this.DangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -66,6 +73,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1051, 617);
             this.panel1.TabIndex = 0;
+            // 
+            // cbDepartment
+            // 
+            this.cbDepartment.FormattingEnabled = true;
+            this.cbDepartment.Location = new System.Drawing.Point(547, 124);
+            this.cbDepartment.Name = "cbDepartment";
+            this.cbDepartment.Size = new System.Drawing.Size(121, 21);
+            this.cbDepartment.TabIndex = 6;
+            this.cbDepartment.SelectedIndexChanged += new System.EventHandler(this.cbDepartment_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -123,6 +139,13 @@
             // lstEmployee
             // 
             this.lstEmployee.HideSelection = false;
+            this.lstEmployee.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6});
             this.lstEmployee.Location = new System.Drawing.Point(25, 13);
             this.lstEmployee.Name = "lstEmployee";
             this.lstEmployee.Size = new System.Drawing.Size(835, 269);
@@ -201,14 +224,6 @@
             this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
-            // cbDepartment
-            // 
-            this.cbDepartment.FormattingEnabled = true;
-            this.cbDepartment.Location = new System.Drawing.Point(547, 124);
-            this.cbDepartment.Name = "cbDepartment";
-            this.cbDepartment.Size = new System.Drawing.Size(121, 21);
-            this.cbDepartment.TabIndex = 6;
             // 
             // fMain
             // 
