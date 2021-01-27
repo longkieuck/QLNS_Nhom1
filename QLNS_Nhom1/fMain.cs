@@ -26,5 +26,14 @@ namespace QLNS_Nhom1
             frm.ShowDialog();
             this.Show();
         }
+<<<<<<< HEAD
+=======
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            fRepairEmployee f = new fRepairEmployee();
+            f.Show();
+        }
+>>>>>>> dat
     }
 }

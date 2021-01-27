@@ -27,5 +27,14 @@ namespace QLNS_Nhom1.Models
         // Tên Phòng ban
         public string DepartmentIdName { get; set; }
 
+        public Department(string DepartmentId)
+        {
+            this.DepartmentId = DepartmentId;
+        }
+        public Department(DataRow row)
+        {
+            this.DepartmentId = row["DepartmentId"].ToString();
+        }
+
     }
 }

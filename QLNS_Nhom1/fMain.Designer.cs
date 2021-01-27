@@ -88,10 +88,14 @@
             this.textBox1.Location = new System.Drawing.Point(700, 125);
             this.textBox1.Name = "textBox1";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.textBox1.Size = new System.Drawing.Size(116, 22);
 =======
             this.textBox1.Size = new System.Drawing.Size(116, 20);
 >>>>>>> origin/thiep
+=======
+            this.textBox1.Size = new System.Drawing.Size(116, 20);
+>>>>>>> dat
             this.textBox1.TabIndex = 4;
             // 
             // panel4
@@ -121,6 +125,7 @@
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel3
             // 
@@ -173,10 +178,14 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.menuStrip1.Size = new System.Drawing.Size(1051, 28);
 =======
             this.menuStrip1.Size = new System.Drawing.Size(1051, 24);
 >>>>>>> origin/thiep
+=======
+            this.menuStrip1.Size = new System.Drawing.Size(1051, 24);
+>>>>>>> dat
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -184,47 +193,67 @@
             // 
             this.TrangChu.Name = "TrangChu";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.TrangChu.Size = new System.Drawing.Size(93, 24);
 =======
             this.TrangChu.Size = new System.Drawing.Size(78, 20);
 >>>>>>> origin/thiep
+=======
+            this.TrangChu.Size = new System.Drawing.Size(76, 20);
+>>>>>>> dat
             this.TrangChu.Text = "Trang Chủ ";
             // 
             // ThongTinLuongNV
             // 
             this.ThongTinLuongNV.Name = "ThongTinLuongNV";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.ThongTinLuongNV.Size = new System.Drawing.Size(207, 24);
 =======
             this.ThongTinLuongNV.Size = new System.Drawing.Size(169, 20);
 >>>>>>> origin/thiep
+=======
+            this.ThongTinLuongNV.Size = new System.Drawing.Size(167, 20);
+>>>>>>> dat
             this.ThongTinLuongNV.Text = "Thông Tin Lương Nhân Viên";
             // 
             // TaoHoSo
             // 
             this.TaoHoSo.Name = "TaoHoSo";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.TaoHoSo.Size = new System.Drawing.Size(127, 24);
 =======
             this.TaoHoSo.Size = new System.Drawing.Size(101, 20);
 >>>>>>> origin/thiep
+=======
+            this.TaoHoSo.Size = new System.Drawing.Size(100, 20);
+>>>>>>> dat
             this.TaoHoSo.Text = "Tạo Hồ Sơ Mới ";
             // 
             // HuongDan
             // 
             this.HuongDan.Name = "HuongDan";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.HuongDan.Size = new System.Drawing.Size(104, 24);
 =======
             this.HuongDan.Size = new System.Drawing.Size(83, 20);
 >>>>>>> origin/thiep
+=======
+            this.HuongDan.Size = new System.Drawing.Size(83, 20);
+>>>>>>> dat
             this.HuongDan.Text = "Hướng Dẫn ";
             // 
             // DangXuat
             // 
             this.DangXuat.Name = "DangXuat";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.DangXuat.Size = new System.Drawing.Size(93, 24);
+=======
+            this.DangXuat.Size = new System.Drawing.Size(74, 20);
+>>>>>>> dat
             this.DangXuat.Text = "Đăng Xuât";
             // 
             // directorySearcher1

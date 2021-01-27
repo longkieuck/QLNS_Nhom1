@@ -27,5 +27,16 @@ namespace QLNS_Nhom1.Models
         public float BaseSalary { get; set; }
         // Hệ số lương
         public float LevelSalary { get; set; }
+
+        public Salary(string SalaryId)
+        {
+            this.SalaryId = SalaryId;
+        }
+        public Salary(DataRow row)
+        {
+            this.SalaryId = row["SalaryId"].ToString();
+        }
     }
+
+
 }

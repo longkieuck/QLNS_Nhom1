@@ -31,6 +31,7 @@ namespace QLNS_Nhom1.DataAcessLayer
         
         private DataProvider() { }
 <<<<<<< HEAD
+<<<<<<< HEAD
         /// <summary>
         /// ExcuteQuery lấy dữ liệu dạng bảng : Datatable 
         /// </summary>
@@ -42,6 +43,11 @@ namespace QLNS_Nhom1.DataAcessLayer
         private string connectionSTR = "Data Source=.\\SQLEXPRESS;Initial Catalog=QLNS;Integrated Security=True";
 
 >>>>>>> origin/thiep
+=======
+
+        private string connectionSTR = "Data Source=LAPTOP-SCOJ079I;Initial Catalog=QLNS;Integrated Security=True";
+
+>>>>>>> dat
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
