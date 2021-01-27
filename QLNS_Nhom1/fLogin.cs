@@ -31,7 +31,7 @@ namespace QLNS_Nhom1
             }
             else
             {
-                MessageBox.Show("Sài tên đăng nhập hoặc mật khẩu!");
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
             }
             
         }

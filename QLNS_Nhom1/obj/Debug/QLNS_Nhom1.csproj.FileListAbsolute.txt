@@ -26,4 +26,22 @@ C:\Users\Dell\Desktop\Thuc tap Nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.c
 C:\Users\Dell\Desktop\Thuc tap Nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.CopyComplete
 C:\Users\Dell\Desktop\Thuc tap Nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.exe
 C:\Users\Dell\Desktop\Thuc tap Nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.pdb
+<<<<<<< HEAD
 C:\Users\Dell\Desktop\Thuc tap Nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.fCreateEmployee.resources
+=======
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\QLNS_Nhom1.exe.config
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\QLNS_Nhom1.exe
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\QLNS_Nhom1.pdb
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\Dapper.dll
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\bin\Debug\Dapper.xml
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csprojAssemblyReference.cache
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.fLogin.resources
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.fMain.resources
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.Properties.Resources.resources
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.GenerateResource.cache
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.CoreCompileInputs.cache
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.CopyComplete
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.exe
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.pdb
+C:\Users\computer\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.frmDelete.resources
+>>>>>>> origin/thiep

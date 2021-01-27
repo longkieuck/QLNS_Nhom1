@@ -44,8 +44,11 @@
             this.TaoHoSo = new System.Windows.Forms.ToolStripMenuItem();
             this.HuongDan = new System.Windows.Forms.ToolStripMenuItem();
             this.DangXuat = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+=======
+>>>>>>> origin/thiep
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -55,7 +58,10 @@
             // 
             // panel1
             // 
+<<<<<<< HEAD
             this.panel1.Controls.Add(this.comboBox1);
+=======
+>>>>>>> origin/thiep
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.panel4);
@@ -81,7 +87,11 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(700, 125);
             this.textBox1.Name = "textBox1";
+<<<<<<< HEAD
             this.textBox1.Size = new System.Drawing.Size(116, 22);
+=======
+            this.textBox1.Size = new System.Drawing.Size(116, 20);
+>>>>>>> origin/thiep
             this.textBox1.TabIndex = 4;
             // 
             // panel4
@@ -101,6 +111,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -145,7 +156,7 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(191, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(467, 40);
+            this.label1.Size = new System.Drawing.Size(388, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phầm mềm quản lý nhân sự";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -161,37 +172,58 @@
             this.DangXuat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+<<<<<<< HEAD
             this.menuStrip1.Size = new System.Drawing.Size(1051, 28);
+=======
+            this.menuStrip1.Size = new System.Drawing.Size(1051, 24);
+>>>>>>> origin/thiep
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // TrangChu
             // 
             this.TrangChu.Name = "TrangChu";
+<<<<<<< HEAD
             this.TrangChu.Size = new System.Drawing.Size(93, 24);
+=======
+            this.TrangChu.Size = new System.Drawing.Size(78, 20);
+>>>>>>> origin/thiep
             this.TrangChu.Text = "Trang Chủ ";
             // 
             // ThongTinLuongNV
             // 
             this.ThongTinLuongNV.Name = "ThongTinLuongNV";
+<<<<<<< HEAD
             this.ThongTinLuongNV.Size = new System.Drawing.Size(207, 24);
+=======
+            this.ThongTinLuongNV.Size = new System.Drawing.Size(169, 20);
+>>>>>>> origin/thiep
             this.ThongTinLuongNV.Text = "Thông Tin Lương Nhân Viên";
             // 
             // TaoHoSo
             // 
             this.TaoHoSo.Name = "TaoHoSo";
+<<<<<<< HEAD
             this.TaoHoSo.Size = new System.Drawing.Size(127, 24);
+=======
+            this.TaoHoSo.Size = new System.Drawing.Size(101, 20);
+>>>>>>> origin/thiep
             this.TaoHoSo.Text = "Tạo Hồ Sơ Mới ";
             // 
             // HuongDan
             // 
             this.HuongDan.Name = "HuongDan";
+<<<<<<< HEAD
             this.HuongDan.Size = new System.Drawing.Size(104, 24);
+=======
+            this.HuongDan.Size = new System.Drawing.Size(83, 20);
+>>>>>>> origin/thiep
             this.HuongDan.Text = "Hướng Dẫn ";
             // 
             // DangXuat
             // 
             this.DangXuat.Name = "DangXuat";
+<<<<<<< HEAD
             this.DangXuat.Size = new System.Drawing.Size(93, 24);
             this.DangXuat.Text = "Đăng Xuât";
             // 
@@ -209,6 +241,11 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 6;
             // 
+=======
+            this.DangXuat.Size = new System.Drawing.Size(74, 20);
+            this.DangXuat.Text = "Đăng Xuât";
+            // 
+>>>>>>> origin/thiep
             // fMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -228,6 +265,7 @@
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
+<<<<<<< HEAD
         }
 
         #endregion
@@ -239,6 +277,19 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
+=======
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+>>>>>>> origin/thiep
         private System.Windows.Forms.ListView lstEmployee;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem TrangChu;
@@ -246,6 +297,7 @@
         private System.Windows.Forms.ToolStripMenuItem TaoHoSo;
         private System.Windows.Forms.ToolStripMenuItem HuongDan;
         private System.Windows.Forms.ToolStripMenuItem DangXuat;
+<<<<<<< HEAD
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
@@ -253,3 +305,10 @@
     }
 }
 
+=======
+        //private System.DirectoryServices.DirectorySearcher directorySearcher1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+    }
+}
+>>>>>>> origin/thiep
