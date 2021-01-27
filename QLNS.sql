@@ -52,18 +52,22 @@ END
 GO
 
 CREATE PROC UpdateEmployee
-	@manv INT,
-	@hoten nvarchar(20),
-	@ngsinh DATE,
-	@diachi NVARCHAR(100),
-	@gioitinh NVARCHAR(4),
-	@sdt CHAR(10),
-	@luong INT,
-	@mapb INT
+	
+	@FullName nvarchar(20),
+	@DateOfBirth DATE,
+	@Address NVARCHAR(100),
+	@Gender nchar(3),
+	@PhoneNumber CHAR(10),
+	@SalaryId varchar(10),
+	@DepartmentId varchar(10),
+	@PositionId varchar(10),
+	@Id INT
 AS
 BEGIN
-	UPDATE dbo.Employee SET FullName=@hoten,DateOfBirth=@ngsinh,Address=@diachi,Gender=@gioitinh,PhoneNumber=@sdt,SalaryId=@luong,DepartmentId=@mapb WHERE Id=@manv
+	UPDATE dbo.Employee SET FullName=@FullName,DateOfBirth=@DateOfBirth,Address=@Address,Gender=@Gender,PhoneNumber=@PhoneNumber,SalaryId=@SalaryId,DepartmentId=@DepartmentId,PositionId=@PositionId WHERE Id=@Id
 END
 GO
+
+EXEC UpdateEmployee 'dat','08/08/2000','ha noi','nam','0911111111','1','1','1',9
 
 

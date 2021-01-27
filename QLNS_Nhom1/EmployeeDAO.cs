@@ -92,5 +92,15 @@ namespace QLNS_Nhom1
             }
             return List;
         }
+
+        public bool UpdateNv(Employee employee)
+        {
+            string query = string.Format(" EXEC UpdateEmployee @FullName , @DateOfBirth , @Address "+
+                ", @Gender , @PhoneNumber , @SalaryId , @DepartmentId , @PositionId , @Id");
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { employee.FullName, employee.DateOfBirth, employee.Address,
+                employee.Gender, employee.PhoneNumber, employee.SalaryId, employee.DepartmentId, employee.PositionId, employee.Id });
+
+            return result > 0;
+        }
     }
 }

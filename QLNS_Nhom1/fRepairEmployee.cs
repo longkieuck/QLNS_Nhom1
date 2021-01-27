@@ -20,7 +20,7 @@ namespace QLNS_Nhom1
             InitializeComponent();
             Load();
         }
-        
+
         void Load()
         {
             LoadListEmployee();
@@ -28,7 +28,7 @@ namespace QLNS_Nhom1
             LoadIntoCbxPositionId(cbxPositionId);
             LoadIntoCbxSalaryId(cbxSalaryId);
             AddBindingEmployee();
-            
+
         }
         /// <summary>
         /// đổ dữ liệu vào girdview
@@ -113,14 +113,36 @@ namespace QLNS_Nhom1
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            Employee employee = new Employee();
-
-
-
-
-
-
-
+            long check;
+            if (MessageBox.Show("Bạn có thật sự muốn sửa nhân viên có tên là: " + txtFullName.Text, "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            {
+                if (txtFullName.Text == "" || txtAddress.Text == "" || txtID.Text == "" || txtPhoneNumber.Text == "")
+                {
+                    MessageBox.Show("Sai hoặc thiếu thông tin");
+                }
+                else
+                {
+                    Employee employee = new Employee();
+                    employee.FullName = txtFullName.Text;
+                    employee.DateOfBirth = dtpDateOfBirth.Value;
+                    employee.Address = txtAddress.Text;
+                    employee.Gender = radNam.Checked ? "nam" : "nu";
+                    employee.PhoneNumber = txtPhoneNumber.Text;
+                    employee.PositionId = cbxPositionId.Text;
+                    employee.SalaryId = cbxSalaryId.Text;
+                    employee.DepartmentId = cbxDepartmentId.Text;
+                    employee.Id = Int32.Parse(txtID.Text);
+                    if (EmployeeDAO.Instance.UpdateNv(employee))
+                    {
+                        MessageBox.Show("Sửa nhân viên thành công! ");
+                        LoadListEmployee();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Có lỗi khi sửa nhân viên! ");
+                    }
+                }
+            }
         }
     }
 }
