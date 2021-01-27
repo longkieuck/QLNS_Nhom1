@@ -44,7 +44,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.Thêm = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.cbxSalaryId = new System.Windows.Forms.ComboBox();
             this.dtgvNV = new System.Windows.Forms.DataGridView();
@@ -256,16 +256,17 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "SỬA NHÂN VIÊN";
             // 
-            // Thêm
+            // btnSua
             // 
-            this.Thêm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Thêm.Location = new System.Drawing.Point(635, 220);
-            this.Thêm.Margin = new System.Windows.Forms.Padding(2);
-            this.Thêm.Name = "Thêm";
-            this.Thêm.Size = new System.Drawing.Size(92, 43);
-            this.Thêm.TabIndex = 25;
-            this.Thêm.Text = "Sửa";
-            this.Thêm.UseVisualStyleBackColor = true;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(635, 220);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(92, 43);
+            this.btnSua.TabIndex = 25;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // button1
             // 
@@ -328,7 +329,7 @@
             // radNu
             // 
             this.radNu.AutoSize = true;
-            this.radNu.Location = new System.Drawing.Point(886, 100);
+            this.radNu.Location = new System.Drawing.Point(862, 100);
             this.radNu.Name = "radNu";
             this.radNu.Size = new System.Drawing.Size(37, 17);
             this.radNu.TabIndex = 32;
@@ -336,7 +337,6 @@
             this.radNu.Tag = "nu";
             this.radNu.Text = "nu";
             this.radNu.UseVisualStyleBackColor = true;
-           
             // 
             // fRepairEmployee
             // 
@@ -350,7 +350,7 @@
             this.Controls.Add(this.dtgvNV);
             this.Controls.Add(this.cbxSalaryId);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Thêm);
+            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dtpDateOfBirth);
@@ -395,7 +395,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button Thêm;
+        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cbxSalaryId;
         private System.Windows.Forms.DataGridView dtgvNV;

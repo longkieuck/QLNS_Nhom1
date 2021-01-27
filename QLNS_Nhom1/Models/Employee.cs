@@ -50,6 +50,10 @@ namespace QLNS_Nhom1.Models
             this.DepartmentId = row["DepartmentId"].ToString();
             this.SalaryId = row["SalaryId"].ToString();
         }
+        public Employee()
+        {
+
+        }
     }
 
 }

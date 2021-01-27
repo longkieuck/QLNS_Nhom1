@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLNS_Nhom1.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,20 +47,42 @@ namespace QLNS_Nhom1
         /// <param name="cb"></param>
         void LoadIntoCbxDepartmentId(ComboBox cb)
         {
-            cb.DataSource = EmployeeDAO.Instance.GetListDepartmentId();
-            cb.DisplayMember = "DepartmentId";
+            //cb.DataSource = EmployeeDAO.Instance.GetListDepartmentId();
+            //cb.DisplayMember = "DepartmentId";
+
+            var departments = EmployeeDAO.Instance.GetListDepartmentId();
+            foreach (var item in departments)
+            {
+
+                cb.Items.Add(item.DepartmentId);
+            }
         }
 
         void LoadIntoCbxPositionId(ComboBox cb)
         {
-            cb.DataSource = EmployeeDAO.Instance.GetListPositiontId();
-            cb.DisplayMember = "PositiontId";
+
+            //cb.DataSource = EmployeeDAO.Instance.GetListPositiontId();
+            //cb.DisplayMember = "PositonId";
+            var positions = EmployeeDAO.Instance.GetListPositiontId();
+            foreach (var item in positions)
+            {
+
+                cb.Items.Add(item.PositionId);
+            }
+
+
+
         }
 
         void LoadIntoCbxSalaryId(ComboBox cb)
         {
-            cb.DataSource = EmployeeDAO.Instance.GetListSalaryId();
-            cb.DisplayMember = "SalaryId";
+            //cb.DataSource = EmployeeDAO.Instance.GetListSalaryId();
+            //cb.DisplayMember = "SalaryId";
+            var salarys = EmployeeDAO.Instance.GetListSalaryId();
+            foreach (var item in salarys)
+            {
+                cb.Items.Add(item.SalaryId);
+            }
         }
         /// <summary>
         /// lấy dữ liệu khi trỏ chuột trong gridview
@@ -86,6 +109,18 @@ namespace QLNS_Nhom1
             // you don't need to bind the Male radiobutton, just make it do the opposite
             // of Male by handling the CheckedChanged event on Male:
             radNu.CheckedChanged += (s, args) => radNam.Checked = !radNu.Checked;
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            Employee employee = new Employee();
+
+
+
+
+
+
+
         }
     }
 }

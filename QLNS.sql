@@ -51,4 +51,19 @@ BEGIN
 END
 GO
 
+CREATE PROC UpdateEmployee
+	@manv INT,
+	@hoten nvarchar(20),
+	@ngsinh DATE,
+	@diachi NVARCHAR(100),
+	@gioitinh NVARCHAR(4),
+	@sdt CHAR(10),
+	@luong INT,
+	@mapb INT
+AS
+BEGIN
+	UPDATE dbo.Employee SET FullName=@hoten,DateOfBirth=@ngsinh,Address=@diachi,Gender=@gioitinh,PhoneNumber=@sdt,SalaryId=@luong,DepartmentId=@mapb WHERE Id=@manv
+END
+GO
+
 
