@@ -50,6 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DepartmentDAO.cs" />
+    <Compile Include="DAO\EmployeeDAO.cs" />
+    <Compile Include="DAO\PositonDAO.cs" />
+    <Compile Include="DAO\SalaryDAO.cs" />
     <Compile Include="DataAcessLayer\DataProvider.cs" />
     <Compile Include="DataAcessLayer\AccountDAL.cs" />
     <Compile Include="fCreateEmployee.cs">
