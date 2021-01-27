@@ -13,14 +13,21 @@ namespace QLNS_Nhom1.Models
     /// </summary>
     class Employee
     {
-        private DataRow dataRow;
         public Employee()
         {
 
         }
-        public Employee(DataRow dataRow)
+        public Employee(DataRow row)
         {
-            this.dataRow = dataRow;
+            this.Id = Int32.Parse(row["Id"].ToString());
+            this.FullName = row["FullName"].ToString();
+            this.Gender = row["Gender"].ToString();
+            this.PhoneNumber = row["PhoneNumber"].ToString();
+            this.Address = row["Address"].ToString();
+            this.DateOfBirth = DateTime.Parse(row["DateOfBirth"].ToString());
+            this.PositionId = row["PositionId"].ToString();
+            this.DepartmentId = row["DepartmentId"].ToString();
+            this.SalaryId = row["SalaryId"].ToString();
         }
         // Mã Nhân viên 
         public int Id { get; set; }

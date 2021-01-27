@@ -13,10 +13,10 @@ namespace QLNS_Nhom1.Models
     /// </summary>
     class Department
     {
-        private DataRow dataRow;
-        public Department(DataRow dataRow)
+        public Department(DataRow row)
         {
-            this.dataRow = dataRow;
+            this.DepartmentId = row["DepartmentId"].ToString();
+            this.DepartmentIdName = row["DepartmentIdName"].ToString();
         }
         public Department()
         {
