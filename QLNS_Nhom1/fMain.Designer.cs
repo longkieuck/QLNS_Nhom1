@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "Mã NV"}, -1, System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Control, null);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Họ Tên");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Giới Tính");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Ngày Sinh");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("Địa Chỉ");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmployee = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -53,6 +46,12 @@
             this.HuongDan = new System.Windows.Forms.ToolStripMenuItem();
             this.DangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.colId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colFullName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colGender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colDateOfBirth = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -64,7 +63,7 @@
             // 
             this.panel1.Controls.Add(this.cbDepartment);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtEmployee);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -92,13 +91,14 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Tìm Kiếm";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtEmployee
             // 
-            this.textBox1.Location = new System.Drawing.Point(700, 125);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtEmployee.Location = new System.Drawing.Point(700, 125);
+            this.txtEmployee.Name = "txtEmployee";
+            this.txtEmployee.Size = new System.Drawing.Size(116, 20);
+            this.txtEmployee.TabIndex = 4;
             // 
             // panel4
             // 
@@ -138,19 +138,20 @@
             // 
             // lstEmployee
             // 
+            this.lstEmployee.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colId,
+            this.colFullName,
+            this.colGender,
+            this.colPhoneNumber,
+            this.colAddress,
+            this.colDateOfBirth});
             this.lstEmployee.HideSelection = false;
-            this.lstEmployee.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6});
             this.lstEmployee.Location = new System.Drawing.Point(25, 13);
             this.lstEmployee.Name = "lstEmployee";
             this.lstEmployee.Size = new System.Drawing.Size(835, 269);
             this.lstEmployee.TabIndex = 0;
             this.lstEmployee.UseCompatibleStateImageBehavior = false;
+            this.lstEmployee.View = System.Windows.Forms.View.Details;
             // 
             // panel2
             // 
@@ -225,6 +226,34 @@
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
+            // colId
+            // 
+            this.colId.Text = "Mã NV";
+            // 
+            // colFullName
+            // 
+            this.colFullName.Text = "Họ Tên";
+            this.colFullName.Width = 160;
+            // 
+            // colGender
+            // 
+            this.colGender.Text = "Giới Tính";
+            // 
+            // colPhoneNumber
+            // 
+            this.colPhoneNumber.Text = "Số Điện Thoại";
+            this.colPhoneNumber.Width = 120;
+            // 
+            // colAddress
+            // 
+            this.colAddress.Text = "Địa Chỉ";
+            this.colAddress.Width = 100;
+            // 
+            // colDateOfBirth
+            // 
+            this.colDateOfBirth.Text = "Ngày Sinh";
+            this.colDateOfBirth.Width = 100;
+            // 
             // fMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -264,8 +293,14 @@
         private System.Windows.Forms.ToolStripMenuItem DangXuat;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmployee;
         private System.Windows.Forms.ComboBox cbDepartment;
+        private System.Windows.Forms.ColumnHeader colId;
+        private System.Windows.Forms.ColumnHeader colFullName;
+        private System.Windows.Forms.ColumnHeader colGender;
+        private System.Windows.Forms.ColumnHeader colPhoneNumber;
+        private System.Windows.Forms.ColumnHeader colAddress;
+        private System.Windows.Forms.ColumnHeader colDateOfBirth;
     }
 }
 

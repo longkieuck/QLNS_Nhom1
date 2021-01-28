@@ -14,10 +14,7 @@ namespace QLNS_Nhom1.Models
     class Employee
     {
         private DataRow dataRow;
-        public Employee()
-        {
-
-        }
+        public Employee() { }
 
         public Employee(int id, string name, string gender, string phonenumber, string address, DateTime dateofbirth, string positionid,
             string departmentid, string salaryid)
@@ -34,7 +31,15 @@ namespace QLNS_Nhom1.Models
         }
         public Employee(DataRow dataRow)
         {
-            this.dataRow = dataRow;
+            this.Id = (int)dataRow["Id"];
+            this.FullName = dataRow["FullName"].ToString();
+            this.Gender = dataRow["Gender"].ToString();
+            this.PhoneNumber = dataRow["PhoneNumber"].ToString();
+            this.Address = dataRow["Address"].ToString();
+            this.DateOfBirth = DateTime.Parse(dataRow["DateOfBirth"].ToString());
+            this.PositionId = dataRow["PositionId"].ToString();
+            this.DepartmentId = dataRow["DepartmentId"].ToString();
+            this.SalaryId = dataRow["SalaryId"].ToString();
         }
         // Mã Nhân viên 
         public int Id { get; set; }

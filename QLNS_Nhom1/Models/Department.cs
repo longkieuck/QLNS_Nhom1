@@ -14,7 +14,10 @@ namespace QLNS_Nhom1.Models
     class Department
     {
         private DataRow dataRow;
+        private string departmentid;
+        private string departmentidname;
 
+        public Department() {}
         public Department(string departmentid, string departmentname)
         {
             this.DepartmentId = departmentid;
@@ -22,17 +25,22 @@ namespace QLNS_Nhom1.Models
         }
         public Department(DataRow dataRow)
         {
-            this.DepartmentId = DepartmentId;
-            this.DepartmentIdName = DepartmentIdName;
+            this.DepartmentId = dataRow["DepartmentId"].ToString();
+            this.DepartmentIdName = dataRow["DepartmentIdName"].ToString();
         }
-        public Department()
-        {
 
-        }
         // Mã phòng ban
-        public string DepartmentId { get; set; }
+        public string DepartmentId 
+        { 
+            get { return departmentid; }
+            set { departmentid = value; }
+        }
         // Tên Phòng ban
-        public string DepartmentIdName { get; set; }
+        public string DepartmentIdName 
+        {
+            get { return departmentidname; }
+            set { departmentidname = value; }
+        }
 
     }
 }
