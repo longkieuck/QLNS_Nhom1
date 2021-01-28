@@ -43,10 +43,11 @@
             this.ThongTinLuongNV = new System.Windows.Forms.ToolStripMenuItem();
             this.TaoHoSo = new System.Windows.Forms.ToolStripMenuItem();
             this.HuongDan = new System.Windows.Forms.ToolStripMenuItem();
-            this.DangXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.giớiThiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cácMẹoKhiSửDụngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DangXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -186,23 +187,20 @@
             // HuongDan
             // 
             this.HuongDan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.giớiThiệuToolStripMenuItem,
             this.helpToolStripMenuItem,
             this.cácMẹoKhiSửDụngToolStripMenuItem});
             this.HuongDan.Name = "HuongDan";
             this.HuongDan.Size = new System.Drawing.Size(83, 20);
             this.HuongDan.Text = "Hướng Dẫn ";
+
             // 
-            // DangXuat
+            // giớiThiệuToolStripMenuItem
             // 
-            this.DangXuat.Name = "DangXuat";
-            this.DangXuat.Size = new System.Drawing.Size(74, 20);
-            this.DangXuat.Text = "Đăng Xuât";
-            // 
-            // directorySearcher1
-            // 
-            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.giớiThiệuToolStripMenuItem.Name = "giớiThiệuToolStripMenuItem";
+            this.giớiThiệuToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.giớiThiệuToolStripMenuItem.Text = "giới thiệu";
+            this.giớiThiệuToolStripMenuItem.Click += new System.EventHandler(this.giớiThiệuToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -217,6 +215,18 @@
             this.cácMẹoKhiSửDụngToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.cácMẹoKhiSửDụngToolStripMenuItem.Text = "các mẹo khi sử dụng";
             this.cácMẹoKhiSửDụngToolStripMenuItem.Click += new System.EventHandler(this.cácMẹoKhiSửDụngToolStripMenuItem_Click);
+            // 
+            // DangXuat
+            // 
+            this.DangXuat.Name = "DangXuat";
+            this.DangXuat.Size = new System.Drawing.Size(74, 20);
+            this.DangXuat.Text = "Đăng Xuât";
+            // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
             // fMain
             // 
@@ -261,6 +271,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cácMẹoKhiSửDụngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem giớiThiệuToolStripMenuItem;
     }
 }
 

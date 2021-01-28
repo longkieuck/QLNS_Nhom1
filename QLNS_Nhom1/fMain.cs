@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,12 +28,22 @@ namespace QLNS_Nhom1
         {
             FormHelp formhelp = new FormHelp();
             formhelp.Show();
+            
+
         }
 
         private void cácMẹoKhiSửDụngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormTip formtip = new FormTip();
             formtip.Show();
+        }
+
+       
+
+        private void giớiThiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGT formgt = new FormGT();
+            formgt.Show();
         }
     }
 }

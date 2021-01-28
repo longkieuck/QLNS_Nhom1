@@ -16,5 +16,28 @@ namespace QLNS_Nhom1
         {
             InitializeComponent();
         }
+        int count = -1;
+        private void FormTip_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (count > 0)
+            {
+                count--;
+            }
+            pictureBox1.Image = imageList1.Images[count];
+        }
+
+        private void btnnext_Click(object sender, EventArgs e)
+        {
+            if (count < 25)
+            {
+                count++;
+            }
+            pictureBox1.Image = imageList1.Images[count];
+        }
     }
 }

@@ -42,3 +42,6 @@ C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.CoreCom
 C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.CopyComplete
 C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.exe
 C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.pdb
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.FormTip.resources
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.FormHelp.resources
+C:\Users\xuanh\Desktop\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.FormGT.resources

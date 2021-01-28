@@ -1,6 +1,6 @@
 ﻿namespace QLNS_Nhom1
 {
-    partial class FormHelp
+    partial class FormGT
     {
         /// <summary>
         /// Required designer variable.
@@ -34,31 +34,31 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(110, 13);
+            this.button1.Location = new System.Drawing.Point(87, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 23);
+            this.button1.Size = new System.Drawing.Size(200, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "hướng dẫn";
+            this.button1.Text = "giới thiệu";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 54);
+            this.textBox1.Location = new System.Drawing.Point(12, 32);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(426, 340);
+            this.textBox1.Size = new System.Drawing.Size(391, 325);
             this.textBox1.TabIndex = 1;
             // 
-            // FormHelp
+            // FormGT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 406);
+            this.ClientSize = new System.Drawing.Size(415, 384);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
-            this.Name = "FormHelp";
-            this.Text = "FormHelp";
+            this.Name = "FormGT";
+            this.Text = "FormGT";
             this.ResumeLayout(false);
             this.PerformLayout();
 
