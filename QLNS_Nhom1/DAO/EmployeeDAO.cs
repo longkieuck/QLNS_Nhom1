@@ -65,16 +65,16 @@ namespace QLNS_Nhom1.DAO
                 employee.Gender,employee.PhoneNumber,employee.Address,employee.DateOfBirth,employee.PositionId,employee.DepartmentId,employee.SalaryId});
             return result > 0;
         }
-
         public List<Employee> GetEmployees()
         {
-            var employees = new List<Employee>();
-            string connectionString = "Server=DESKTOP-6N6LFDC\\SQLEXPRESS;Database=QLNS;User ID=nhom1;pwd=nhom1";
-            IDbConnection dbConnection = new SqlConnection(connectionString);
-
-            employees = dbConnection.Query<Employee>("Select * from Employee").ToList();
-
-            return employees;
+            List<Employee> List = new List<Employee>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Employee");
+            foreach (DataRow item in data.Rows)
+            {
+                Employee employee = new Employee(item);
+                List.Add(employee);
+            }
+            return List;
         }
 
     }

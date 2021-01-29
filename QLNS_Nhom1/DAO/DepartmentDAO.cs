@@ -25,21 +25,31 @@ namespace QLNS_Nhom1.DAO
         }
         private DepartmentDAO() { }
 
-        private string connectionString = "Server=DESKTOP-6N6LFDC\\SQLEXPRESS;Database=QLNS;User ID=nhom1;pwd=nhom1";
 
         /// <summary>
         /// Lấy danh sách các thông tin đầy đủ của các phòng ban
         /// </summary>
         /// CreatedBy : Nguyễn Văn Hiến 
         /// <returns> Danh sách phòng ban</returns>
+        //public List<Department> GetDepartments()
+        //{
+        //    var departments = new List<Department>();
+        //    IDbConnection dbConnection = new SqlConnection(connectionString);
+
+        //    departments = dbConnection.Query<Department>("Select * from Department").ToList();
+
+        //    return departments;
+        //}
         public List<Department> GetDepartments()
         {
-            var departments = new List<Department>();
-            IDbConnection dbConnection = new SqlConnection(connectionString);
-
-            departments = dbConnection.Query<Department>("Select * from Department").ToList();
-
-            return departments;
+            List<Department> List = new List<Department>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Department");
+            foreach (DataRow item in data.Rows)
+            {
+                Department department = new Department(item);
+                List.Add(department);
+            }
+            return List;
         }
     }
 }
