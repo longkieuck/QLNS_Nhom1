@@ -26,6 +26,5 @@ namespace QLNS_Nhom1.Models
         public string DepartmentId { get; set; }
         // Tên Phòng ban
         public string DepartmentIdName { get; set; }
-
     }
 }

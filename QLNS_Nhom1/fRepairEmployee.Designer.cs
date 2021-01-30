@@ -1,10 +1,6 @@
-using QLNS_Nhom1.DAO;
-using QLNS_Nhom1.Models;
-using System.Collections.Generic;
-
-namespace QLNS_Nhom1
+﻿namespace QLNS_Nhom1
 {
-    partial class fCreateEmployee
+    partial class fRepairEmployee
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +28,7 @@ namespace QLNS_Nhom1
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtEmployeeId = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.txtFullName = new System.Windows.Forms.TextBox();
@@ -44,51 +40,57 @@ namespace QLNS_Nhom1
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimeDOB = new System.Windows.Forms.DateTimePicker();
+            this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.cbSalaryId = new System.Windows.Forms.ComboBox();
-            this.cbPositionId = new System.Windows.Forms.ComboBox();
-            this.cbDepartmentId = new System.Windows.Forms.ComboBox();
-            this.cbGender = new System.Windows.Forms.ComboBox();
-            this.btnThem = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnQuayLai = new System.Windows.Forms.Button();
+            this.cbxSalaryId = new System.Windows.Forms.ComboBox();
+            this.dtgvNV = new System.Windows.Forms.DataGridView();
+            this.cbxDepartmentId = new System.Windows.Forms.ComboBox();
+            this.cbxPositionId = new System.Windows.Forms.ComboBox();
+            this.radNam = new System.Windows.Forms.RadioButton();
+            this.radNu = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvNV)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtEmployeeId
+            // txtID
             // 
-            this.txtEmployeeId.Location = new System.Drawing.Point(211, 122);
-            this.txtEmployeeId.Multiline = true;
-            this.txtEmployeeId.Name = "txtEmployeeId";
-            this.txtEmployeeId.Size = new System.Drawing.Size(192, 33);
-            this.txtEmployeeId.TabIndex = 0;
-            this.txtEmployeeId.UseWaitCursor = true;
+            this.txtID.Location = new System.Drawing.Point(211, 122);
+            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtID.Multiline = true;
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(192, 34);
+            this.txtID.TabIndex = 0;
+            this.txtID.UseWaitCursor = true;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(211, 277);
+            this.txtAddress.Location = new System.Drawing.Point(209, 191);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(192, 33);
+            this.txtAddress.Size = new System.Drawing.Size(192, 34);
             this.txtAddress.TabIndex = 1;
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(211, 225);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(625, 187);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneNumber.Multiline = true;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(192, 33);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(192, 34);
             this.txtPhoneNumber.TabIndex = 2;
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(211, 173);
+            this.txtFullName.Location = new System.Drawing.Point(625, 121);
+            this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullName.Multiline = true;
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(192, 33);
+            this.txtFullName.Size = new System.Drawing.Size(192, 34);
             this.txtFullName.TabIndex = 3;
             // 
             // label1
@@ -110,7 +112,7 @@ namespace QLNS_Nhom1
             this.label2.AutoEllipsis = true;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 225);
+            this.label2.Location = new System.Drawing.Point(427, 187);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 32);
             this.label2.TabIndex = 5;
@@ -124,7 +126,7 @@ namespace QLNS_Nhom1
             this.label3.AutoEllipsis = true;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 174);
+            this.label3.Location = new System.Drawing.Point(427, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 32);
             this.label3.TabIndex = 6;
@@ -138,7 +140,7 @@ namespace QLNS_Nhom1
             this.label4.AutoEllipsis = true;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 277);
+            this.label4.Location = new System.Drawing.Point(13, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 32);
             this.label4.TabIndex = 7;
@@ -152,7 +154,7 @@ namespace QLNS_Nhom1
             this.label5.AutoEllipsis = true;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(429, 174);
+            this.label5.Location = new System.Drawing.Point(847, 181);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 32);
             this.label5.TabIndex = 10;
@@ -166,7 +168,7 @@ namespace QLNS_Nhom1
             this.label6.AutoEllipsis = true;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 337);
+            this.label6.Location = new System.Drawing.Point(15, 265);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(177, 32);
             this.label6.TabIndex = 11;
@@ -180,7 +182,7 @@ namespace QLNS_Nhom1
             this.label7.AutoEllipsis = true;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(429, 123);
+            this.label7.Location = new System.Drawing.Point(1293, 181);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(120, 32);
             this.label7.TabIndex = 12;
@@ -194,7 +196,7 @@ namespace QLNS_Nhom1
             this.label8.AutoEllipsis = true;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(424, 226);
+            this.label8.Location = new System.Drawing.Point(847, 121);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 32);
             this.label8.TabIndex = 14;
@@ -203,19 +205,20 @@ namespace QLNS_Nhom1
             this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.label8.UseCompatibleTextRendering = true;
             // 
-            // dateTimeDOB
+            // dtpDateOfBirth
             // 
-            this.dateTimeDOB.Location = new System.Drawing.Point(603, 288);
-            this.dateTimeDOB.Name = "dateTimeDOB";
-            this.dateTimeDOB.Size = new System.Drawing.Size(192, 22);
-            this.dateTimeDOB.TabIndex = 22;
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(1471, 132);
+            this.dtpDateOfBirth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpDateOfBirth.Name = "dtpDateOfBirth";
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(192, 22);
+            this.dtpDateOfBirth.TabIndex = 22;
             // 
             // label11
             // 
             this.label11.AutoEllipsis = true;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(429, 278);
+            this.label11.Location = new System.Drawing.Point(1293, 123);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(124, 32);
             this.label11.TabIndex = 23;
@@ -227,7 +230,8 @@ namespace QLNS_Nhom1
             // panel1
             // 
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Location = new System.Drawing.Point(187, 12);
+            this.panel1.Location = new System.Drawing.Point(625, 14);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(512, 78);
             this.panel1.TabIndex = 24;
@@ -238,85 +242,113 @@ namespace QLNS_Nhom1
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(159, 23);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(217, 29);
+            this.label12.Size = new System.Drawing.Size(196, 29);
             this.label12.TabIndex = 0;
-            this.label12.Text = "THÊM NHÂN VIÊN";
+            this.label12.Text = "SỬA NHÂN VIÊN";
             // 
-            // btnCreate
+            // btnSua
             // 
-            this.btnCreate.Location = new System.Drawing.Point(0, 0);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(75, 23);
-            this.btnCreate.TabIndex = 32;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(847, 271);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(123, 53);
+            this.btnSua.TabIndex = 25;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // btnBack
+            // btnQuayLai
             // 
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(-2, 0);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(116, 33);
-            this.btnBack.TabIndex = 26;
-            this.btnBack.Text = "Quay Lại";
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLai.Location = new System.Drawing.Point(-3, 0);
+            this.btnQuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(116, 33);
+            this.btnQuayLai.TabIndex = 26;
+            this.btnQuayLai.Text = "Quay Lại";
+            this.btnQuayLai.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
-            // cbSalaryId
+            // cbxSalaryId
             // 
-            this.cbSalaryId.FormattingEnabled = true;
-            this.cbSalaryId.Location = new System.Drawing.Point(603, 131);
-            this.cbSalaryId.Name = "cbSalaryId";
-            this.cbSalaryId.Size = new System.Drawing.Size(192, 24);
-            this.cbSalaryId.TabIndex = 27;
+            this.cbxSalaryId.FormattingEnabled = true;
+            this.cbxSalaryId.Location = new System.Drawing.Point(1471, 188);
+            this.cbxSalaryId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxSalaryId.Name = "cbxSalaryId";
+            this.cbxSalaryId.Size = new System.Drawing.Size(192, 24);
+            this.cbxSalaryId.TabIndex = 27;
             // 
-            // cbPositionId
+            // dtgvNV
             // 
-            this.cbPositionId.FormattingEnabled = true;
-            this.cbPositionId.Location = new System.Drawing.Point(603, 182);
-            this.cbPositionId.Name = "cbPositionId";
-            this.cbPositionId.Size = new System.Drawing.Size(192, 24);
-            this.cbPositionId.TabIndex = 29;
+            this.dtgvNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvNV.Location = new System.Drawing.Point(16, 362);
+            this.dtgvNV.Margin = new System.Windows.Forms.Padding(4);
+            this.dtgvNV.Name = "dtgvNV";
+            this.dtgvNV.RowHeadersWidth = 51;
+            this.dtgvNV.Size = new System.Drawing.Size(1728, 305);
+            this.dtgvNV.TabIndex = 28;
             // 
-            // cbDepartmentId
+            // cbxDepartmentId
             // 
-            this.cbDepartmentId.FormattingEnabled = true;
-            this.cbDepartmentId.Location = new System.Drawing.Point(211, 343);
-            this.cbDepartmentId.Name = "cbDepartmentId";
-            this.cbDepartmentId.Size = new System.Drawing.Size(192, 24);
-            this.cbDepartmentId.TabIndex = 30;
+            this.cbxDepartmentId.FormattingEnabled = true;
+            this.cbxDepartmentId.Location = new System.Drawing.Point(211, 271);
+            this.cbxDepartmentId.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxDepartmentId.Name = "cbxDepartmentId";
+            this.cbxDepartmentId.Size = new System.Drawing.Size(192, 24);
+            this.cbxDepartmentId.TabIndex = 29;
             // 
-            // cbGender
+            // cbxPositionId
             // 
-            this.cbGender.FormattingEnabled = true;
-            this.cbGender.Location = new System.Drawing.Point(603, 232);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(192, 24);
-            this.cbGender.TabIndex = 31;
+            this.cbxPositionId.FormattingEnabled = true;
+            this.cbxPositionId.Location = new System.Drawing.Point(1020, 188);
+            this.cbxPositionId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxPositionId.Name = "cbxPositionId";
+            this.cbxPositionId.Size = new System.Drawing.Size(209, 24);
+            this.cbxPositionId.TabIndex = 30;
             // 
-            // btnThem
+            // radNam
             // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(351, 421);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(95, 34);
-            this.btnThem.TabIndex = 33;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.radNam.AutoSize = true;
+            this.radNam.Location = new System.Drawing.Point(1032, 123);
+            this.radNam.Margin = new System.Windows.Forms.Padding(4);
+            this.radNam.Name = "radNam";
+            this.radNam.Size = new System.Drawing.Size(56, 21);
+            this.radNam.TabIndex = 31;
+            this.radNam.TabStop = true;
+            this.radNam.Tag = "nam";
+            this.radNam.Text = "nam";
+            this.radNam.UseVisualStyleBackColor = true;
             // 
-            // fCreateEmployee
+            // radNu
+            // 
+            this.radNu.AutoSize = true;
+            this.radNu.Location = new System.Drawing.Point(1149, 123);
+            this.radNu.Margin = new System.Windows.Forms.Padding(4);
+            this.radNu.Name = "radNu";
+            this.radNu.Size = new System.Drawing.Size(45, 21);
+            this.radNu.TabIndex = 32;
+            this.radNu.TabStop = true;
+            this.radNu.Tag = "nu";
+            this.radNu.Text = "nu";
+            this.radNu.UseVisualStyleBackColor = true;
+            // 
+            // fRepairEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(833, 853);
-            this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.cbGender);
-            this.Controls.Add(this.cbDepartmentId);
-            this.Controls.Add(this.cbPositionId);
-            this.Controls.Add(this.cbSalaryId);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnCreate);
+            this.ClientSize = new System.Drawing.Size(1760, 853);
+            this.Controls.Add(this.radNu);
+            this.Controls.Add(this.radNam);
+            this.Controls.Add(this.cbxPositionId);
+            this.Controls.Add(this.cbxDepartmentId);
+            this.Controls.Add(this.dtgvNV);
+            this.Controls.Add(this.cbxSalaryId);
+            this.Controls.Add(this.btnQuayLai);
+            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dateTimeDOB);
+            this.Controls.Add(this.dtpDateOfBirth);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -328,11 +360,13 @@ namespace QLNS_Nhom1
             this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.txtEmployeeId);
-            this.Name = "fCreateEmployee";
-            this.Text = "Thêm Nhân Viên ";
+            this.Controls.Add(this.txtID);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "fRepairEmployee";
+            this.Text = "Sửa Nhân Viên ";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvNV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,7 +374,7 @@ namespace QLNS_Nhom1
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtEmployeeId;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.TextBox txtFullName;
@@ -352,82 +386,17 @@ namespace QLNS_Nhom1
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimeDOB;
+        private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.ComboBox cbSalaryId;
-        private System.Windows.Forms.ComboBox cbPositionId;
-        private System.Windows.Forms.ComboBox cbDepartmentId;
-
-
-        /// <summary>
-        /// Thêm data vào combox Position : trên UI
-        /// Created By : Nguyễn Văn Hiến
-        /// </summary>
-        private void AddComboboxPosition()
-        {
-            var positions = new List<Position>();
-            // lấy dữ liệu 
-            positions = PositonDAO.Instance.GetPositions();
-
-            // Đẩy dữ liệu vào combobox
-            foreach (var item in positions)
-            {
-                cbPositionId.Items.Add(item.PositionId.ToString());
-            }
-        }
-        /// <summary>
-        /// Thêm data vào combobox department :trên UI
-        /// Created By : Nguyễn Văn Hiến
-        /// </summary>
-        private void AddComboboxDepartment()
-        {
-            var deparments = new List<Department>();
-            // lấy dữ liệu 
-            deparments = DepartmentDAO.Instance.GetDepartments();
-
-            // Đẩy dữ liệu vào combobox
-            foreach (var item in deparments)
-            {
-                cbDepartmentId.Items.Add(item.DepartmentId);
-            }
-        }
-        /// <summary>
-        /// Thêm data vào combobox salary : trên UI
-        /// </summary>
-        private void AddComboboxSalary()
-        {
-            var salaries = new List<Salary>();
-            // lấy dữ liệu 
-            salaries = SalaryDAO.Instance.GetSalaries();
-
-            // Đẩy dữ liệu vào combobox
-            foreach (var item in salaries)
-            {
-                cbSalaryId.Items.Add(item.SalaryId.ToString());
-            }
-        }
-        private void AddComboboxGender()
-        {
-            cbGender.Items.Add("Nam");
-            cbGender.Items.Add("Nữ");
-            cbGender.Items.Add("Khác");
-        }
-
-        // Thêm dữ liệu vào combobox
-        public void AddCombobox()
-        {
-            AddComboboxPosition();
-            AddComboboxDepartment();
-            AddComboboxSalary();
-            AddComboboxGender();
-        }
-
-        private System.Windows.Forms.ComboBox cbGender;
-        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnQuayLai;
+        private System.Windows.Forms.ComboBox cbxSalaryId;
+        private System.Windows.Forms.DataGridView dtgvNV;
+        private System.Windows.Forms.ComboBox cbxDepartmentId;
+        private System.Windows.Forms.ComboBox cbxPositionId;
+        private System.Windows.Forms.RadioButton radNam;
+        private System.Windows.Forms.RadioButton radNu;
     }
-
 }

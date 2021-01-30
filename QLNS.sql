@@ -51,6 +51,25 @@ BEGIN
 END
 GO
 
+CREATE PROC UpdateEmployee
+	
+	@FullName nvarchar(20),
+	@DateOfBirth DATE,
+	@Address NVARCHAR(100),
+	@Gender nchar(3),
+	@PhoneNumber CHAR(10),
+	@SalaryId varchar(10),
+	@DepartmentId varchar(10),
+	@PositionId varchar(10),
+	@Id INT
+AS
+BEGIN
+	UPDATE dbo.Employee SET FullName=@FullName,DateOfBirth=@DateOfBirth,Address=@Address,Gender=@Gender,PhoneNumber=@PhoneNumber,SalaryId=@SalaryId,DepartmentId=@DepartmentId,PositionId=@PositionId WHERE Id=@Id
+END
+GO
+
+EXEC UpdateEmployee 'dat','08/08/2000','ha noi','nam','0911111111','1','1','1',9
+
 
 -- Created By : Nguyễn Văn Hiến
 CREATE PROC InsertEmployee

@@ -47,6 +47,12 @@ namespace QLNS_Nhom1.Models
         public string DepartmentId { get; set; }
         // Mã lương 
         public string SalaryId { get; set; }
+
+        /// <summary>
+        /// support get data
+        /// created by Đạt
+        /// </summary>
+        /// <param name="row"></param>
     }
 
 }

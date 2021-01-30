@@ -56,6 +56,12 @@
     <Compile Include="DAO\SalaryDAO.cs" />
     <Compile Include="DataAcessLayer\DataProvider.cs" />
     <Compile Include="DataAcessLayer\AccountDAL.cs" />
+    <Compile Include="fRepairEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fRepairEmployee.Designer.cs">
+      <DependentUpon>fRepairEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="fCreateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fRepairEmployee.resx">
+      <DependentUpon>fRepairEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

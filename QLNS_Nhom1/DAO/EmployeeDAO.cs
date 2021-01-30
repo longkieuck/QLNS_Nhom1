@@ -1,13 +1,7 @@
-﻿using Dapper;
-using QLNS_Nhom1.DataAcessLayer;
+﻿using QLNS_Nhom1.DataAcessLayer;
 using QLNS_Nhom1.Models;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLNS_Nhom1.DAO
 {
@@ -75,6 +69,23 @@ namespace QLNS_Nhom1.DAO
                 List.Add(employee);
             }
             return List;
+        }
+
+        /// <summary>
+        /// Cập nhật nhân viên 
+        /// </summary>
+        /// Creted By : Đạt 
+        /// Merged  By : Hiến
+        /// <param name="employee"></param>
+        /// <returns></returns>
+        public bool UpdateNv(Employee employee)
+        {
+            string query = string.Format(" EXEC UpdateEmployee @FullName , @DateOfBirth , @Address " +
+                ", @Gender , @PhoneNumber , @SalaryId , @DepartmentId , @PositionId , @Id");
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { employee.FullName, employee.DateOfBirth, employee.Address,
+                employee.Gender, employee.PhoneNumber, employee.SalaryId, employee.DepartmentId, employee.PositionId, employee.Id });
+
+            return result > 0;
         }
 
     }

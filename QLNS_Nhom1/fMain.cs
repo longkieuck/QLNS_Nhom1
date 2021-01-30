@@ -18,5 +18,20 @@ namespace QLNS_Nhom1
 
             InitializeComponent();
         }
+        private void fMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+            // khơi tạo form sửa ,mở form
+            fRepairEmployee f = new fRepairEmployee();
+            f.Show();
+
+            // đóng lại cửa sổ main
+            //this.Close();
+        }
     }
 }

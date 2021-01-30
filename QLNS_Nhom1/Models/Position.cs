@@ -27,4 +27,6 @@ namespace QLNS_Nhom1.Models
         public string PositionName { get; set; }
 
     }
+
+    
 }
