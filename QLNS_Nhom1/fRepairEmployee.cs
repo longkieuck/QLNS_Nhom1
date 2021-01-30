@@ -10,6 +10,7 @@ namespace QLNS_Nhom1
         public fRepairEmployee()
         {
             InitializeComponent();
+            Load();
         }
         void Load()
         {

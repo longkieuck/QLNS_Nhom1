@@ -15,7 +15,6 @@ namespace QLNS_Nhom1
     {
         public fMain()
         {
-
             InitializeComponent();
         }
         private void fMain_Load(object sender, EventArgs e)
@@ -32,6 +31,13 @@ namespace QLNS_Nhom1
 
             // đóng lại cửa sổ main
             //this.Close();
+        }
+
+        private void TaoHoSo_Click(object sender, EventArgs e)
+        {
+            fCreateEmployee f = new fCreateEmployee();
+            f.Show();
+
         }
     }
 }
