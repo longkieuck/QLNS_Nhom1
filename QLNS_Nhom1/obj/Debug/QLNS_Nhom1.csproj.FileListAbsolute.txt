@@ -43,3 +43,5 @@ E:\k2_nam3\thuctapnhom\nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.csproj.Co
 E:\k2_nam3\thuctapnhom\nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.exe
 E:\k2_nam3\thuctapnhom\nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.pdb
 C:\Users\Dell\Desktop\Thuc tap Nhom\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.fRepairEmployee.resources
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.fCreateEmployee.resources
+C:\Users\longk\source\repos\QLNS_Nhom1\QLNS_Nhom1\obj\Debug\QLNS_Nhom1.fRepairEmployee.resources
