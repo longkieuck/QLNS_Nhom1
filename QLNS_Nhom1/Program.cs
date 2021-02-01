@@ -27,8 +27,13 @@ namespace QLNS_Nhom1
             // Trả về dữ liệu 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             //Application.Run(new fMain());
             Application.Run(new fMain());
+=======
+            Application.Run(new fMain());
+            //Application.Run(new fCreateEmployee());
+>>>>>>> origin/van
         }
     }
 }
