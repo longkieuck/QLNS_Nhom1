@@ -17,18 +17,18 @@ namespace QLNS_Nhom1.DataAcessLayer
         /// <summary>
         /// Đây là connection String phù hợp với máy của hiến
         /// </summary>
-        private string connectionString = "Data Source=DESKTOP-BLKHC2K\\SQLEXPRESS;Initial Catalog=QLNS;Integrated Security=True";
+        private string connectionString = "Server=DESKTOP-6N6LFDC\\SQLEXPRESS;Database=QLNS;User ID=nhom1;pwd=nhom1";
 
         /// <summary>
         /// Long
         /// </summary>
-        private string connectionSTR = "Data Source=.\\sqlexpress01;Initial Catalog=QLNS;Integrated Security=True";
+        private string connectionSTR = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
             private set { DataProvider.instance = value; }
         }
-        
+
         private DataProvider() { }
         /// <summary>
         /// ExcuteQuery lấy dữ liệu dạng bảng : Datatable 

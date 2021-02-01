@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -17,8 +17,6 @@ namespace QLNS_Nhom1.Models
         public Salary(DataRow row)
         {
             this.SalaryId = row["SalaryId"].ToString();
-            this.BaseSalary = float.Parse(row["BaseSalary"].ToString());
-            this.LevelSalary = float.Parse(row["LevelSalary"].ToString());
         }
 
         // Mã lương

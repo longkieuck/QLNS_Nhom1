@@ -1,3 +1,4 @@
+
 ﻿using QLNS_Nhom1.DataAcessLayer;
 using QLNS_Nhom1.Models;
 using System.Collections.Generic;
@@ -54,7 +55,6 @@ namespace QLNS_Nhom1
             this.cbPositionId = new System.Windows.Forms.ComboBox();
             this.cbDepartmentId = new System.Windows.Forms.ComboBox();
             this.cbGender = new System.Windows.Forms.ComboBox();
-            this.btnThem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -244,7 +244,6 @@ namespace QLNS_Nhom1
             // 
             // btnCreate
             // 
-<<<<<<< HEAD
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.Location = new System.Drawing.Point(310, 415);
             this.btnCreate.Name = "btnCreate";
@@ -253,12 +252,6 @@ namespace QLNS_Nhom1
             this.btnCreate.Text = "Thêm";
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
-=======
-            this.btnCreate.Location = new System.Drawing.Point(0, 0);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(75, 23);
-            this.btnCreate.TabIndex = 32;
->>>>>>> hien2
             // 
             // btnBack
             // 
@@ -303,28 +296,11 @@ namespace QLNS_Nhom1
             this.cbGender.Size = new System.Drawing.Size(192, 24);
             this.cbGender.TabIndex = 31;
             // 
-<<<<<<< HEAD
-=======
-            // btnThem
-            // 
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(351, 421);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(95, 34);
-            this.btnThem.TabIndex = 33;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
-            // 
->>>>>>> hien2
             // fCreateEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 853);
-<<<<<<< HEAD
-=======
-            this.Controls.Add(this.btnThem);
->>>>>>> hien2
             this.Controls.Add(this.cbGender);
             this.Controls.Add(this.cbDepartmentId);
             this.Controls.Add(this.cbPositionId);
@@ -388,7 +364,7 @@ namespace QLNS_Nhom1
         {
             var positions = new List<Position>();
             // lấy dữ liệu 
-            positions = PositonDAO.Instance.GetPositions();
+            //positions = PositonDAO.Instance.GetPositions();
 
             // Đẩy dữ liệu vào combobox
             foreach (var item in positions)
@@ -404,7 +380,7 @@ namespace QLNS_Nhom1
         {
             var deparments = new List<Department>();
             // lấy dữ liệu 
-            deparments = DepartmentDAO.Instance.GetDepartments();
+            //deparments = DepartmentDAO.Instance.GetDepartments();
 
             // Đẩy dữ liệu vào combobox
             foreach (var item in deparments)
@@ -419,7 +395,7 @@ namespace QLNS_Nhom1
         {
             var salaries = new List<Salary>();
             // lấy dữ liệu 
-            salaries = SalaryDAO.Instance.GetSalaries();
+            //salaries = SalaryDAO.Instance.GetSalaries();
 
             // Đẩy dữ liệu vào combobox
             foreach (var item in salaries)
@@ -444,7 +420,6 @@ namespace QLNS_Nhom1
         }
 
         private System.Windows.Forms.ComboBox cbGender;
-        private System.Windows.Forms.Button btnThem;
     }
 
 }

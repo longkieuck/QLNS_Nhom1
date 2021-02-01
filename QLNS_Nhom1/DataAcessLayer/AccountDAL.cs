@@ -23,7 +23,7 @@ namespace QLNS_Nhom1.DataAcessLayer
         {
             string query = "QLNS_Login @username , @pass";
 
-            DataTable result = DataProvider.Instance.ExecuteQuery(query,new object[] { userName,pass});
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, pass });
 
             return result.Rows.Count > 0;
         }

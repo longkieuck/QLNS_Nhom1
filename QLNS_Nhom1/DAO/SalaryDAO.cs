@@ -1,4 +1,4 @@
-﻿using Dapper;
+using Dapper;
 using QLNS_Nhom1.DataAcessLayer;
 using QLNS_Nhom1.Models;
 using System;

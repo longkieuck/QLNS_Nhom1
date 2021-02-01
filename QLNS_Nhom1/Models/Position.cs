@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -17,9 +17,10 @@ namespace QLNS_Nhom1.Models
         public Position(DataRow row)
         {
             this.PositionId = row["PositionId"].ToString();
-            this.PositionName = row["PositionName"].ToString();
         }
-
+        public Position()
+        {
+        }
         // Mã chức vụ
         public string PositionId { get; set; }
         

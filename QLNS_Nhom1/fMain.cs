@@ -1,4 +1,6 @@
-﻿using QLNS_Nhom1.DataAcessLayer;
+using QLNS_Nhom1;
+using QLNS_Nhom1.DataAcessLayer;
+using QLNS_Nhom1.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -92,8 +94,7 @@ namespace QLNS_Nhom1
             List<Employee> listEmployee = SearchEmployeeByName(txtEmployee.Text);
             LoadEmployeeList(listEmployee);
         }
-    }
-}
+    
         private void btnEdit_Click(object sender, EventArgs e)
         {
 

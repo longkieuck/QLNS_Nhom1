@@ -27,7 +27,7 @@ namespace QLNS_Nhom1
             // Trả về dữ liệu 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fMain());
+            Application.Run(new fRepairEmployee());
             //Application.Run(new fCreateEmployee());
         }
     }

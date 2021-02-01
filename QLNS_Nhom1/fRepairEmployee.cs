@@ -1,7 +1,16 @@
 using QLNS_Nhom1.DAO;
 using QLNS_Nhom1.Models;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace QLNS_Nhom1
 {
@@ -12,6 +21,7 @@ namespace QLNS_Nhom1
             InitializeComponent();
             Load();
         }
+
         void Load()
         {
             LoadListEmployee();
@@ -41,7 +51,7 @@ namespace QLNS_Nhom1
             //cb.DataSource = EmployeeDAO.Instance.GetListDepartmentId();
             //cb.DisplayMember = "DepartmentId";
 
-            var departments = DepartmentDAO.Instance.GetDepartments();
+            var departments = EmployeeDAO.Instance.GetListDepartmentId();
             foreach (var item in departments)
             {
 
@@ -54,19 +64,22 @@ namespace QLNS_Nhom1
 
             //cb.DataSource = EmployeeDAO.Instance.GetListPositiontId();
             //cb.DisplayMember = "PositonId";
-            var positions = PositonDAO.Instance.GetPositions();
+            var positions = EmployeeDAO.Instance.GetListPositiontId();
             foreach (var item in positions)
             {
+
                 cb.Items.Add(item.PositionId);
             }
 
 
+
         }
+
         void LoadIntoCbxSalaryId(ComboBox cb)
         {
             //cb.DataSource = EmployeeDAO.Instance.GetListSalaryId();
             //cb.DisplayMember = "SalaryId";
-            var salarys = SalaryDAO.Instance.GetSalaries();
+            var salarys = EmployeeDAO.Instance.GetListSalaryId();
             foreach (var item in salarys)
             {
                 cb.Items.Add(item.SalaryId);
@@ -98,8 +111,15 @@ namespace QLNS_Nhom1
             // of Male by handling the CheckedChanged event on Male:
             radNu.CheckedChanged += (s, args) => radNam.Checked = !radNu.Checked;
         }
+
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
         private void btnSua_Click(object sender, EventArgs e)
         {
+            long check;
             if (MessageBox.Show("Bạn có thật sự muốn sửa nhân viên có tên là: " + txtFullName.Text, "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
                 if (txtFullName.Text == "" || txtAddress.Text == "" || txtID.Text == "" || txtPhoneNumber.Text == "")
@@ -130,13 +150,5 @@ namespace QLNS_Nhom1
                 }
             }
         }
-
-        private void btnQuayLai_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            fMain f = new fMain();
-            f.Show();
-        }
-
     }
 }

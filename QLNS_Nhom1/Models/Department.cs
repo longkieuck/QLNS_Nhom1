@@ -13,33 +13,23 @@ namespace QLNS_Nhom1.Models
     /// </summary>
     class Department
     {
-        private DataRow dataRow;
-        private string departmentid;
-        private string departmentidname;
+        // Mã phòng ban
+        public string DepartmentId { get; set; }
+        // Tên Phòng ban
+        public string DepartmentIdName { get; set; }
 
-        public Department() {}
+        public Department(string DepartmentId)
+        {
+            this.DepartmentId = DepartmentId;
+        }
+        public Department(DataRow row)
+        {
+            this.DepartmentId = row["DepartmentId"].ToString();
+        }
         public Department(string departmentid, string departmentname)
         {
             this.DepartmentId = departmentid;
             this.DepartmentIdName = departmentname;
-        }
-        public Department(DataRow dataRow)
-        {
-            this.DepartmentId = dataRow["DepartmentId"].ToString();
-            this.DepartmentIdName = dataRow["DepartmentIdName"].ToString();
-        }
-
-        // Mã phòng ban
-        public string DepartmentId 
-        { 
-            get { return departmentid; }
-            set { departmentid = value; }
-        }
-        // Tên Phòng ban
-        public string DepartmentIdName 
-        {
-            get { return departmentidname; }
-            set { departmentidname = value; }
         }
 
     }
