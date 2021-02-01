@@ -15,7 +15,7 @@ namespace QLNS_Nhom1
     {
         SqlConnection connection;
         SqlCommand command;
-        string str = "Data Source =.\\SQLEXPRESS;Initial Catalog = QLNS; Integrated Security = True";
+        string str = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
         void Loaddata()
