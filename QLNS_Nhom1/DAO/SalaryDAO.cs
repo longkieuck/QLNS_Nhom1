@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using QLNS_Nhom1.DataAcessLayer;
 using QLNS_Nhom1.Models;
 using System;
 using System.Collections.Generic;
@@ -23,9 +24,6 @@ namespace QLNS_Nhom1.DAO
             private set { SalaryDAO.instance = value; }
         }
         private SalaryDAO() { }
-
-        private string connectionString = "Server=DESKTOP-6N6LFDC\\SQLEXPRESS;Database=QLNS;User ID=nhom1;pwd=nhom1";
-
         /// <summary>
         /// Lấy danh sách các thông tin đầy đủ của các kiểu lương :mã lương, lương cơ bản , hệ số 
         /// </summary>
@@ -33,12 +31,14 @@ namespace QLNS_Nhom1.DAO
         /// <returns> Danh sách các loại lương</returns>
         public List<Salary> GetSalaries()
         {
-            var salaries = new List<Salary>();
-            IDbConnection dbConnection = new SqlConnection(connectionString);
-
-            salaries = dbConnection.Query<Salary>("Select * from Salary").ToList();
-
-            return salaries;
+            List<Salary> List = new List<Salary>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Salary");
+            foreach (DataRow item in data.Rows)
+            {
+                Salary salary = new Salary(item);
+                List.Add(salary);
+            }
+            return List;
         }
     }
 }

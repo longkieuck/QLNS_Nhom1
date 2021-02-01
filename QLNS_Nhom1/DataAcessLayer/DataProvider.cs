@@ -36,11 +36,12 @@ namespace QLNS_Nhom1.DataAcessLayer
         /// <param name="query">truy vấn sql</param>
         /// <param name="parameter"></param>
         /// <returns></returns>
+
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
 
@@ -74,7 +75,7 @@ namespace QLNS_Nhom1.DataAcessLayer
         {
             int data = 0;
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
 
@@ -106,7 +107,7 @@ namespace QLNS_Nhom1.DataAcessLayer
         {
             object data = 0;
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
 

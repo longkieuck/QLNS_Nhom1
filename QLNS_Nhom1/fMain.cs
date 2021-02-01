@@ -1,5 +1,4 @@
 ﻿using QLNS_Nhom1.DataAcessLayer;
-using QLNS_Nhom1.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,3 +94,23 @@ namespace QLNS_Nhom1
         }
     }
 }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+            // khơi tạo form sửa ,mở form
+            fRepairEmployee f = new fRepairEmployee();
+            f.Show();
+
+            // đóng lại cửa sổ main
+            //this.Close();
+        }
+
+        private void TaoHoSo_Click(object sender, EventArgs e)
+        {
+            fCreateEmployee f = new fCreateEmployee();
+            f.Show();
+
+        }
+    }
+}
+
