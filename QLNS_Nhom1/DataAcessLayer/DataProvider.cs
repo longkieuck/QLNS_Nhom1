@@ -37,6 +37,7 @@ namespace QLNS_Nhom1.DataAcessLayer
         /// <param name="parameter"></param>
         /// <returns></returns>
 
+
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();

@@ -112,6 +112,29 @@ namespace QLNS_Nhom1
             f.Show();
 
         }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            frmDelete frm = new frmDelete();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            fRepairEmployee f = new fRepairEmployee();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void TaoHoSo_Click_1(object sender, EventArgs e)
+        {
+            fCreateEmployee f = new fCreateEmployee();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
 

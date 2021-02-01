@@ -19,16 +19,18 @@ namespace QLNS_Nhom1
         
         static void Main()
         {
-            //var connectionString = "Server = DESKTOP-6N6LFDC\\SQLEXPRESS;Database=QLNS;User ID=nhom1;pwd=nhom1";
-            //IDbConnection dbConnection = new SqlConnection(connectionString);
+            var connectionString = "Server=DESKTOP-0L1VLRS\\SQLEXPRESS01;Database=QLNS;User ID=nhom1;pwd=nhom1";
+            IDbConnection dbConnection = new SqlConnection(connectionString);
+
+            // Khởi tạo commadText
+            //var customers = dbConnection.Query<Employee>("Select * From [Employee]");
 
             //// Khởi tạo commadText
             //var customers = dbConnection.Query<Employee>("Select * From [Employee]");
             // Trả về dữ liệu 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fRepairEmployee());
-            //Application.Run(new fCreateEmployee());
+            Application.Run(new fLogin());
         }
     }
 }

@@ -37,6 +37,12 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lstEmployee = new System.Windows.Forms.ListView();
+            this.colId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colFullName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colGender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colDateOfBirth = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -46,12 +52,6 @@
             this.HuongDan = new System.Windows.Forms.ToolStripMenuItem();
             this.DangXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.colId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colFullName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colGender = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colDateOfBirth = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -78,7 +78,7 @@
             this.cbDepartment.FormattingEnabled = true;
             this.cbDepartment.Location = new System.Drawing.Point(547, 124);
             this.cbDepartment.Name = "cbDepartment";
-            this.cbDepartment.Size = new System.Drawing.Size(121, 21);
+            this.cbDepartment.Size = new System.Drawing.Size(121, 28);
             this.cbDepartment.TabIndex = 6;
             this.cbDepartment.SelectedIndexChanged += new System.EventHandler(this.cbDepartment_SelectedIndexChanged);
             // 
@@ -97,7 +97,7 @@
             // 
             this.txtEmployee.Location = new System.Drawing.Point(700, 125);
             this.txtEmployee.Name = "txtEmployee";
-            this.txtEmployee.Size = new System.Drawing.Size(116, 20);
+            this.txtEmployee.Size = new System.Drawing.Size(116, 26);
             this.txtEmployee.TabIndex = 4;
             // 
             // panel4
@@ -117,6 +117,7 @@
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -126,6 +127,7 @@
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
             // 
             // panel3
             // 
@@ -152,79 +154,6 @@
             this.lstEmployee.TabIndex = 0;
             this.lstEmployee.UseCompatibleStateImageBehavior = false;
             this.lstEmployee.View = System.Windows.Forms.View.Details;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(75, 31);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(892, 62);
-            this.panel2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(191, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(388, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Phầm mềm quản lý nhân sự";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TrangChu,
-            this.ThongTinLuongNV,
-            this.TaoHoSo,
-            this.HuongDan,
-            this.DangXuat});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1051, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // TrangChu
-            // 
-            this.TrangChu.Name = "TrangChu";
-            this.TrangChu.Size = new System.Drawing.Size(76, 20);
-            this.TrangChu.Text = "Trang Chủ ";
-            // 
-            // ThongTinLuongNV
-            // 
-            this.ThongTinLuongNV.Name = "ThongTinLuongNV";
-            this.ThongTinLuongNV.Size = new System.Drawing.Size(167, 20);
-            this.ThongTinLuongNV.Text = "Thông Tin Lương Nhân Viên";
-            // 
-            // TaoHoSo
-            // 
-            this.TaoHoSo.Name = "TaoHoSo";
-            this.TaoHoSo.Size = new System.Drawing.Size(100, 20);
-            this.TaoHoSo.Text = "Tạo Hồ Sơ Mới ";
-            // 
-            // HuongDan
-            // 
-            this.HuongDan.Name = "HuongDan";
-            this.HuongDan.Size = new System.Drawing.Size(83, 20);
-            this.HuongDan.Text = "Hướng Dẫn ";
-            // 
-            // DangXuat
-            // 
-            this.DangXuat.Name = "DangXuat";
-            this.DangXuat.Size = new System.Drawing.Size(74, 20);
-            this.DangXuat.Text = "Đăng Xuât";
-            // 
-            // directorySearcher1
-            // 
-            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
             // colId
             // 
@@ -253,6 +182,81 @@
             // 
             this.colDateOfBirth.Text = "Ngày Sinh";
             this.colDateOfBirth.Width = 100;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(75, 31);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(892, 62);
+            this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grip;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(191, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(544, 46);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Phầm mềm quản lý nhân sự";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TrangChu,
+            this.ThongTinLuongNV,
+            this.TaoHoSo,
+            this.HuongDan,
+            this.DangXuat});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1051, 33);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // TrangChu
+            // 
+            this.TrangChu.Name = "TrangChu";
+            this.TrangChu.Size = new System.Drawing.Size(112, 29);
+            this.TrangChu.Text = "Trang Chủ ";
+            // 
+            // ThongTinLuongNV
+            // 
+            this.ThongTinLuongNV.Name = "ThongTinLuongNV";
+            this.ThongTinLuongNV.Size = new System.Drawing.Size(249, 29);
+            this.ThongTinLuongNV.Text = "Thông Tin Lương Nhân Viên";
+            // 
+            // TaoHoSo
+            // 
+            this.TaoHoSo.Name = "TaoHoSo";
+            this.TaoHoSo.Size = new System.Drawing.Size(153, 29);
+            this.TaoHoSo.Text = "Tạo Hồ Sơ Mới ";
+            this.TaoHoSo.Click += new System.EventHandler(this.TaoHoSo_Click_1);
+            // 
+            // HuongDan
+            // 
+            this.HuongDan.Name = "HuongDan";
+            this.HuongDan.Size = new System.Drawing.Size(126, 29);
+            this.HuongDan.Text = "Hướng Dẫn ";
+            // 
+            // DangXuat
+            // 
+            this.DangXuat.Name = "DangXuat";
+            this.DangXuat.Size = new System.Drawing.Size(112, 29);
+            this.DangXuat.Text = "Đăng Xuât";
+            // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
             // fMain
             // 
@@ -303,4 +307,3 @@
         private System.Windows.Forms.ColumnHeader colDateOfBirth;
     }
 }
-
