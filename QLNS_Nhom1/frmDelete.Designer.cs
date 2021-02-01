@@ -59,15 +59,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(213, 265);
+            this.label1.Location = new System.Drawing.Point(15, 262);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.Size = new System.Drawing.Size(50, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "ID";
+            this.label1.Text = "Nhập ID:";
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(435, 255);
+            this.btnXoa.Location = new System.Drawing.Point(224, 252);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 10;
@@ -77,7 +77,7 @@
             // 
             // tbID
             // 
-            this.tbID.Location = new System.Drawing.Point(260, 259);
+            this.tbID.Location = new System.Drawing.Point(71, 255);
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(121, 20);
             this.tbID.TabIndex = 20;
@@ -93,7 +93,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmDelete";
             this.Text = "Delete Employee";
-            this.Load += new System.EventHandler(this.frmDelete_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);

@@ -8,35 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using QLNS_Nhom1.DAO;
 
 namespace QLNS_Nhom1
 {
     public partial class frmDelete : Form
     {
-        SqlConnection connection;
-        SqlCommand command;
-        string str = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
-        SqlDataAdapter adapter = new SqlDataAdapter();
-        DataTable table = new DataTable();
-        void Loaddata()
-        {
-            command = connection.CreateCommand();
-            command.CommandText = "select * from dbo.Employee";
-            adapter.SelectCommand = command;
-            table.Clear();
-            adapter.Fill(table);
-            dgv.DataSource = table;
-        }
         public frmDelete()
         {
             InitializeComponent();
+            LoadListEmployee();
         }
-
-        private void frmDelete_Load(object sender, EventArgs e)
+        /// <summary>
+        /// đổ dữ liệu vào girdview
+        /// created by dat
+        /// </summary>
+        void LoadListEmployee()
         {
-            connection = new SqlConnection(str);
-            connection.Open();
-            Loaddata();
+            dgv.DataSource = EmployeeDAO.Instance.GetListEmployee();
         }
 
         private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -48,10 +37,21 @@ namespace QLNS_Nhom1
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            command = connection.CreateCommand();
-            command.CommandText = "delete from dbo.Employee where Id = '"+tbID.Text+"'";
-            command.ExecuteNonQuery();
-            Loaddata();
+            int idEmployee;
+            Int32.TryParse(tbID.Text.Trim(), out idEmployee);
+            try
+            {
+                EmployeeDAO.Instance.Delete(idEmployee);
+                MessageBox.Show("Xóa thành công");
+                LoadListEmployee();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                LoadListEmployee();
+            }
         }
+
+
     }
 }

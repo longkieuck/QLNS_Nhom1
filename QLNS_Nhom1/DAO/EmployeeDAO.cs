@@ -86,6 +86,12 @@ namespace QLNS_Nhom1.DAO
 
             return result > 0;
         }
+        public bool Delete(int idEmployee)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("Delete from dbo.Employee where Id ='" + idEmployee + "'", new object[] { idEmployee });
+
+            return result > 0;
+        }
 
         /// <summary>
         /// lay ds ma phong ban
