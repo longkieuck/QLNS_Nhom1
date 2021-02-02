@@ -66,7 +66,6 @@ namespace QLNS_Nhom1
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(145, 29);
             this.txtID.TabIndex = 0;
-            this.txtID.Text = "1";
             this.txtID.UseWaitCursor = true;
             // 
             // txtAddress
@@ -241,11 +240,12 @@ namespace QLNS_Nhom1
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Yellow;
             this.panel1.Controls.Add(this.label12);
             this.panel1.Location = new System.Drawing.Point(469, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(384, 64);
+            this.panel1.Size = new System.Drawing.Size(442, 64);
             this.panel1.TabIndex = 24;
             // 
             // label12
@@ -276,7 +276,7 @@ namespace QLNS_Nhom1
             // btnQuayLai
             // 
             this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuayLai.Location = new System.Drawing.Point(-2, 0);
+            this.btnQuayLai.Location = new System.Drawing.Point(0, -1);
             this.btnQuayLai.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(113, 27);
@@ -298,10 +298,10 @@ namespace QLNS_Nhom1
             // dtgvNV
             // 
             this.dtgvNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvNV.Location = new System.Drawing.Point(-2, 299);
+            this.dtgvNV.Location = new System.Drawing.Point(47, 297);
             this.dtgvNV.Name = "dtgvNV";
             this.dtgvNV.RowHeadersWidth = 51;
-            this.dtgvNV.Size = new System.Drawing.Size(1296, 236);
+            this.dtgvNV.Size = new System.Drawing.Size(1201, 236);
             this.dtgvNV.TabIndex = 28;
             // 
             // cbxDepartmentId
@@ -327,11 +327,11 @@ namespace QLNS_Nhom1
             this.radNam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radNam.Location = new System.Drawing.Point(774, 100);
             this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(55, 23);
+            this.radNam.Size = new System.Drawing.Size(59, 23);
             this.radNam.TabIndex = 31;
             this.radNam.TabStop = true;
             this.radNam.Tag = "nam";
-            this.radNam.Text = "nam";
+            this.radNam.Text = "Nam";
             this.radNam.UseVisualStyleBackColor = true;
             // 
             // radNu
@@ -340,11 +340,11 @@ namespace QLNS_Nhom1
             this.radNu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radNu.Location = new System.Drawing.Point(862, 100);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(43, 23);
+            this.radNu.Size = new System.Drawing.Size(49, 23);
             this.radNu.TabIndex = 32;
             this.radNu.TabStop = true;
             this.radNu.Tag = "nu";
-            this.radNu.Text = "nu";
+            this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = true;
             // 
             // fRepairEmployee

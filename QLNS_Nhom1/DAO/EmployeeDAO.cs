@@ -77,7 +77,7 @@ namespace QLNS_Nhom1.DAO
             return List;
         }
 
-        public bool UpdateNv(Employee employee)
+        public bool UpdateEmployee(Employee employee)
         {
             string query = string.Format(" EXEC UpdateEmployee @FullName , @DateOfBirth , @Address " +
                 ", @Gender , @PhoneNumber , @SalaryId , @DepartmentId , @PositionId , @Id");

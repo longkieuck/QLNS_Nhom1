@@ -28,7 +28,6 @@ namespace QLNS_Nhom1
             LoadIntoCbxDepartmentId(cbxDepartmentId);
             LoadIntoCbxPositionId(cbxPositionId);
             LoadIntoCbxSalaryId(cbxSalaryId);
-            
             Reset();
             AddBindingEmployee();
 
@@ -115,9 +114,9 @@ namespace QLNS_Nhom1
                 dtpDateOfBirth.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "DateOfBirth", true, DataSourceUpdateMode.Never));
                 var fmaleBinding = new Binding("Checked", dtgvNV.DataSource, "Gender", true, DataSourceUpdateMode.Never);
                 // when Formatting (reading from datasource), return true for Female, else false
-                fmaleBinding.Format += (s, args) => args.Value = ((string)args.Value) == "nu ";
+                fmaleBinding.Format += (s, args) => args.Value = ((string)args.Value) == "Nữ ";
                 // when Parsing (writing to datasource), return "Male" for true, else "Fmale"
-                fmaleBinding.Parse += (s, args) => args.Value = (bool)args.Value ? "nu " : "nam";
+                fmaleBinding.Parse += (s, args) => args.Value = (bool)args.Value ? "Nữ " : "Nam";
                 // add the binding
                 radNu.DataBindings.Add(fmaleBinding);
 
@@ -146,17 +145,20 @@ namespace QLNS_Nhom1
                     employee.FullName = txtFullName.Text;
                     employee.DateOfBirth = dtpDateOfBirth.Value;
                     employee.Address = txtAddress.Text;
-                    employee.Gender = radNam.Checked ? "nam" : "nu";
+                    employee.Gender = radNam.Checked ? "Nam" : "Nữ";
                     employee.PhoneNumber = txtPhoneNumber.Text;
                     employee.PositionId = cbxPositionId.Text;
                     employee.SalaryId = cbxSalaryId.Text;
                     employee.DepartmentId = cbxDepartmentId.Text;
                     employee.Id = Int32.Parse(txtID.Text);
-                    if (EmployeeDAO.Instance.UpdateNv(employee))
+                    if (EmployeeDAO.Instance.UpdateEmployee(employee))
                     {
                         MessageBox.Show("Sửa nhân viên thành công! ");
-                        LoadListEmployee();
-                      
+                        this.Hide();
+                        this.Close();
+                        fRepairEmployee f = new fRepairEmployee();
+                        f.ShowDialog();
+                        this.Show();
                     }
                     else
                     {
