@@ -135,6 +135,18 @@ namespace QLNS_Nhom1
             f.ShowDialog();
             this.Show();
         }
+
+        private void lỗiHayGặpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            gioithieu fgioithieu = new gioithieu();
+            fgioithieu.Show();
+        }
+
+        private void cácChứcNăngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cacchucnang fcacchucnang = new cacchucnang();
+            fcacchucnang.Show();
+        }
     }
 }
 
