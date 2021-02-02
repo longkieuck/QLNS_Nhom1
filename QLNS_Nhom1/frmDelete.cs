@@ -35,21 +35,26 @@ namespace QLNS_Nhom1
             tbID.Text = dgv.Rows[i].Cells[0].Value.ToString();
         }
 
+          
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int idEmployee;
-            Int32.TryParse(tbID.Text.Trim(), out idEmployee);
-            try
+            if (MessageBox.Show("Bạn có thật sự muốn xóa nhân viên có mã id là: " + tbID.Text, "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                EmployeeDAO.Instance.Delete(idEmployee);
-                MessageBox.Show("Xóa thành công");
-                LoadListEmployee();
+                int idEmployee;
+                Int32.TryParse(tbID.Text.Trim(), out idEmployee);
+                try
+                {
+                    EmployeeDAO.Instance.Delete(idEmployee);
+                    MessageBox.Show("Xóa thành công");
+                    LoadListEmployee();
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show("Có lỗi xảy ra" + err.ToString());
+                    LoadListEmployee();
+                }
             }
-            catch (Exception err)
-            {
-                MessageBox.Show("Có lỗi xảy ra" + err.ToString());
-                LoadListEmployee();
-            }
+           
         }
 
 
