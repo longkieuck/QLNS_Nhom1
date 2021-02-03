@@ -380,7 +380,7 @@ namespace QLNS_Nhom1
             // Đẩy dữ liệu vào combobox
             foreach (var item in positions)
             {
-                cbPositionId.Items.Add(item.PositionId.ToString());
+                cbPositionId.Items.Add(item.PositionName.ToString());
             }
         }
         /// <summary>

@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationCore\ServiceResult.cs" />
     <Compile Include="DAO\DepartmentDAO.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DAO\PositonDAO.cs" />
@@ -134,8 +135,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataTranferObject\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

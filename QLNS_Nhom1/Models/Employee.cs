@@ -44,6 +44,7 @@ namespace QLNS_Nhom1.Models
         // Mã Nhân viên 
         public int Id { get; set; }
         // Tên 
+        
         public string FullName { get; set; }
         // Giới tính
         public string Gender { get; set; }
