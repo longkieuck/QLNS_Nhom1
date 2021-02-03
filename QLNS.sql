@@ -173,6 +173,3 @@ BEGIN
 END
 
 select * from Employee where [dbo].[GetUnsignString](FullName) like N'%' + [dbo].[GetUnsignString](N'Nguyen') + '%'
-
-
-
