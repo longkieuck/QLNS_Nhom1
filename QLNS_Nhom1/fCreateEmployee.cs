@@ -96,12 +96,9 @@ namespace QLNS_Nhom1
                 employee.FullName = txtFullName.Text;
                 employee.PhoneNumber = txtPhoneNumber.Text;
                 employee.Address = txtAddress.Text;
-
-                employee.PositionId = cbPositionId.SelectedItem.ToString();
-
-
-                employee.DepartmentId = cbDepartmentId.SelectedItem.ToString();
-                employee.SalaryId = cbSalaryId.SelectedItem.ToString();
+                employee.PositionId = (cbPositionId.SelectedIndex + 1).ToString();
+                employee.DepartmentId = (cbDepartmentId.SelectedIndex+1).ToString();
+                employee.SalaryId = (cbSalaryId.SelectedIndex + 1).ToString();
                 employee.Gender = cbGender.SelectedItem.ToString();
                 employee.DateOfBirth = dateTimeDOB.Value;
 

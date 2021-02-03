@@ -161,10 +161,10 @@ namespace QLNS_Nhom1
             this.label6.Location = new System.Drawing.Point(44, 402);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 32);
+            this.label6.Size = new System.Drawing.Size(133, 32);
             this.label6.TabIndex = 11;
             this.label6.Tag = "";
-            this.label6.Text = "Mã Phòng Ban :";
+            this.label6.Text = "Phòng Ban :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.label6.UseCompatibleTextRendering = true;
             // 
@@ -176,10 +176,10 @@ namespace QLNS_Nhom1
             this.label7.Location = new System.Drawing.Point(506, 168);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 32);
+            this.label7.Size = new System.Drawing.Size(84, 32);
             this.label7.TabIndex = 12;
             this.label7.Tag = "";
-            this.label7.Text = "Mã Lương:";
+            this.label7.Text = "Lương:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.label7.UseCompatibleTextRendering = true;
             // 
@@ -396,7 +396,7 @@ namespace QLNS_Nhom1
             // Đẩy dữ liệu vào combobox
             foreach (var item in deparments)
             {
-                cbDepartmentId.Items.Add(item.DepartmentId.ToString());
+                cbDepartmentId.Items.Add(item.DepartmentIdName.ToString());
             }
         }
         /// <summary>
@@ -411,7 +411,7 @@ namespace QLNS_Nhom1
             // Đẩy dữ liệu vào combobox
             foreach (var item in salaries)
             {
-                cbSalaryId.Items.Add(item.SalaryId.ToString());
+                cbSalaryId.Items.Add(item.LevelSalary+"*("+item.BaseSalary+")");
             }
         }
         private void AddComboboxGender()

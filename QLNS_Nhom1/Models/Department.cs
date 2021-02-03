@@ -25,6 +25,7 @@ namespace QLNS_Nhom1.Models
         public Department(DataRow row)
         {
             this.DepartmentId = row["DepartmentId"].ToString();
+            this.DepartmentIdName = row["DepartmentIdName"].ToString();
         }
         public Department(string departmentid, string departmentname)
         {
