@@ -13,7 +13,6 @@ namespace QLNS_Nhom1.Models
     /// </summary>
     class Employee
     {
-        private DataRow dataRow;
         public Employee() { }
 
         public Employee(int id, string name, string gender, string phonenumber, string address, DateTime dateofbirth, string positionid,
@@ -44,6 +43,7 @@ namespace QLNS_Nhom1.Models
         // Mã Nhân viên 
         public int Id { get; set; }
         // Tên 
+        
         public string FullName { get; set; }
         // Giới tính
         public string Gender { get; set; }

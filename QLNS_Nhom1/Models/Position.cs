@@ -1,11 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace QLNS_Nhom1.Models
 {
     /// <summary>
@@ -18,6 +11,7 @@ namespace QLNS_Nhom1.Models
         public Position(DataRow row)
         {
             this.PositionId = row["PositionId"].ToString();
+            this.PositionName = row["PositionName"].ToString();
         }
         public Position()
         {

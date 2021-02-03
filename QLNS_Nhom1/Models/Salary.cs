@@ -18,6 +18,8 @@ namespace QLNS_Nhom1.Models
         public Salary(DataRow row)
         {
             this.SalaryId = row["SalaryId"].ToString();
+            this.BaseSalary = float.Parse(row["BaseSalary"].ToString());
+            this.LevelSalary = float.Parse(row["LevelSalary"].ToString());
         }
 
         // Mã lương
@@ -27,10 +29,7 @@ namespace QLNS_Nhom1.Models
         // Hệ số lương
         public float LevelSalary { get; set; }
 
-        public Salary(string SalaryId)
-        {
-            this.SalaryId = SalaryId;
-        }
+
     }
 
 
