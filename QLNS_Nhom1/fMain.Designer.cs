@@ -51,10 +51,10 @@
             this.TaoHoSo = new System.Windows.Forms.ToolStripMenuItem();
             this.HuongDan = new System.Windows.Forms.ToolStripMenuItem();
             this.DangXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();   
-            this.colDepartment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.colDepartment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,10 +82,9 @@
             // 
             this.cbDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartment.FormattingEnabled = true;
-            this.cbDepartment.Location = new System.Drawing.Point(547, 126);
+            this.cbDepartment.Location = new System.Drawing.Point(524, 123);
             this.cbDepartment.Name = "cbDepartment";
-            this.cbDepartment.Size = new System.Drawing.Size(121, 21);
-
+            this.cbDepartment.Size = new System.Drawing.Size(121, 24);
             this.cbDepartment.TabIndex = 6;
             this.cbDepartment.SelectedIndexChanged += new System.EventHandler(this.cbDepartment_SelectedIndexChanged);
             // 
@@ -103,9 +102,9 @@
             // txtEmployee
             // 
             this.txtEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployee.Location = new System.Drawing.Point(677, 125);
+            this.txtEmployee.Location = new System.Drawing.Point(675, 124);
             this.txtEmployee.Name = "txtEmployee";
-            this.txtEmployee.Size = new System.Drawing.Size(139, 22);
+            this.txtEmployee.Size = new System.Drawing.Size(141, 22);
             this.txtEmployee.TabIndex = 4;
             // 
             // panel4
@@ -156,6 +155,7 @@
             this.colAddress,
             this.colDateOfBirth,
             this.colDepartment});
+            this.lstEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstEmployee.HideSelection = false;
             this.lstEmployee.Location = new System.Drawing.Point(25, 13);
             this.lstEmployee.Name = "lstEmployee";
@@ -167,32 +167,31 @@
             // colId
             // 
             this.colId.Text = "Mã NV";
-            this.colId.Width = 61;
             // 
             // colFullName
             // 
             this.colFullName.Text = "Họ Tên";
-            this.colFullName.Width = 143;
+            this.colFullName.Width = 141;
             // 
             // colGender
             // 
             this.colGender.Text = "Giới Tính";
-            this.colGender.Width = 154;
+            this.colGender.Width = 75;
             // 
             // colPhoneNumber
             // 
             this.colPhoneNumber.Text = "Số Điện Thoại";
-            this.colPhoneNumber.Width = 143;
+            this.colPhoneNumber.Width = 141;
             // 
             // colAddress
             // 
             this.colAddress.Text = "Địa Chỉ";
-            this.colAddress.Width = 143;
+            this.colAddress.Width = 141;
             // 
             // colDateOfBirth
             // 
             this.colDateOfBirth.Text = "Ngày Sinh";
-            this.colDateOfBirth.Width = 143;
+            this.colDateOfBirth.Width = 130;
             // 
             // panel2
             // 
@@ -210,7 +209,7 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(191, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(388, 32);
+            this.label1.Size = new System.Drawing.Size(379, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phần mềm quản lý nhân sự";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -268,28 +267,30 @@
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // colDepartment
-            // 
-            this.colDepartment.Text = "Phòng Ban";
-            this.colDepartment.Width = 143;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(547, 102);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(523, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.Size = new System.Drawing.Size(74, 16);
             this.label2.TabIndex = 7;
             this.label2.Text = "Phòng Ban";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(700, 102);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(673, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Họ Tên";
+            // 
+            // colDepartment
+            // 
+            this.colDepartment.Text = "Phòng Ban";
+            this.colDepartment.Width = 141;
             // 
             // fMain
             // 
