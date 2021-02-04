@@ -51,7 +51,7 @@
             this.TaoHoSo = new System.Windows.Forms.ToolStripMenuItem();
             this.HuongDan = new System.Windows.Forms.ToolStripMenuItem();
             this.DangXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();   
             this.colDepartment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -80,19 +80,21 @@
             // 
             // cbDepartment
             // 
+            this.cbDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartment.FormattingEnabled = true;
             this.cbDepartment.Location = new System.Drawing.Point(547, 126);
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Size = new System.Drawing.Size(121, 21);
+
             this.cbDepartment.TabIndex = 6;
             this.cbDepartment.SelectedIndexChanged += new System.EventHandler(this.cbDepartment_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(842, 124);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(837, 120);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
+            this.button1.Size = new System.Drawing.Size(98, 28);
             this.button1.TabIndex = 5;
             this.button1.Text = "Tìm Kiếm";
             this.button1.UseVisualStyleBackColor = true;
@@ -100,9 +102,10 @@
             // 
             // txtEmployee
             // 
-            this.txtEmployee.Location = new System.Drawing.Point(700, 126);
+            this.txtEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployee.Location = new System.Drawing.Point(677, 125);
             this.txtEmployee.Name = "txtEmployee";
-            this.txtEmployee.Size = new System.Drawing.Size(116, 20);
+            this.txtEmployee.Size = new System.Drawing.Size(139, 22);
             this.txtEmployee.TabIndex = 4;
             // 
             // panel4
@@ -174,6 +177,7 @@
             // colGender
             // 
             this.colGender.Text = "Giới Tính";
+            this.colGender.Width = 154;
             // 
             // colPhoneNumber
             // 
@@ -208,7 +212,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(388, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Phầm mềm quản lý nhân sự";
+            this.label1.Text = "Phần mềm quản lý nhân sự";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
