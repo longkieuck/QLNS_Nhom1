@@ -25,9 +25,7 @@ namespace QLNS_Nhom1
         void Load()
         {
             LoadListEmployee();
-            LoadIntoCbxDepartmentId(cbxDepartmentId);
-            LoadIntoCbxPositionId(cbxPositionId);
-            LoadIntoCbxSalaryId(cbxSalaryId);
+            AddCombobox();
             AddBindingEmployee();
 
         }
@@ -42,73 +40,19 @@ namespace QLNS_Nhom1
 
 
         /// <summary>
-        /// load combobox
-        /// created by dat
-        /// </summary>
-        /// <param name="cb"></param>
-        void LoadIntoCbxDepartmentId(ComboBox cb)
-        {
-            //cb.DataSource = EmployeeDAO.Instance.GetListDepartmentId();
-            //cb.DisplayMember = "DepartmentId";
-
-            var departments = EmployeeDAO.Instance.GetListDepartmentId();
-            foreach (var item in departments)
-            {
-
-                cb.Items.Add(item.DepartmentId);
-            }
-        }
-
-        void LoadIntoCbxPositionId(ComboBox cb)
-        {
-
-            //cb.DataSource = EmployeeDAO.Instance.GetListPositiontId();
-            //cb.DisplayMember = "PositonId";
-            var positions = EmployeeDAO.Instance.GetListPositiontId();
-            foreach (var item in positions)
-            {
-
-                cb.Items.Add(item.PositionId);
-            }
-
-
-
-        }
-
-        void LoadIntoCbxSalaryId(ComboBox cb)
-        {
-            //cb.DataSource = EmployeeDAO.Instance.GetListSalaryId();
-            //cb.DisplayMember = "SalaryId";
-            var salarys = EmployeeDAO.Instance.GetListSalaryId();
-            foreach (var item in salarys)
-            {
-                cb.Items.Add(item.SalaryId);
-            }
-        }
-        /// <summary>
         /// lấy dữ liệu khi trỏ chuột trong gridview
         /// created by dat
         /// </summary>
         void AddBindingEmployee()
         {
-            txtID.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "ID", true, DataSourceUpdateMode.Never));
             txtFullName.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "FullName", true, DataSourceUpdateMode.Never));
             txtAddress.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "Address", true, DataSourceUpdateMode.Never));
-            cbxDepartmentId.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "DepartmentId", true, DataSourceUpdateMode.Never));
             txtPhoneNumber.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "PhoneNumber", true, DataSourceUpdateMode.Never));
-            cbxPositionId.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "PositionId", true, DataSourceUpdateMode.Never));
-            cbxSalaryId.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "SalaryId", true, DataSourceUpdateMode.Never));
             dtpDateOfBirth.DataBindings.Add(new Binding("Text", dtgvNV.DataSource, "DateOfBirth", true, DataSourceUpdateMode.Never));
             var fmaleBinding = new Binding("Checked", dtgvNV.DataSource, "Gender", true, DataSourceUpdateMode.Never);
-            // when Formatting (reading from datasource), return true for Female, else false
-            fmaleBinding.Format += (s, args) => args.Value = ((string)args.Value) == "nu ";
-            // when Parsing (writing to datasource), return "Male" for true, else "Fmale"
-            fmaleBinding.Parse += (s, args) => args.Value = (bool)args.Value ? "nu " : "nam";
-            // add the binding
+            fmaleBinding.Format += (s, args) => args.Value = ((string)args.Value) == "Nữ ";
+            fmaleBinding.Parse += (s, args) => args.Value = (bool)args.Value ? "Nữ " : "Nam";
             radNu.DataBindings.Add(fmaleBinding);
-
-            // you don't need to bind the Male radiobutton, just make it do the opposite
-            // of Male by handling the CheckedChanged event on Male:
             radNu.CheckedChanged += (s, args) => radNam.Checked = !radNu.Checked;
         }
 
@@ -116,13 +60,96 @@ namespace QLNS_Nhom1
         {
             this.Hide();
         }
+        /// <summary>
+        /// cac ham convertdata
+        /// </summary>
+    
+        private string GetDepartmentIdByDepartmentName(string departmentName)
+        {
+            var departments = DepartmentDAO.Instance.GetDepartments();
+            foreach (var department in departments)
+            {
+                if (department.DepartmentIdName.Equals(departmentName))
+                {
+                    return department.DepartmentId;
+                }
+            }
+            return "Null-Dữ liệu truyền vào bị lỗi";
 
+        }
+        private string GetDepartmentIdNameByDepartmentId(string departmentId)
+        {
+            var departments = DepartmentDAO.Instance.GetDepartments();
+            foreach (var department in departments)
+            {
+                if (department.DepartmentId.Equals(departmentId))
+                {
+                    return department.DepartmentIdName;
+                }
+            }
+            return "Null-Dữ liệu truyền vào bị lỗi";
+
+        }
+        private string GetPositionIdByPositionName(string positionName)
+        {
+            var positions = PositonDAO.Instance.GetPositions();
+            foreach (var position in positions)
+            {
+                if (position.PositionName.Equals(positionName))
+                {
+                    return position.PositionId;
+                }
+            }
+            return "Null-Dữ liệu truyền vào bị lỗi";
+
+        }
+
+        private string GetPositionNameByPositionId(string positionId)
+        {
+            var positions = PositonDAO.Instance.GetPositions();
+            foreach (var position in positions)
+            {
+                if (position.PositionId.Equals(positionId))
+                {
+                    return position.PositionName;
+                }
+            }
+            return "Null-Dữ liệu truyền vào bị lỗi";
+
+        }
+        private string GetSalaryIdByLevelSalary(float levelSalary)
+        {
+            var salaries = SalaryDAO.Instance.GetSalaries();
+            foreach (var salary in salaries)
+            {
+                if (salary.LevelSalary == levelSalary)
+                {
+                    return salary.SalaryId;
+                }
+            }
+            return "Null-Dữ liệu truyền vào bị lỗi";
+
+        }
+
+        private float GetLevelSalaryBySararyId(string SalaryId)
+        {
+            var salaries = SalaryDAO.Instance.GetSalaries();
+            foreach (var salary in salaries)
+            {
+                if (salary.SalaryId.Equals(SalaryId))
+                {
+                    return salary.LevelSalary;
+                }
+            }
+            return 0;
+
+        }
         private void btnSua_Click(object sender, EventArgs e)
         {
             long check;
             if (MessageBox.Show("Bạn có thật sự muốn sửa nhân viên có tên là: " + txtFullName.Text, "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                if (txtFullName.Text == "" || txtAddress.Text == "" || txtID.Text == "" || txtPhoneNumber.Text == "")
+                if (txtFullName.Text == "" || txtAddress.Text == "" || txtPhoneNumber.Text == "")
                 {
                     MessageBox.Show("Sai hoặc thiếu thông tin");
                 }
@@ -132,16 +159,20 @@ namespace QLNS_Nhom1
                     employee.FullName = txtFullName.Text;
                     employee.DateOfBirth = dtpDateOfBirth.Value;
                     employee.Address = txtAddress.Text;
-                    employee.Gender = radNam.Checked ? "nam" : "nu";
+                    employee.Gender = radNam.Checked ? "Nam" : "Nữ";
                     employee.PhoneNumber = txtPhoneNumber.Text;
-                    employee.PositionId = cbxPositionId.Text;
-                    employee.SalaryId = cbxSalaryId.Text;
-                    employee.DepartmentId = cbxDepartmentId.Text;
-                    employee.Id = Int32.Parse(txtID.Text);
+                    employee.PositionId = GetPositionIdByPositionName(cbxPositionId.Text);
+                    employee.DepartmentId = GetDepartmentIdByDepartmentName(cbxDepartmentId.Text);
+                    employee.SalaryId = GetSalaryIdByLevelSalary(float.Parse(cbxSalaryId.Text));
+                    employee.Id = id;
                     if (EmployeeDAO.Instance.UpdateNv(employee))
                     {
                         MessageBox.Show("Sửa nhân viên thành công! ");
-                        LoadListEmployee();
+                        this.Hide();
+                        this.Close();
+                        fRepairEmployee f = new fRepairEmployee();
+                        f.ShowDialog();
+                        this.Show();
                     }
                     else
                     {
@@ -150,5 +181,30 @@ namespace QLNS_Nhom1
                 }
             }
         }
+        int id;
+        /// <summary>
+        /// chuc nang tuong tu voi blinding
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dtgvNV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int numrow;
+            numrow = e.RowIndex;
+            string DepartmentId;
+            DepartmentId = dtgvNV.Rows[numrow].Cells[7].Value.ToString();
+            cbxDepartmentId.Text = GetDepartmentIdNameByDepartmentId(DepartmentId);
+
+            string PositionId;
+            PositionId = dtgvNV.Rows[numrow].Cells[6].Value.ToString();
+            cbxPositionId.Text = GetPositionNameByPositionId(PositionId);
+
+            string SararyId;
+            SararyId =dtgvNV.Rows[numrow].Cells[8].Value.ToString();
+            cbxSalaryId.Text = GetLevelSalaryBySararyId(SararyId).ToString();
+
+            id = Convert.ToInt32(dtgvNV.Rows[numrow].Cells[0].Value);
+        }
+
     }
 }

@@ -17,12 +17,17 @@ namespace QLNS_Nhom1.DataAcessLayer
         /// <summary>
         /// Đây là connection String phù hợp với máy của hiến
         /// </summary>
-        private string connectionString = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
-
+     //   private string connectionString = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
+        /// <summary>
+        /// dat
+        /// </summary>
+        private string connectionString = "Data Source=LAPTOP-SCOJ079I;Initial Catalog=QLNS;Integrated Security=True";
         /// <summary>
         /// Long
         /// </summary>
-        private string connectionSTR = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
+      // private string connectionSTR = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
+
+        private string connectionSTR = "Data Source=LAPTOP-SCOJ079I;Initial Catalog=QLNS;Integrated Security=True";
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }

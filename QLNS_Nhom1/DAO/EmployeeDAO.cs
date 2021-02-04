@@ -65,17 +65,7 @@ namespace QLNS_Nhom1.DAO
                 employee.Gender,employee.PhoneNumber,employee.Address,employee.DateOfBirth,employee.PositionId,employee.DepartmentId,employee.SalaryId});
             return result > 0;
         }
-        public List<Employee> GetEmployees()
-        {
-            List<Employee> List = new List<Employee>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Employee");
-            foreach (DataRow item in data.Rows)
-            {
-                Employee employee = new Employee(item);
-                List.Add(employee);
-            }
-            return List;
-        }
+        
 
         public bool UpdateNv(Employee employee)
         {
@@ -87,56 +77,7 @@ namespace QLNS_Nhom1.DAO
             return result > 0;
         }
 
-        /// <summary>
-        /// lay ds ma phong ban
-        /// created by dat
-        /// </summary>
-        /// <returns></returns>
-        public List<Department> GetListDepartmentId()
-        {
-            List<Department> List = new List<Department>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Department");
-            foreach (DataRow item in data.Rows)
-            {
-                Department DepartmentId = new Department(item);
-                List.Add(DepartmentId);
-            }
-            return List;
-        }
-
-        /// <summary>
-        /// lay ds ma chuc vu
-        /// created by dat
-        /// </summary>
-        /// <returns></returns>
-        public List<Position> GetListPositiontId()
-        {
-            List<Position> List = new List<Position>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Position");
-            foreach (DataRow item in data.Rows)
-            {
-                Position PositiontId = new Position(item);
-                List.Add(PositiontId);
-            }
-            return List;
-        }
-
-        /// <summary>
-        /// lay ds ma luong
-        /// created by dat
-        /// </summary>
-        /// <returns></returns>
-        public List<Salary> GetListSalaryId()
-        {
-            List<Salary> List = new List<Salary>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Salary");
-            foreach (DataRow item in data.Rows)
-            {
-                Salary SalaryId = new Salary(item);
-                List.Add(SalaryId);
-            }
-            return List;
-        }
+        
 
     }
 }

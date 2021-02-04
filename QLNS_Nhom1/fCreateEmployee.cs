@@ -81,7 +81,7 @@ namespace QLNS_Nhom1
         /// </summary>
         /// <param name="departmentName">tên phòng ban cần lấy mã</param>
         /// <returns>mã phòng ban or lỗi</returns>
-        private string GetDepartmentIdByDepartmentName(string departmentName)
+        public string GetDepartmentIdByDepartmentName(string departmentName)
         {
             var departments = DepartmentDAO.Instance.GetDepartments();
             foreach (var department in departments)
