@@ -59,9 +59,9 @@ namespace QLNS_Nhom1.DAO
         /// <returns>true or false : ứng với sự thay đổi số hàng có lớn 0 hay là không lớn hơn 0</returns>
         public bool InsertEmployee(Employee employee)
         {
-            string query = string.Format("EXEC InsertEmployee @id , @name , @gender , @phoneNumber , @address , @dateOfBrith ," +
+            string query = string.Format("EXEC InsertEmployee @name , @gender , @phoneNumber , @address , @dateOfBrith ," +
                 " @positionId , @departmentId , @salaryId ");
-            int result = DataProvider.Instance.ExecuteNonQuery(query,new object[] {employee.Id,employee.FullName,
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] {employee.FullName,
                 employee.Gender,employee.PhoneNumber,employee.Address,employee.DateOfBirth,employee.PositionId,employee.DepartmentId,employee.SalaryId});
             return result > 0;
         }

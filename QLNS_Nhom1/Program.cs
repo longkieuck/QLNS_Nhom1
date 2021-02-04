@@ -30,7 +30,7 @@ namespace QLNS_Nhom1
             // Trả về dữ liệu 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fCreateEmployee());
+            Application.Run(new fLogin());
         }
     }
 }
