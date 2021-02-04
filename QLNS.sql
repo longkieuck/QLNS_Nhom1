@@ -78,12 +78,13 @@ insert into Salary values('2',1000,3.0)
 insert into Salary values('3',1000,4.0)
 go
 
+Drop Proc UpdateEmployee
 CREATE PROC UpdateEmployee
 	
 	@FullName nvarchar(20),
 	@DateOfBirth DATE,
-	@Address NVARCHAR(100),
-	@Gender nchar(3),
+	@Address NVARCHAR(50),
+	@Gender nchar(5),
 	@PhoneNumber CHAR(10),
 	@SalaryId varchar(10),
 	@DepartmentId varchar(10),
@@ -173,6 +174,10 @@ BEGIN
 END
 
 select * from Employee where [dbo].[GetUnsignString](FullName) like N'%' + [dbo].[GetUnsignString](N'Nguyen') + '%'
+
+
+go
+
 
 
 

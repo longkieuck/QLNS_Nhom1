@@ -80,7 +80,7 @@ namespace QLNS_Nhom1.DAO
         public bool UpdateNv(Employee employee)
         {
             string query = string.Format(" EXEC UpdateEmployee @FullName , @DateOfBirth , @Address " +
-                ", @Gender , @PhoneNumber , @SalaryId , @DepartmentId , @PositionId , @Id");
+                ", @Gender , @PhoneNumber , @SalaryId , @DepartmentId , @PositionId , @Id ");
             int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { employee.FullName, employee.DateOfBirth, employee.Address,
                 employee.Gender, employee.PhoneNumber, employee.SalaryId, employee.DepartmentId, employee.PositionId, employee.Id });
 
@@ -95,7 +95,7 @@ namespace QLNS_Nhom1.DAO
         public List<Department> GetListDepartmentId()
         {
             List<Department> List = new List<Department>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT DepartmentId FROM Department");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Department");
             foreach (DataRow item in data.Rows)
             {
                 Department DepartmentId = new Department(item);
@@ -112,7 +112,7 @@ namespace QLNS_Nhom1.DAO
         public List<Position> GetListPositiontId()
         {
             List<Position> List = new List<Position>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT PositionId FROM Position");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Position");
             foreach (DataRow item in data.Rows)
             {
                 Position PositiontId = new Position(item);
@@ -129,7 +129,7 @@ namespace QLNS_Nhom1.DAO
         public List<Salary> GetListSalaryId()
         {
             List<Salary> List = new List<Salary>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT SalaryId FROM Salary");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM Salary");
             foreach (DataRow item in data.Rows)
             {
                 Salary SalaryId = new Salary(item);

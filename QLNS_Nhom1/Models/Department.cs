@@ -13,11 +13,11 @@ namespace QLNS_Nhom1.Models
     /// </summary>
     class Department
     {
-        // Mã phòng ban
-        public string DepartmentId { get; set; }
-        // Tên Phòng ban
-        public string DepartmentIdName { get; set; }
 
+        public Department()
+        {
+            
+        }
         public Department(string DepartmentId)
         {
             this.DepartmentId = DepartmentId;
@@ -32,6 +32,10 @@ namespace QLNS_Nhom1.Models
             this.DepartmentId = departmentid;
             this.DepartmentIdName = departmentname;
         }
+        // Mã phòng ban
+        public string DepartmentId { get; set; }
+        // Tên Phòng ban
+        public string DepartmentIdName { get; set; }
 
     }
 }

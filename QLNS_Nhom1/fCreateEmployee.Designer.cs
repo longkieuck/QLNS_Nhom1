@@ -176,10 +176,10 @@ namespace QLNS_Nhom1
             this.label7.Location = new System.Drawing.Point(506, 168);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 32);
+            this.label7.Size = new System.Drawing.Size(167, 32);
             this.label7.TabIndex = 12;
             this.label7.Tag = "";
-            this.label7.Text = "Lương:";
+            this.label7.Text = "Cấp Độ Lương:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.label7.UseCompatibleTextRendering = true;
             // 
@@ -203,7 +203,7 @@ namespace QLNS_Nhom1
             this.dateTimeDOB.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeDOB.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.dateTimeDOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeDOB.Location = new System.Drawing.Point(654, 405);
+            this.dateTimeDOB.Location = new System.Drawing.Point(681, 406);
             this.dateTimeDOB.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimeDOB.Name = "dateTimeDOB";
             this.dateTimeDOB.Size = new System.Drawing.Size(239, 27);
@@ -273,7 +273,7 @@ namespace QLNS_Nhom1
             // 
             this.cbSalaryId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSalaryId.FormattingEnabled = true;
-            this.cbSalaryId.Location = new System.Drawing.Point(654, 177);
+            this.cbSalaryId.Location = new System.Drawing.Point(681, 176);
             this.cbSalaryId.Margin = new System.Windows.Forms.Padding(4);
             this.cbSalaryId.Name = "cbSalaryId";
             this.cbSalaryId.Size = new System.Drawing.Size(239, 28);
@@ -283,7 +283,7 @@ namespace QLNS_Nhom1
             // 
             this.cbPositionId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPositionId.FormattingEnabled = true;
-            this.cbPositionId.Location = new System.Drawing.Point(654, 261);
+            this.cbPositionId.Location = new System.Drawing.Point(681, 260);
             this.cbPositionId.Margin = new System.Windows.Forms.Padding(4);
             this.cbPositionId.Name = "cbPositionId";
             this.cbPositionId.Size = new System.Drawing.Size(239, 28);
@@ -303,7 +303,7 @@ namespace QLNS_Nhom1
             // 
             this.cbGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGender.FormattingEnabled = true;
-            this.cbGender.Location = new System.Drawing.Point(654, 344);
+            this.cbGender.Location = new System.Drawing.Point(681, 343);
             this.cbGender.Margin = new System.Windows.Forms.Padding(4);
             this.cbGender.Name = "cbGender";
             this.cbGender.Size = new System.Drawing.Size(239, 28);
@@ -411,7 +411,7 @@ namespace QLNS_Nhom1
             // Đẩy dữ liệu vào combobox
             foreach (var item in salaries)
             {
-                cbSalaryId.Items.Add(item.LevelSalary+"*("+item.BaseSalary+")");
+                cbSalaryId.Items.Add(item.LevelSalary);
             }
         }
         private void AddComboboxGender()

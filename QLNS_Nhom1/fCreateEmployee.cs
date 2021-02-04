@@ -1,6 +1,7 @@
 ﻿using QLNS_Nhom1.DAO;
 using QLNS_Nhom1.Models;
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -73,6 +74,66 @@ namespace QLNS_Nhom1
             }
             return true;
         }
+
+        /// <summary>
+        /// Lấy dữ liệu mã phòng ban thông qua tên phòng ban
+        /// Created By : Nguyễn Văn Hiến
+        /// </summary>
+        /// <param name="departmentName">tên phòng ban cần lấy mã</param>
+        /// <returns>mã phòng ban or lỗi</returns>
+        private string GetDepartmentIdByDepartmentName(string departmentName)
+        {
+            var departments = DepartmentDAO.Instance.GetDepartments();
+            foreach (var department in departments)
+            {
+                if (department.DepartmentIdName.Equals(departmentName))
+                {
+                    return department.DepartmentId;
+                }
+            }
+            return "Null-Dữ liệu truyền vào bị lỗi";
+
+        }
+
+        /// <summary>
+        /// Lấy dữ liệu mã chức vụ thông qua tên chức vụ
+        /// Created By : Nguyễn Văn Hiến
+        /// </summary>
+        /// <param name="positionName">tên chức vụ cần lấy mã </param>
+        /// <returns>Mã chức vụ or lỗi </returns>
+        private string GetPositionIdByPositionName(string positionName)
+        {
+            var positions = PositonDAO.Instance.GetPositions();
+            foreach (var position in positions)
+            {
+                if (position.PositionName.Equals(positionName))
+                {
+                    return position.PositionId;
+                }
+            }
+            return "Null-Dữ liệu truyền vào bị lỗi";
+
+        }
+
+        /// <summary>
+        /// Láy mã lương thông qua cấp độ lương
+        /// Created By : Nguyễn Văn Hiến
+        /// </summary>
+        /// <param name="levelSalary">cấp độ lương</param>
+        /// <returns>mã lương or lỗi</returns>
+        private string GetSalaryIdByLevelSalary(float levelSalary)
+        {
+            var salaries = SalaryDAO.Instance.GetSalaries();
+            foreach (var salary in salaries)
+            {
+                if (salary.LevelSalary == levelSalary)
+                {
+                    return salary.SalaryId;
+                }
+            }
+            return "Null-Dữ liệu truyền vào bị lỗi";
+
+        }
         private void btnCreate_Click(object sender, EventArgs e)
         {
             /// check valid 
@@ -96,9 +157,9 @@ namespace QLNS_Nhom1
                 employee.FullName = txtFullName.Text;
                 employee.PhoneNumber = txtPhoneNumber.Text;
                 employee.Address = txtAddress.Text;
-                employee.PositionId = (cbPositionId.SelectedIndex + 1).ToString();
-                employee.DepartmentId = (cbDepartmentId.SelectedIndex+1).ToString();
-                employee.SalaryId = (cbSalaryId.SelectedIndex + 1).ToString();
+                employee.PositionId = GetPositionIdByPositionName(cbPositionId.Text);
+                employee.DepartmentId = GetDepartmentIdByDepartmentName(cbDepartmentId.Text);
+                employee.SalaryId = GetSalaryIdByLevelSalary(float.Parse(cbSalaryId.Text));
                 employee.Gender = cbGender.SelectedItem.ToString();
                 employee.DateOfBirth = dateTimeDOB.Value;
 
@@ -111,9 +172,6 @@ namespace QLNS_Nhom1
                     MessageBox.Show("Lỗi Trong quá trình thêm");
                 }
             }
-
-
-            
 
         }
 
