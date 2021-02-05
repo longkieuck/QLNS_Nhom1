@@ -101,7 +101,7 @@ namespace QLNS_Nhom1
             this.label2.Location = new System.Drawing.Point(44, 252);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 32);
+            this.label2.Size = new System.Drawing.Size(198, 38);
             this.label2.TabIndex = 5;
             this.label2.Tag = "";
             this.label2.Text = "Số Điện Thoại :";
@@ -116,7 +116,7 @@ namespace QLNS_Nhom1
             this.label3.Location = new System.Drawing.Point(44, 164);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 32);
+            this.label3.Size = new System.Drawing.Size(152, 38);
             this.label3.TabIndex = 6;
             this.label3.Tag = "";
             this.label3.Text = "Họ Và Tên:";
@@ -131,7 +131,7 @@ namespace QLNS_Nhom1
             this.label4.Location = new System.Drawing.Point(44, 330);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 32);
+            this.label4.Size = new System.Drawing.Size(120, 38);
             this.label4.TabIndex = 7;
             this.label4.Tag = "";
             this.label4.Text = "Địa Chỉ :";
@@ -146,7 +146,7 @@ namespace QLNS_Nhom1
             this.label5.Location = new System.Drawing.Point(506, 258);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 32);
+            this.label5.Size = new System.Drawing.Size(129, 38);
             this.label5.TabIndex = 10;
             this.label5.Tag = "";
             this.label5.Text = "Chức Vụ:";
@@ -161,7 +161,7 @@ namespace QLNS_Nhom1
             this.label6.Location = new System.Drawing.Point(44, 402);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(133, 32);
+            this.label6.Size = new System.Drawing.Size(160, 38);
             this.label6.TabIndex = 11;
             this.label6.Tag = "";
             this.label6.Text = "Phòng Ban :";
@@ -176,7 +176,7 @@ namespace QLNS_Nhom1
             this.label7.Location = new System.Drawing.Point(506, 168);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 32);
+            this.label7.Size = new System.Drawing.Size(200, 38);
             this.label7.TabIndex = 12;
             this.label7.Tag = "";
             this.label7.Text = "Cấp Độ Lương:";
@@ -191,7 +191,7 @@ namespace QLNS_Nhom1
             this.label8.Location = new System.Drawing.Point(506, 335);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(115, 32);
+            this.label8.Size = new System.Drawing.Size(138, 38);
             this.label8.TabIndex = 14;
             this.label8.Tag = "";
             this.label8.Text = "Giới Tính:";
@@ -206,7 +206,7 @@ namespace QLNS_Nhom1
             this.dateTimeDOB.Location = new System.Drawing.Point(681, 406);
             this.dateTimeDOB.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimeDOB.Name = "dateTimeDOB";
-            this.dateTimeDOB.Size = new System.Drawing.Size(239, 27);
+            this.dateTimeDOB.Size = new System.Drawing.Size(239, 31);
             this.dateTimeDOB.TabIndex = 22;
             // 
             // label11
@@ -217,7 +217,7 @@ namespace QLNS_Nhom1
             this.label11.Location = new System.Drawing.Point(506, 400);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(121, 32);
+            this.label11.Size = new System.Drawing.Size(145, 38);
             this.label11.TabIndex = 23;
             this.label11.Tag = "";
             this.label11.Text = "Ngày Sinh:";
@@ -241,7 +241,7 @@ namespace QLNS_Nhom1
             this.label12.Location = new System.Drawing.Point(199, 27);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(226, 26);
+            this.label12.Size = new System.Drawing.Size(264, 32);
             this.label12.TabIndex = 0;
             this.label12.Text = "THÊM NHÂN VIÊN";
             // 
@@ -268,6 +268,7 @@ namespace QLNS_Nhom1
             this.btnBack.Text = "Quay Lại";
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // cbSalaryId
             // 
@@ -276,7 +277,7 @@ namespace QLNS_Nhom1
             this.cbSalaryId.Location = new System.Drawing.Point(681, 176);
             this.cbSalaryId.Margin = new System.Windows.Forms.Padding(4);
             this.cbSalaryId.Name = "cbSalaryId";
-            this.cbSalaryId.Size = new System.Drawing.Size(239, 28);
+            this.cbSalaryId.Size = new System.Drawing.Size(239, 33);
             this.cbSalaryId.TabIndex = 27;
             // 
             // cbPositionId
@@ -286,7 +287,7 @@ namespace QLNS_Nhom1
             this.cbPositionId.Location = new System.Drawing.Point(681, 260);
             this.cbPositionId.Margin = new System.Windows.Forms.Padding(4);
             this.cbPositionId.Name = "cbPositionId";
-            this.cbPositionId.Size = new System.Drawing.Size(239, 28);
+            this.cbPositionId.Size = new System.Drawing.Size(239, 33);
             this.cbPositionId.TabIndex = 29;
             // 
             // cbDepartmentId
@@ -296,7 +297,7 @@ namespace QLNS_Nhom1
             this.cbDepartmentId.Location = new System.Drawing.Point(234, 405);
             this.cbDepartmentId.Margin = new System.Windows.Forms.Padding(4);
             this.cbDepartmentId.Name = "cbDepartmentId";
-            this.cbDepartmentId.Size = new System.Drawing.Size(239, 28);
+            this.cbDepartmentId.Size = new System.Drawing.Size(239, 33);
             this.cbDepartmentId.TabIndex = 30;
             // 
             // cbGender
@@ -306,12 +307,12 @@ namespace QLNS_Nhom1
             this.cbGender.Location = new System.Drawing.Point(681, 343);
             this.cbGender.Margin = new System.Windows.Forms.Padding(4);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(239, 28);
+            this.cbGender.Size = new System.Drawing.Size(239, 33);
             this.cbGender.TabIndex = 31;
             // 
             // fCreateEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Chartreuse;
             this.ClientSize = new System.Drawing.Size(1041, 802);
@@ -337,6 +338,7 @@ namespace QLNS_Nhom1
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fCreateEmployee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Nhân Viên ";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

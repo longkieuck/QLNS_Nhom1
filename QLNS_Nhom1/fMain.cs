@@ -23,16 +23,6 @@ namespace QLNS_Nhom1
 
         }
 
-        private void fMain_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         void LoadDepartment()
         {
             List<Department> listDepartment = DepartmentDAL.Instance.GetListDepartment();
@@ -151,6 +141,11 @@ namespace QLNS_Nhom1
             this.Hide();
             f.ShowDialog();
             this.Show();
+        }
+
+        private void DangXuat_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

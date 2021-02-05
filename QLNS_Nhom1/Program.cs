@@ -31,7 +31,7 @@ namespace QLNS_Nhom1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new fCreateEmployee());
-            Application.Run(new fMain());
+            Application.Run(new fLogin());
         }
     }
 }
