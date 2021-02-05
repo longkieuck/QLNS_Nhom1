@@ -19,19 +19,21 @@ namespace QLNS_Nhom1
         int count = -1;
         private void btnpre_Click(object sender, EventArgs e)
         {
-            if (count < 4)
+            if (count <= 0)
             {
-                count++;
+                count=3;
             }
+            else count--;
             pictureBox1.Image = imageList1.Images[count];
         }
 
         private void btnnext_Click(object sender, EventArgs e)
         {
-            if (count >0)
+            if (count >=2)
             {
-                count--;
+                count = 0;
             }
+            else count++;
             pictureBox1.Image = imageList1.Images[count];
         }
     }
