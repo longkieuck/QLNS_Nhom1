@@ -55,6 +55,7 @@ namespace QLNS_Nhom1
             this.cbxPositionId = new System.Windows.Forms.ComboBox();
             this.radNam = new System.Windows.Forms.RadioButton();
             this.radNu = new System.Windows.Forms.RadioButton();
+            this.radKhac = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNV)).BeginInit();
             this.SuspendLayout();
@@ -300,7 +301,7 @@ namespace QLNS_Nhom1
             // 
             this.radNam.AutoSize = true;
             this.radNam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radNam.Location = new System.Drawing.Point(774, 100);
+            this.radNam.Location = new System.Drawing.Point(765, 100);
             this.radNam.Name = "radNam";
             this.radNam.Size = new System.Drawing.Size(59, 23);
             this.radNam.TabIndex = 31;
@@ -313,7 +314,7 @@ namespace QLNS_Nhom1
             // 
             this.radNu.AutoSize = true;
             this.radNu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radNu.Location = new System.Drawing.Point(862, 100);
+            this.radNu.Location = new System.Drawing.Point(820, 100);
             this.radNu.Name = "radNu";
             this.radNu.Size = new System.Drawing.Size(49, 23);
             this.radNu.TabIndex = 32;
@@ -322,12 +323,27 @@ namespace QLNS_Nhom1
             this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = true;
             // 
+            // radKhac
+            // 
+            this.radKhac.AutoSize = true;
+            this.radKhac.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radKhac.Location = new System.Drawing.Point(865, 100);
+            this.radKhac.Name = "radKhac";
+            this.radKhac.Size = new System.Drawing.Size(62, 23);
+            this.radKhac.TabIndex = 33;
+            this.radKhac.TabStop = true;
+            this.radKhac.Tag = "nu";
+            this.radKhac.Text = "Khác";
+            this.radKhac.UseVisualStyleBackColor = true;
+            this.radKhac.CheckedChanged += new System.EventHandler(this.radKhac_CheckedChanged);
+            // 
             // fRepairEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GreenYellow;
-            this.ClientSize = new System.Drawing.Size(1316, 627);
+            this.ClientSize = new System.Drawing.Size(1284, 627);
+            this.Controls.Add(this.radKhac);
             this.Controls.Add(this.radNu);
             this.Controls.Add(this.radNam);
             this.Controls.Add(this.cbxPositionId);
@@ -383,6 +399,7 @@ namespace QLNS_Nhom1
         private System.Windows.Forms.ComboBox cbxPositionId;
         private System.Windows.Forms.RadioButton radNam;
         private System.Windows.Forms.RadioButton radNu;
+        private System.Windows.Forms.RadioButton radKhac;
 
         private void AddComboboxPosition()
         {
@@ -431,6 +448,7 @@ namespace QLNS_Nhom1
             AddComboboxDepartment();
             AddComboboxSalary();
         }
-      
+
+        
     }
 }

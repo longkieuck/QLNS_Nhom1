@@ -159,7 +159,7 @@ namespace QLNS_Nhom1
                     employee.FullName = txtFullName.Text;
                     employee.DateOfBirth = dtpDateOfBirth.Value;
                     employee.Address = txtAddress.Text;
-                    employee.Gender = radNam.Checked ? "Nam" : "Nữ";
+                    employee.Gender = radNam.Checked ? "Nam" : radNu.Checked?"Nữ":"Khác";
                     employee.PhoneNumber = txtPhoneNumber.Text;
                     employee.PositionId = GetPositionIdByPositionName(cbxPositionId.Text);
                     employee.DepartmentId = GetDepartmentIdByDepartmentName(cbxDepartmentId.Text);
@@ -192,19 +192,27 @@ namespace QLNS_Nhom1
             int numrow;
             numrow = e.RowIndex;
             string DepartmentId;
-            DepartmentId = dtgvNV.Rows[numrow].Cells[7].Value.ToString();
-            cbxDepartmentId.Text = GetDepartmentIdNameByDepartmentId(DepartmentId);
-
             string PositionId;
-            PositionId = dtgvNV.Rows[numrow].Cells[6].Value.ToString();
-            cbxPositionId.Text = GetPositionNameByPositionId(PositionId);
-
             string SararyId;
-            SararyId =dtgvNV.Rows[numrow].Cells[8].Value.ToString();
-            cbxSalaryId.Text = GetLevelSalaryBySararyId(SararyId).ToString();
+            if (numrow >= 0)
+            {
+                DepartmentId = dtgvNV.Rows[numrow].Cells[7].Value.ToString();
+                cbxDepartmentId.Text = GetDepartmentIdNameByDepartmentId(DepartmentId);
+                SararyId = dtgvNV.Rows[numrow].Cells[8].Value.ToString();
+                cbxSalaryId.Text = GetLevelSalaryBySararyId(SararyId).ToString();
+                PositionId = dtgvNV.Rows[numrow].Cells[6].Value.ToString();
+                cbxPositionId.Text = GetPositionNameByPositionId(PositionId);
+                id = Convert.ToInt32(dtgvNV.Rows[numrow].Cells[0].Value);
+            }
 
-            id = Convert.ToInt32(dtgvNV.Rows[numrow].Cells[0].Value);
+                
+
+            
         }
 
+        private void radKhac_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
