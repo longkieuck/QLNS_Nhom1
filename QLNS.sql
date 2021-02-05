@@ -144,9 +144,31 @@ END
 
 select * from Employee where [dbo].[GetUnsignString](FullName) like N'%' + [dbo].[GetUnsignString](N'Nguyen') + '%'
 
+-- Hàm liệt kê nhân viên theo tên và phòng ban
+create function EMPLOYEE_LIST_BY_NAME_AND_DEPARTMENTID(@department nvarchar(30), @name nvarchar(20))
+returns table
+as
+return 
+	select *
+	from Employee em
+	where [dbo].[GetUnsignString](em.FullName) like N'%' + [dbo].[GetUnsignString](@name) + '%' and
+	em.DepartmentId = (select DepartmentId
+						from Department
+						where Department.DepartmentIdName = @department)
 
-go
+select * from dbo.EMPLOYEE_LIST_BY_NAME_AND_DEPARTMENTID(N'Kế Toán', N'Lê Phạm Thành')
 
+create proc GetEmployeeListByName
+	@name nvarchar(20), 
+	@department nvarchar(30)
+as
+begin
+	select *
+	from Employee em
+	where [dbo].[GetUnsignString](em.FullName) like N'%' + [dbo].[GetUnsignString](@name) + '%' and
+	em.DepartmentId = (select DepartmentId
+						from Department
+						where Department.DepartmentIdName = @department)
+end
 
-
-
+exec GetEmployeeListByName N'ành', N'Kế Toán'

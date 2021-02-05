@@ -67,12 +67,18 @@ namespace QLNS_Nhom1.DAO
         }
         
 
-        public bool UpdateNv(Employee employee)
+        public bool UpdateEmployee(Employee employee)
         {
             string query = string.Format(" EXEC UpdateEmployee @FullName , @DateOfBirth , @Address " +
                 ", @Gender , @PhoneNumber , @SalaryId , @DepartmentId , @PositionId , @Id ");
             int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { employee.FullName, employee.DateOfBirth, employee.Address,
                 employee.Gender, employee.PhoneNumber, employee.SalaryId, employee.DepartmentId, employee.PositionId, employee.Id });
+
+            return result > 0;
+        }
+        public bool Delete(int idEmployee)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("Delete from dbo.Employee where Id ='" + idEmployee + "'", new object[] { idEmployee });
 
             return result > 0;
         }

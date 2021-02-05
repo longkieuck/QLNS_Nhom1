@@ -49,18 +49,36 @@ namespace QLNS_Nhom1.DataAcessLayer
             return list;
         }
 
-        public List<Employee> SearchEmployeeByName(string name)
+        public List<Employee> SearchEmployeeByName(string name, string department)
         {
             List<Employee> list = new List<Employee>();
-            string query = string.Format("select * from Employee where [dbo].[GetUnsignString](FullName) like N'%' + [dbo].[GetUnsignString](N'{0}') + '%'", name);
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-
-            foreach(DataRow item in data.Rows)
+            if(department.CompareTo("Tất Cả") == 0)
             {
-                Employee employee = new Employee(item);
-                list.Add(employee);
+                string query = string.Format("select * from Employee where [dbo].[GetUnsignString](FullName) like N'%' + [dbo].[GetUnsignString](N'{0}') + '%'", name);
+
+                DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+                foreach (DataRow item in data.Rows)
+                {
+                    Employee employee = new Employee(item);
+                    list.Add(employee);
+                }
             }
+            else
+            {
+                string query = string.Format("exec GetEmployeeListByName @name , @department");
+
+                DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { name, department });
+
+                foreach (DataRow item in data.Rows)
+                {
+                    Employee employee = new Employee(item);
+                    list.Add(employee);
+                }
+            }
+
             return list;
         }
+
     }
 }
