@@ -217,6 +217,7 @@ namespace QLNS_Nhom1
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Yellow;
             this.panel1.Controls.Add(this.label12);
             this.panel1.Location = new System.Drawing.Point(469, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);

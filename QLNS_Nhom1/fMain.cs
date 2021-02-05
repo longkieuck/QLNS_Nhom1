@@ -25,7 +25,7 @@ namespace QLNS_Nhom1
 
         private void fMain_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,16 +44,17 @@ namespace QLNS_Nhom1
             cbDepartment.DisplayMember = "DepartmentIdName";
         }
 
-        List<Employee> SearchEmployeeByName(string name)
+        List<Employee> SearchEmployeeByName(string name, string department)
         {
-            List<Employee> listEmployee = EmployeeDAL.Instance.SearchEmployeeByName(name);
+            List<Employee> listEmployee = EmployeeDAL.Instance.SearchEmployeeByName(name,department);
 
             return listEmployee;
         }
 
         void LoadEmployeeList(List<Employee> employee)
         {
-            foreach(Employee em in employee)
+            GetDepartmentName(employee);
+            foreach (Employee em in employee)
             {
                 ListViewItem item = new ListViewItem(em.Id.ToString());
                 item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = em.FullName });
@@ -61,6 +62,7 @@ namespace QLNS_Nhom1
                 item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = em.PhoneNumber });
                 item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = em.Address });
                 item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = em.DateOfBirth.ToString("yyyy/MM/dd") });
+                item.SubItems.Add(new ListViewItem.ListViewSubItem() { Text = em.DepartmentId });
 
                 lstEmployee.Items.Add(item);
             }
@@ -70,6 +72,21 @@ namespace QLNS_Nhom1
             List<Employee> listEmployee = EmployeeDAL.Instance.GetEmployeeByDepartmentID(id);
             LoadEmployeeList(listEmployee);
             listEmployee.Clear();
+        }
+
+        void GetDepartmentName(List<Employee> employee)
+        {
+            List<Department> listDepartment = DepartmentDAL.Instance.GetListDepartment();
+            foreach (Employee em in employee)
+            {
+                foreach (Department dep in listDepartment)
+                {
+                    if (em.DepartmentId.CompareTo(dep.DepartmentId) == 0)
+                    {
+                        em.DepartmentId = dep.DepartmentIdName;
+                    }
+                }
+            }
         }
 
         private void cbDepartment_SelectedIndexChanged(object sender, EventArgs e)
@@ -90,8 +107,8 @@ namespace QLNS_Nhom1
         private void button1_Click(object sender, EventArgs e)
         {
             lstEmployee.Items.Clear();
-
-            List<Employee> listEmployee = SearchEmployeeByName(txtEmployee.Text);
+            string departmentname = cbDepartment.Text;
+            List<Employee> listEmployee = SearchEmployeeByName(txtEmployee.Text,departmentname);
             LoadEmployeeList(listEmployee);
         }
     

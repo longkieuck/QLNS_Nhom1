@@ -146,7 +146,7 @@ namespace QLNS_Nhom1
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
-            long check;
+         
             if (MessageBox.Show("Bạn có thật sự muốn sửa nhân viên có tên là: " + txtFullName.Text, "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
                 if (txtFullName.Text == "" || txtAddress.Text == "" || txtPhoneNumber.Text == "")
@@ -165,7 +165,7 @@ namespace QLNS_Nhom1
                     employee.DepartmentId = GetDepartmentIdByDepartmentName(cbxDepartmentId.Text);
                     employee.SalaryId = GetSalaryIdByLevelSalary(float.Parse(cbxSalaryId.Text));
                     employee.Id = id;
-                    if (EmployeeDAO.Instance.UpdateNv(employee))
+                    if (EmployeeDAO.Instance.UpdateEmployee(employee))
                     {
                         MessageBox.Show("Sửa nhân viên thành công! ");
                         this.Hide();
