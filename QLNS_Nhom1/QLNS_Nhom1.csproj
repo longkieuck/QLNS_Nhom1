@@ -56,6 +56,18 @@
     <Compile Include="DAO\SalaryDAO.cs" />
     <Compile Include="DataAcessLayer\AccountDAL.cs" />
     <Compile Include="DataAcessLayer\DataProvider.cs" />
+    <Compile Include="FormGT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGT.Designer.cs">
+      <DependentUpon>FormGT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMT.Designer.cs">
+      <DependentUpon>FormMT.cs</DependentUpon>
+    </Compile>
     <Compile Include="fRepairEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,12 @@
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGT.resx">
+      <DependentUpon>FormGT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMT.resx">
+      <DependentUpon>FormMT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fRepairEmployee.resx">
       <DependentUpon>fRepairEmployee.cs</DependentUpon>

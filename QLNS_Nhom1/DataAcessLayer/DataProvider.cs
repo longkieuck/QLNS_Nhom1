@@ -21,13 +21,13 @@ namespace QLNS_Nhom1.DataAcessLayer
         /// <summary>
         /// dat
         /// </summary>
-        private string connectionString = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
+        private string connectionString = "Data Source=QUYNH\\SQLEXPRESS;Initial Catalog=QLNS;Integrated Security=True";
         /// <summary>
         /// Long
         /// </summary>
       // private string connectionSTR = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
 
-        private string connectionSTR = "Data Source=LAPTOP-SCOJ079I;Initial Catalog=QLNS;Integrated Security=True";
+        private string connectionSTR = "Data Source=QUYNH\\SQLEXPRESS;Initial Catalog=QLNS;Integrated Security=True";
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }

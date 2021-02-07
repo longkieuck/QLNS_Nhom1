@@ -147,6 +147,18 @@ namespace QLNS_Nhom1
         {
             this.Hide();
         }
+
+        private void giớiThiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGT formgt = new FormGT();
+            formgt.Show();
+        }
+
+        private void môTảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMT formmt = new FormMT();
+            formmt.Show();
+        }
     }
 }
 
