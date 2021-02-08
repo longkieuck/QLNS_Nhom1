@@ -137,6 +137,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -152,6 +153,50 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\anh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh2 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh10 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh15.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

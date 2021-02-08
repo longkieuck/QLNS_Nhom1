@@ -22,7 +22,11 @@ namespace QLNS_Nhom1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+
+        
+
+        private void richTextBox1_BindingContextChanged(object sender, EventArgs e)
         {
             richTextBox1.AppendText("Phần mềm này có thế giúp giáo viên " +
                 "quản lý từ mô hình lớp 10-10000 học viên, có thể áp dụng ở" +
