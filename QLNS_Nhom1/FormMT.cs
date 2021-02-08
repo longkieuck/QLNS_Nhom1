@@ -96,6 +96,7 @@ namespace QLNS_Nhom1
                 pictureBox13.Visible = false;
                 pictureBox14.Visible = false;
                 pictureBox15.Visible = false;
+                //
 
             }
             else if (pictureBox6.Visible == true)
