@@ -106,7 +106,7 @@ namespace QLNS_Nhom1
         {
 
             // khơi tạo form sửa ,mở form
-            fRepairEmployee f = new fRepairEmployee();
+            fRepair f = new fRepair();
             f.Show();
 
             // đóng lại cửa sổ main
@@ -121,7 +121,7 @@ namespace QLNS_Nhom1
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            frmDelete frm = new frmDelete();
+            fDelete frm = new fDelete();
             this.Hide();
             frm.ShowDialog();
             this.Show();
@@ -129,7 +129,7 @@ namespace QLNS_Nhom1
 
         private void btnEdit_Click_1(object sender, EventArgs e)
         {
-            fRepairEmployee f = new fRepairEmployee();
+            fRepair f = new fRepair();
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -150,13 +150,13 @@ namespace QLNS_Nhom1
 
         private void giớiThiệuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormGT formgt = new FormGT();
+            fIntroduce formgt = new fIntroduce();
             formgt.Show();
         }
 
         private void môTảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormMT formmt = new FormMT();
+            fIntruction formmt = new fIntruction();
             formmt.Show();
         }
     }

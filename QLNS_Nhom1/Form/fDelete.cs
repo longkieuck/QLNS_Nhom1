@@ -12,9 +12,9 @@ using QLNS_Nhom1.DAO;
 
 namespace QLNS_Nhom1
 {
-    public partial class frmDelete : Form
+    public partial class fDelete : Form
     {
-        public frmDelete()
+        public fDelete()
         {
             InitializeComponent();
             LoadListEmployee();
@@ -38,7 +38,11 @@ namespace QLNS_Nhom1
           
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có thật sự muốn xóa nhân viên có mã id là: " + tbID.Text, "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            if (tbID.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập id nhân viên muốn xoá!");
+            }
+            else if (MessageBox.Show("Bạn có thật sự muốn xóa nhân viên có id là: " + tbID.Text, "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
                 int idEmployee;
                 Int32.TryParse(tbID.Text.Trim(), out idEmployee);
@@ -57,6 +61,9 @@ namespace QLNS_Nhom1
            
         }
 
-
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

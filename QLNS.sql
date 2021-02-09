@@ -42,6 +42,8 @@ Create table Account
 
 Go
 
+insert into Account values('admin','admin')
+
 CREATE PROC QLNS_Login
 @username nvarchar(50), @pass nvarchar(50)
 AS
@@ -59,9 +61,6 @@ BEGIN
 	Values(@fullName,@gender,@phoneNumber,@address,@dateOfBirth,@positionId,@departmentId,@salaryId) 
 END
 GO
-EXEC InsertEmployee 'hien','nam','00000000000','hanoi','04/08/2000','1','1','1'
-
-
 
 ---------------- Insert 
 --- Cteated By : Nguyễn Văn Hiến
@@ -95,10 +94,6 @@ BEGIN
 	UPDATE dbo.Employee SET FullName=@FullName,DateOfBirth=@DateOfBirth,Address=@Address,Gender=@Gender,PhoneNumber=@PhoneNumber,SalaryId=@SalaryId,DepartmentId=@DepartmentId,PositionId=@PositionId WHERE Id=@Id
 END
 GO
-
-EXEC UpdateEmployee 'dat','08/08/2000','ha noi','nam','0911111111','1','1','1',9
-
-------------------------
 
 ----------------------- Bùi Thị Mỹ Văn --------------
 
@@ -170,5 +165,3 @@ begin
 						from Department
 						where Department.DepartmentIdName = @department)
 end
-
-exec GetEmployeeListByName N'ành', N'Kế Toán'

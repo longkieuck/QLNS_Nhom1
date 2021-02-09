@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace QLNS_Nhom1
 {
-    partial class fRepairEmployee
+    partial class fRepair
     {
         /// <summary>
         /// Required designer variable.
@@ -45,8 +45,6 @@ namespace QLNS_Nhom1
             this.label8 = new System.Windows.Forms.Label();
             this.dtpDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.cbxSalaryId = new System.Windows.Forms.ComboBox();
@@ -56,7 +54,7 @@ namespace QLNS_Nhom1
             this.radNam = new System.Windows.Forms.RadioButton();
             this.radNu = new System.Windows.Forms.RadioButton();
             this.radKhac = new System.Windows.Forms.RadioButton();
-            this.panel1.SuspendLayout();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +78,7 @@ namespace QLNS_Nhom1
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(237, 154);
+            this.txtFullName.Location = new System.Drawing.Point(250, 154);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullName.Multiline = true;
             this.txtFullName.Name = "txtFullName";
@@ -207,34 +205,13 @@ namespace QLNS_Nhom1
             this.label11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.label11.UseCompatibleTextRendering = true;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Yellow;
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Location = new System.Drawing.Point(704, 18);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(576, 98);
-            this.panel1.TabIndex = 24;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(126, 20);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(348, 47);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "SỬA NHÂN VIÊN";
-            // 
             // btnSua
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Location = new System.Drawing.Point(952, 338);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(138, 66);
+            this.btnSua.Size = new System.Drawing.Size(138, 57);
             this.btnSua.TabIndex = 25;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -242,11 +219,11 @@ namespace QLNS_Nhom1
             // 
             // btnQuayLai
             // 
-            this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuayLai.Location = new System.Drawing.Point(-3, 0);
             this.btnQuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(130, 42);
+            this.btnQuayLai.Size = new System.Drawing.Size(161, 48);
             this.btnQuayLai.TabIndex = 26;
             this.btnQuayLai.Text = "Quay Lại";
             this.btnQuayLai.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -332,14 +309,25 @@ namespace QLNS_Nhom1
             this.radKhac.Tag = "nu";
             this.radKhac.Text = "Khác";
             this.radKhac.UseVisualStyleBackColor = true;
-            this.radKhac.CheckedChanged += new System.EventHandler(this.radKhac_CheckedChanged);
             // 
-            // fRepairEmployee
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(794, 39);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(348, 47);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "SỬA NHÂN VIÊN";
+            // 
+            // fRepair
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GreenYellow;
             this.ClientSize = new System.Drawing.Size(1924, 965);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.radKhac);
             this.Controls.Add(this.radNu);
             this.Controls.Add(this.radNam);
@@ -349,7 +337,6 @@ namespace QLNS_Nhom1
             this.Controls.Add(this.cbxSalaryId);
             this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dtpDateOfBirth);
             this.Controls.Add(this.label8);
@@ -363,11 +350,10 @@ namespace QLNS_Nhom1
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtAddress);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "fRepairEmployee";
+            this.Name = "fRepair";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Nhân Viên ";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -387,8 +373,6 @@ namespace QLNS_Nhom1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtpDateOfBirth;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.ComboBox cbxSalaryId;
@@ -447,6 +431,6 @@ namespace QLNS_Nhom1
             AddComboboxSalary();
         }
 
-        
+        private System.Windows.Forms.Label label12;
     }
 }

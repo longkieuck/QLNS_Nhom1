@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLNS_Nhom1
 {
-    public partial class FormMT : Form
+    public partial class fIntruction : Form
     {
-        public FormMT()
+        public fIntruction()
         {
             InitializeComponent();
         }
@@ -556,7 +556,7 @@ namespace QLNS_Nhom1
             }
             else if (pictureBox15.Visible == true)
             {
-                MessageBox.Show("đã hết,quay lại nhấn preview");
+                MessageBox.Show("Đã hết! quay lại nhấn previous");
 
             }
 

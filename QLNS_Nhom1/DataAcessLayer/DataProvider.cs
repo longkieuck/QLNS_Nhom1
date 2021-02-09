@@ -1,12 +1,7 @@
-﻿using Dapper;
-using QLNS_Nhom1.Models;
-using System;
-using System.Collections.Generic;
+﻿
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLNS_Nhom1.DataAcessLayer
 {
@@ -14,20 +9,7 @@ namespace QLNS_Nhom1.DataAcessLayer
     {
         private static DataProvider instance; // Ctrl + R + E
 
-        /// <summary>
-        /// Đây là connection String phù hợp với máy của hiến
-        /// </summary>
-     //   private string connectionString = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
-        /// <summary>
-        /// dat
-        /// </summary>
-        private string connectionString = "Data Source=QUYNH\\SQLEXPRESS;Initial Catalog=QLNS;Integrated Security=True";
-        /// <summary>
-        /// Long
-        /// </summary>
-      // private string connectionSTR = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
-
-        private string connectionSTR = "Data Source=QUYNH\\SQLEXPRESS;Initial Catalog=QLNS;Integrated Security=True";
+        private string connectionSTR = "Data Source=DESKTOP-0L1VLRS\\SQLEXPRESS01;Initial Catalog=QLNS;Integrated Security=True";
         public static DataProvider Instance
         {
             get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
@@ -47,7 +29,7 @@ namespace QLNS_Nhom1.DataAcessLayer
         {
             DataTable data = new DataTable();
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
 
@@ -81,7 +63,7 @@ namespace QLNS_Nhom1.DataAcessLayer
         {
             int data = 0;
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
 
@@ -113,7 +95,7 @@ namespace QLNS_Nhom1.DataAcessLayer
         {
             object data = 0;
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
 

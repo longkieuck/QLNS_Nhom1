@@ -56,78 +56,78 @@
     <Compile Include="DAO\SalaryDAO.cs" />
     <Compile Include="DataAcessLayer\AccountDAL.cs" />
     <Compile Include="DataAcessLayer\DataProvider.cs" />
-    <Compile Include="FormGT.cs">
+    <Compile Include="Form\fIntroduce.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGT.Designer.cs">
-      <DependentUpon>FormGT.cs</DependentUpon>
+    <Compile Include="Form\fIntroduce.Designer.cs">
+      <DependentUpon>fIntroduce.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMT.cs">
+    <Compile Include="Form\fIntruction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMT.Designer.cs">
-      <DependentUpon>FormMT.cs</DependentUpon>
+    <Compile Include="Form\fIntruction.Designer.cs">
+      <DependentUpon>fIntruction.cs</DependentUpon>
     </Compile>
-    <Compile Include="fRepairEmployee.cs">
+    <Compile Include="Form\fRepair.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fRepairEmployee.Designer.cs">
-      <DependentUpon>fRepairEmployee.cs</DependentUpon>
+    <Compile Include="Form\fRepair.Designer.cs">
+      <DependentUpon>fRepair.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAcessLayer\DepartmentDAL.cs" />
     <Compile Include="DataAcessLayer\EmployeeDAL.cs" />
-    <Compile Include="fCreateEmployee.cs">
+    <Compile Include="Form\fCreateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fCreateEmployee.Designer.cs">
+    <Compile Include="Form\fCreateEmployee.Designer.cs">
       <DependentUpon>fCreateEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="fLogin.cs">
+    <Compile Include="Form\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fLogin.Designer.cs">
+    <Compile Include="Form\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="fMain.cs">
+    <Compile Include="Form\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fMain.Designer.cs">
+    <Compile Include="Form\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Department.cs" />
-    <Compile Include="frmDelete.cs">
+    <Compile Include="Form\fDelete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDelete.Designer.cs">
-      <DependentUpon>frmDelete.cs</DependentUpon>
+    <Compile Include="Form\fDelete.Designer.cs">
+      <DependentUpon>fDelete.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Position.cs" />
     <Compile Include="Models\Salary.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fCreateEmployee.resx">
+    <EmbeddedResource Include="Form\fCreateEmployee.resx">
       <DependentUpon>fCreateEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLogin.resx">
+    <EmbeddedResource Include="Form\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fMain.resx">
+    <EmbeddedResource Include="Form\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormGT.resx">
-      <DependentUpon>FormGT.cs</DependentUpon>
+    <EmbeddedResource Include="Form\fIntroduce.resx">
+      <DependentUpon>fIntroduce.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMT.resx">
-      <DependentUpon>FormMT.cs</DependentUpon>
+    <EmbeddedResource Include="Form\fIntruction.resx">
+      <DependentUpon>fIntruction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fRepairEmployee.resx">
-      <DependentUpon>fRepairEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="Form\fRepair.resx">
+      <DependentUpon>fRepair.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDelete.resx">
-      <DependentUpon>frmDelete.cs</DependentUpon>
+    <EmbeddedResource Include="Form\fDelete.resx">
+      <DependentUpon>fDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -198,5 +198,6 @@
   <ItemGroup>
     <None Include="Resources\anh15.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

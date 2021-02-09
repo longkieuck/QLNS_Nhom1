@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 namespace QLNS_Nhom1
 {
-    public partial class fRepairEmployee : Form
+    public partial class fRepair : Form
     {
-        public fRepairEmployee()
+        public fRepair()
         {
             InitializeComponent();
             Load();
@@ -149,7 +149,7 @@ namespace QLNS_Nhom1
          
             if (MessageBox.Show("Bạn có thật sự muốn sửa nhân viên có tên là: " + txtFullName.Text, "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                if (txtFullName.Text == "" || txtAddress.Text == "" || txtPhoneNumber.Text == "")
+                if (txtFullName.Text == "" || txtAddress.Text == "" || txtPhoneNumber.Text == "" ||cbxDepartmentId.Text=="" || cbxPositionId.Text == "" || cbxSalaryId.Text == "")
                 {
                     MessageBox.Show("Sai hoặc thiếu thông tin");
                 }
@@ -159,24 +159,28 @@ namespace QLNS_Nhom1
                     employee.FullName = txtFullName.Text;
                     employee.DateOfBirth = dtpDateOfBirth.Value;
                     employee.Address = txtAddress.Text;
-                    employee.Gender = radNam.Checked ? "Nam" : radNu.Checked?"Nữ":"Khác";
-                    employee.PhoneNumber = txtPhoneNumber.Text;
-                    employee.PositionId = GetPositionIdByPositionName(cbxPositionId.Text);
-                    employee.DepartmentId = GetDepartmentIdByDepartmentName(cbxDepartmentId.Text);
-                    employee.SalaryId = GetSalaryIdByLevelSalary(float.Parse(cbxSalaryId.Text));
-                    employee.Id = id;
-                    if (EmployeeDAO.Instance.UpdateEmployee(employee))
-                    {
-                        MessageBox.Show("Sửa nhân viên thành công! ");
-                        this.Hide();
-                        this.Close();
-                        fRepairEmployee f = new fRepairEmployee();
-                        f.ShowDialog();
-                        this.Show();
-                    }
+                    employee.Gender = radNam.Checked ? "Nam" : radNu.Checked?"Nữ":radKhac.Checked?"Khác":"null";
+                    if (employee.Gender == "null") MessageBox.Show("Vui lòng chọn giới tính!");
                     else
                     {
-                        MessageBox.Show("Có lỗi khi sửa nhân viên! ");
+                        employee.PhoneNumber = txtPhoneNumber.Text;
+                        employee.PositionId = GetPositionIdByPositionName(cbxPositionId.Text);
+                        employee.DepartmentId = GetDepartmentIdByDepartmentName(cbxDepartmentId.Text);
+                        employee.SalaryId = GetSalaryIdByLevelSalary(float.Parse(cbxSalaryId.Text));
+                        employee.Id = id;
+                        if (EmployeeDAO.Instance.UpdateEmployee(employee))
+                        {
+                            MessageBox.Show("Sửa nhân viên thành công! ");
+                            this.Hide();
+
+                            fRepair f = new fRepair();
+                            f.ShowDialog();
+                            this.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Có lỗi khi sửa nhân viên! ");
+                        }
                     }
                 }
             }
@@ -208,11 +212,6 @@ namespace QLNS_Nhom1
                 
 
             
-        }
-
-        private void radKhac_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
