@@ -27,8 +27,24 @@ namespace QLNS_Nhom1
             LoadListEmployee();
             AddCombobox();
             AddBindingEmployee();
+            EditDataGridViewHeader();
 
         }
+
+        private void EditDataGridViewHeader()
+        {
+            dtgvNV.Columns["Id"].HeaderText= "Mã nhân viên";
+            dtgvNV.Columns["FullName"].HeaderText = "Họ tên";
+            dtgvNV.Columns["Gender"].HeaderText = "Giớ tính";
+            dtgvNV.Columns["PhoneNumber"].HeaderText = "Số điện thoại";
+            dtgvNV.Columns["Address"].HeaderText = "Địa chỉ";
+            dtgvNV.Columns["DateOfBirth"].HeaderText = "Ngày sinh";
+            dtgvNV.Columns["PositionId"].HeaderText = "Mã vị trí";
+            dtgvNV.Columns["DepartmentId"].HeaderText = "Mã phòng ban";
+            dtgvNV.Columns["SalaryId"].HeaderText = "Mã lương";
+            dtgvNV.Columns["SalaryId"].Width = 120;
+        }
+
         /// <summary>
         /// đổ dữ liệu vào girdview
         /// created by dat
