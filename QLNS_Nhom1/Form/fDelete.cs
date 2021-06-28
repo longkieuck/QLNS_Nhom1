@@ -18,6 +18,19 @@ namespace QLNS_Nhom1
         {
             InitializeComponent();
             LoadListEmployee();
+            EditDataGridViewHeader();
+        }
+        private void EditDataGridViewHeader()
+        {
+            dgv.Columns["Id"].HeaderText = "Mã nhân viên";
+            dgv.Columns["FullName"].HeaderText = "Họ tên";
+            dgv.Columns["Gender"].HeaderText = "Giới tính";
+            dgv.Columns["PhoneNumber"].HeaderText = "Số điện thoại";
+            dgv.Columns["Address"].HeaderText = "Địa chỉ";
+            dgv.Columns["DateOfBirth"].HeaderText = "Ngày sinh";
+            dgv.Columns["PositionId"].HeaderText = "Mã vị trí";
+            dgv.Columns["DepartmentId"].HeaderText = "Mã phòng ban";
+            dgv.Columns["SalaryId"].HeaderText = "Mã lương";
         }
         /// <summary>
         /// đổ dữ liệu vào girdview

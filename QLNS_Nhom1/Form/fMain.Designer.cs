@@ -77,14 +77,14 @@
             this.panel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel1.Location = new System.Drawing.Point(23, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1051, 617);
+            this.panel1.Size = new System.Drawing.Size(936, 578);
             this.panel1.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(673, 100);
+            this.label3.Location = new System.Drawing.Point(645, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 25);
             this.label3.TabIndex = 8;
@@ -94,7 +94,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(523, 100);
+            this.label2.Location = new System.Drawing.Point(502, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 25);
             this.label2.TabIndex = 7;
@@ -104,7 +104,7 @@
             // 
             this.cbDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDepartment.FormattingEnabled = true;
-            this.cbDepartment.Location = new System.Drawing.Point(524, 123);
+            this.cbDepartment.Location = new System.Drawing.Point(507, 124);
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Size = new System.Drawing.Size(121, 33);
             this.cbDepartment.TabIndex = 6;
@@ -112,19 +112,20 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(837, 120);
+            this.button1.Location = new System.Drawing.Point(818, 124);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 28);
+            this.button1.Size = new System.Drawing.Size(97, 20);
             this.button1.TabIndex = 5;
             this.button1.Text = "Tìm Kiếm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtEmployee
             // 
             this.txtEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployee.Location = new System.Drawing.Point(675, 124);
+            this.txtEmployee.Location = new System.Drawing.Point(650, 124);
             this.txtEmployee.Name = "txtEmployee";
             this.txtEmployee.Size = new System.Drawing.Size(141, 30);
             this.txtEmployee.TabIndex = 4;
@@ -133,36 +134,38 @@
             // 
             this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Controls.Add(this.btnEdit);
-            this.panel4.Location = new System.Drawing.Point(75, 511);
+            this.panel4.Location = new System.Drawing.Point(34, 491);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(881, 74);
             this.panel4.TabIndex = 2;
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDelete.Location = new System.Drawing.Point(772, 16);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(88, 34);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Xoá";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnEdit.Location = new System.Drawing.Point(25, 16);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(88, 34);
             this.btnEdit.TabIndex = 1;
             this.btnEdit.Text = "Sửa";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.lstEmployee);
-            this.panel3.Location = new System.Drawing.Point(75, 167);
+            this.panel3.Location = new System.Drawing.Point(34, 160);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(881, 325);
             this.panel3.TabIndex = 1;
@@ -223,7 +226,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(75, 31);
+            this.panel2.Location = new System.Drawing.Point(23, 35);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(892, 62);
             this.panel2.TabIndex = 0;
@@ -234,7 +237,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(265, 16);
+            this.label1.Location = new System.Drawing.Point(246, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(481, 45);
             this.label1.TabIndex = 0;
@@ -243,7 +246,6 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TaoHoSo,
@@ -251,7 +253,7 @@
             this.DangXuat});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1051, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(936, 33);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -302,7 +304,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.GreenYellow;
-            this.ClientSize = new System.Drawing.Size(1111, 668);
+            this.ClientSize = new System.Drawing.Size(988, 621);
             this.Controls.Add(this.panel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fMain";

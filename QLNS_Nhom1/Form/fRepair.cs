@@ -22,7 +22,7 @@ namespace QLNS_Nhom1
             Load();
         }
 
-        void Load()
+        private void Load()
         {
             LoadListEmployee();
             AddCombobox();
@@ -33,9 +33,9 @@ namespace QLNS_Nhom1
 
         private void EditDataGridViewHeader()
         {
-            dtgvNV.Columns["Id"].HeaderText= "Mã nhân viên";
+            dtgvNV.Columns["Id"].HeaderText = "Mã nhân viên";
             dtgvNV.Columns["FullName"].HeaderText = "Họ tên";
-            dtgvNV.Columns["Gender"].HeaderText = "Giớ tính";
+            dtgvNV.Columns["Gender"].HeaderText = "Giới tính";
             dtgvNV.Columns["PhoneNumber"].HeaderText = "Số điện thoại";
             dtgvNV.Columns["Address"].HeaderText = "Địa chỉ";
             dtgvNV.Columns["DateOfBirth"].HeaderText = "Ngày sinh";
@@ -79,7 +79,7 @@ namespace QLNS_Nhom1
         /// <summary>
         /// cac ham convertdata
         /// </summary>
-    
+
         private string GetDepartmentIdByDepartmentName(string departmentName)
         {
             var departments = DepartmentDAO.Instance.GetDepartments();
@@ -162,10 +162,10 @@ namespace QLNS_Nhom1
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
-         
+
             if (MessageBox.Show("Bạn có thật sự muốn sửa nhân viên có tên là: " + txtFullName.Text, "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                if (txtFullName.Text == "" || txtAddress.Text == "" || txtPhoneNumber.Text == "" ||cbxDepartmentId.Text=="" || cbxPositionId.Text == "" || cbxSalaryId.Text == "")
+                if (txtFullName.Text == "" || txtAddress.Text == "" || txtPhoneNumber.Text == "" || cbxDepartmentId.Text == "" || cbxPositionId.Text == "" || cbxSalaryId.Text == "")
                 {
                     MessageBox.Show("Sai hoặc thiếu thông tin");
                 }
@@ -175,7 +175,7 @@ namespace QLNS_Nhom1
                     employee.FullName = txtFullName.Text;
                     employee.DateOfBirth = dtpDateOfBirth.Value;
                     employee.Address = txtAddress.Text;
-                    employee.Gender = radNam.Checked ? "Nam" : radNu.Checked?"Nữ":radKhac.Checked?"Khác":"null";
+                    employee.Gender = radNam.Checked ? "Nam" : radNu.Checked ? "Nữ" : radKhac.Checked ? "Khác" : "null";
                     if (employee.Gender == "null") MessageBox.Show("Vui lòng chọn giới tính!");
                     else
                     {
@@ -187,11 +187,10 @@ namespace QLNS_Nhom1
                         if (EmployeeDAO.Instance.UpdateEmployee(employee))
                         {
                             MessageBox.Show("Sửa nhân viên thành công! ");
-                            this.Hide();
+                            this.Close();
 
                             fRepair f = new fRepair();
                             f.ShowDialog();
-                            this.Show();
                         }
                         else
                         {
@@ -202,12 +201,7 @@ namespace QLNS_Nhom1
             }
         }
         int id;
-        /// <summary>
-        /// chuc nang tuong tu voi blinding
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void dtgvNV_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dtgvNV_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int numrow;
             numrow = e.RowIndex;
@@ -224,10 +218,6 @@ namespace QLNS_Nhom1
                 cbxPositionId.Text = GetPositionNameByPositionId(PositionId);
                 id = Convert.ToInt32(dtgvNV.Rows[numrow].Cells[0].Value);
             }
-
-                
-
-            
         }
     }
 }

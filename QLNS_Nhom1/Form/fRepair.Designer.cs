@@ -48,41 +48,43 @@ namespace QLNS_Nhom1
             this.btnSua = new System.Windows.Forms.Button();
             this.btnQuayLai = new System.Windows.Forms.Button();
             this.cbxSalaryId = new System.Windows.Forms.ComboBox();
-            this.dtgvNV = new System.Windows.Forms.DataGridView();
             this.cbxDepartmentId = new System.Windows.Forms.ComboBox();
             this.cbxPositionId = new System.Windows.Forms.ComboBox();
             this.radNam = new System.Windows.Forms.RadioButton();
             this.radNu = new System.Windows.Forms.RadioButton();
             this.radKhac = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtgvNV = new System.Windows.Forms.DataGridView();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNV)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(704, 158);
+            this.txtAddress.Location = new System.Drawing.Point(302, 267);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(216, 42);
+            this.txtAddress.Size = new System.Drawing.Size(275, 29);
             this.txtAddress.TabIndex = 1;
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Location = new System.Drawing.Point(250, 226);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(302, 213);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneNumber.Multiline = true;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(216, 39);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(275, 28);
             this.txtPhoneNumber.TabIndex = 2;
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(250, 154);
+            this.txtFullName.Location = new System.Drawing.Point(302, 155);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullName.Multiline = true;
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(216, 42);
+            this.txtFullName.Size = new System.Drawing.Size(275, 30);
             this.txtFullName.TabIndex = 3;
             // 
             // label2
@@ -90,7 +92,7 @@ namespace QLNS_Nhom1
             this.label2.AutoEllipsis = true;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 223);
+            this.label2.Location = new System.Drawing.Point(68, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(205, 39);
             this.label2.TabIndex = 5;
@@ -104,7 +106,7 @@ namespace QLNS_Nhom1
             this.label3.AutoEllipsis = true;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 151);
+            this.label3.Location = new System.Drawing.Point(116, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 39);
             this.label3.TabIndex = 6;
@@ -118,7 +120,7 @@ namespace QLNS_Nhom1
             this.label4.AutoEllipsis = true;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(480, 157);
+            this.label4.Location = new System.Drawing.Point(149, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(124, 39);
             this.label4.TabIndex = 7;
@@ -132,7 +134,7 @@ namespace QLNS_Nhom1
             this.label5.AutoEllipsis = true;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(952, 226);
+            this.label5.Location = new System.Drawing.Point(802, 199);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 39);
             this.label5.TabIndex = 10;
@@ -146,7 +148,7 @@ namespace QLNS_Nhom1
             this.label6.AutoEllipsis = true;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(474, 226);
+            this.label6.Location = new System.Drawing.Point(52, 326);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(221, 39);
             this.label6.TabIndex = 11;
@@ -160,7 +162,7 @@ namespace QLNS_Nhom1
             this.label7.AutoEllipsis = true;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1455, 226);
+            this.label7.Location = new System.Drawing.Point(768, 260);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(181, 39);
             this.label7.TabIndex = 12;
@@ -174,7 +176,7 @@ namespace QLNS_Nhom1
             this.label8.AutoEllipsis = true;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(952, 151);
+            this.label8.Location = new System.Drawing.Point(792, 145);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(143, 39);
             this.label8.TabIndex = 14;
@@ -185,10 +187,10 @@ namespace QLNS_Nhom1
             // 
             // dtpDateOfBirth
             // 
-            this.dtpDateOfBirth.Location = new System.Drawing.Point(1654, 165);
+            this.dtpDateOfBirth.Location = new System.Drawing.Point(990, 326);
             this.dtpDateOfBirth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
-            this.dtpDateOfBirth.Size = new System.Drawing.Size(301, 26);
+            this.dtpDateOfBirth.Size = new System.Drawing.Size(297, 26);
             this.dtpDateOfBirth.TabIndex = 22;
             // 
             // label11
@@ -196,7 +198,7 @@ namespace QLNS_Nhom1
             this.label11.AutoEllipsis = true;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(1455, 154);
+            this.label11.Location = new System.Drawing.Point(786, 315);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(149, 39);
             this.label11.TabIndex = 23;
@@ -207,18 +209,20 @@ namespace QLNS_Nhom1
             // 
             // btnSua
             // 
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.Location = new System.Drawing.Point(952, 338);
+            this.btnSua.Location = new System.Drawing.Point(642, 361);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(138, 57);
+            this.btnSua.Size = new System.Drawing.Size(138, 42);
             this.btnSua.TabIndex = 25;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnQuayLai
             // 
+            this.btnQuayLai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnQuayLai.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuayLai.Location = new System.Drawing.Point(-3, 0);
             this.btnQuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -227,52 +231,41 @@ namespace QLNS_Nhom1
             this.btnQuayLai.TabIndex = 26;
             this.btnQuayLai.Text = "Quay Lại";
             this.btnQuayLai.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.UseVisualStyleBackColor = false;
             this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // cbxSalaryId
             // 
             this.cbxSalaryId.FormattingEnabled = true;
-            this.cbxSalaryId.Location = new System.Drawing.Point(1654, 235);
+            this.cbxSalaryId.Location = new System.Drawing.Point(990, 268);
             this.cbxSalaryId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxSalaryId.Name = "cbxSalaryId";
-            this.cbxSalaryId.Size = new System.Drawing.Size(216, 28);
+            this.cbxSalaryId.Size = new System.Drawing.Size(297, 28);
             this.cbxSalaryId.TabIndex = 27;
-            // 
-            // dtgvNV
-            // 
-            this.dtgvNV.ColumnHeadersHeight = 50;
-            this.dtgvNV.Location = new System.Drawing.Point(200, 452);
-            this.dtgvNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtgvNV.Name = "dtgvNV";
-            this.dtgvNV.RowHeadersWidth = 51;
-            this.dtgvNV.Size = new System.Drawing.Size(1462, 382);
-            this.dtgvNV.TabIndex = 28;
-            this.dtgvNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvNV_CellClick);
             // 
             // cbxDepartmentId
             // 
             this.cbxDepartmentId.FormattingEnabled = true;
-            this.cbxDepartmentId.Location = new System.Drawing.Point(704, 235);
+            this.cbxDepartmentId.Location = new System.Drawing.Point(302, 324);
             this.cbxDepartmentId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxDepartmentId.Name = "cbxDepartmentId";
-            this.cbxDepartmentId.Size = new System.Drawing.Size(216, 28);
+            this.cbxDepartmentId.Size = new System.Drawing.Size(275, 28);
             this.cbxDepartmentId.TabIndex = 29;
             // 
             // cbxPositionId
             // 
             this.cbxPositionId.FormattingEnabled = true;
-            this.cbxPositionId.Location = new System.Drawing.Point(1148, 235);
+            this.cbxPositionId.Location = new System.Drawing.Point(990, 210);
             this.cbxPositionId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxPositionId.Name = "cbxPositionId";
-            this.cbxPositionId.Size = new System.Drawing.Size(235, 28);
+            this.cbxPositionId.Size = new System.Drawing.Size(297, 28);
             this.cbxPositionId.TabIndex = 30;
             // 
             // radNam
             // 
             this.radNam.AutoSize = true;
             this.radNam.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radNam.Location = new System.Drawing.Point(1148, 154);
+            this.radNam.Location = new System.Drawing.Point(990, 154);
             this.radNam.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radNam.Name = "radNam";
             this.radNam.Size = new System.Drawing.Size(85, 30);
@@ -286,7 +279,7 @@ namespace QLNS_Nhom1
             // 
             this.radNu.AutoSize = true;
             this.radNu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radNu.Location = new System.Drawing.Point(1230, 154);
+            this.radNu.Location = new System.Drawing.Point(1083, 154);
             this.radNu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radNu.Name = "radNu";
             this.radNu.Size = new System.Drawing.Size(68, 30);
@@ -300,7 +293,7 @@ namespace QLNS_Nhom1
             // 
             this.radKhac.AutoSize = true;
             this.radKhac.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radKhac.Location = new System.Drawing.Point(1298, 154);
+            this.radKhac.Location = new System.Drawing.Point(1159, 154);
             this.radKhac.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radKhac.Name = "radKhac";
             this.radKhac.Size = new System.Drawing.Size(92, 30);
@@ -313,27 +306,49 @@ namespace QLNS_Nhom1
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(794, 39);
+            this.label12.Location = new System.Drawing.Point(554, 61);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(348, 47);
+            this.label12.Size = new System.Drawing.Size(254, 35);
             this.label12.TabIndex = 34;
             this.label12.Text = "SỬA NHÂN VIÊN";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dtgvNV);
+            this.groupBox1.Location = new System.Drawing.Point(12, 408);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1330, 340);
+            this.groupBox1.TabIndex = 35;
+            this.groupBox1.TabStop = false;
+            // 
+            // dtgvNV
+            // 
+            this.dtgvNV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dtgvNV.ColumnHeadersHeight = 50;
+            this.dtgvNV.Location = new System.Drawing.Point(16, 14);
+            this.dtgvNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtgvNV.Name = "dtgvNV";
+            this.dtgvNV.RowHeadersWidth = 51;
+            this.dtgvNV.Size = new System.Drawing.Size(1300, 316);
+            this.dtgvNV.TabIndex = 36;
+            this.dtgvNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvNV_CellClick_1);
             // 
             // fRepair
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.GreenYellow;
-            this.ClientSize = new System.Drawing.Size(1924, 965);
+            this.ClientSize = new System.Drawing.Size(1578, 750);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.radKhac);
             this.Controls.Add(this.radNu);
             this.Controls.Add(this.radNam);
             this.Controls.Add(this.cbxPositionId);
             this.Controls.Add(this.cbxDepartmentId);
-            this.Controls.Add(this.dtgvNV);
             this.Controls.Add(this.cbxSalaryId);
             this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.btnSua);
@@ -350,10 +365,11 @@ namespace QLNS_Nhom1
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.txtAddress);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1600, 806);
             this.Name = "fRepair";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sửa Nhân Viên ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvNV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -376,7 +392,6 @@ namespace QLNS_Nhom1
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnQuayLai;
         private System.Windows.Forms.ComboBox cbxSalaryId;
-        private System.Windows.Forms.DataGridView dtgvNV;
         private System.Windows.Forms.ComboBox cbxDepartmentId;
         private System.Windows.Forms.ComboBox cbxPositionId;
         private System.Windows.Forms.RadioButton radNam;
@@ -432,5 +447,7 @@ namespace QLNS_Nhom1
         }
 
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dtgvNV;
     }
 }

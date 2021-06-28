@@ -59,38 +59,38 @@ namespace QLNS_Nhom1
             // 
             // txtAddress
             // 
-            this.txtAddress.BackColor = System.Drawing.Color.OldLace;
+            this.txtAddress.BackColor = System.Drawing.Color.White;
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtAddress.Location = new System.Drawing.Point(234, 324);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(239, 38);
+            this.txtAddress.Size = new System.Drawing.Size(239, 29);
             this.txtAddress.TabIndex = 3;
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.BackColor = System.Drawing.Color.OldLace;
+            this.txtPhoneNumber.BackColor = System.Drawing.Color.White;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(234, 246);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(234, 242);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.Multiline = true;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(239, 38);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(239, 27);
             this.txtPhoneNumber.TabIndex = 2;
             // 
             // txtFullName
             // 
-            this.txtFullName.BackColor = System.Drawing.Color.OldLace;
+            this.txtFullName.BackColor = System.Drawing.Color.White;
             this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtFullName.Location = new System.Drawing.Point(234, 164);
+            this.txtFullName.Location = new System.Drawing.Point(234, 173);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFullName.Multiline = true;
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(239, 38);
+            this.txtFullName.Size = new System.Drawing.Size(239, 29);
             this.txtFullName.TabIndex = 1;
             // 
             // label2
@@ -98,7 +98,7 @@ namespace QLNS_Nhom1
             this.label2.AutoEllipsis = true;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 252);
+            this.label2.Location = new System.Drawing.Point(28, 251);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(198, 38);
@@ -236,17 +236,18 @@ namespace QLNS_Nhom1
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(143, 24);
+            this.label12.Location = new System.Drawing.Point(151, 45);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(381, 45);
+            this.label12.Size = new System.Drawing.Size(285, 35);
             this.label12.TabIndex = 0;
             this.label12.Text = "THÊM NHÂN VIÊN";
             // 
             // btnCreate
             // 
+            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCreate.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.Location = new System.Drawing.Point(439, 496);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
@@ -254,27 +255,28 @@ namespace QLNS_Nhom1
             this.btnCreate.Size = new System.Drawing.Size(116, 42);
             this.btnCreate.TabIndex = 9;
             this.btnCreate.Text = "Thêm";
-            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnBack.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(-2, 0);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(145, 39);
+            this.btnBack.Size = new System.Drawing.Size(140, 31);
             this.btnBack.TabIndex = 26;
             this.btnBack.Text = "Quay lại";
             this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // cbSalaryId
             // 
             this.cbSalaryId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSalaryId.FormattingEnabled = true;
-            this.cbSalaryId.Location = new System.Drawing.Point(681, 176);
+            this.cbSalaryId.Location = new System.Drawing.Point(681, 173);
             this.cbSalaryId.Margin = new System.Windows.Forms.Padding(4);
             this.cbSalaryId.Name = "cbSalaryId";
             this.cbSalaryId.Size = new System.Drawing.Size(239, 33);
@@ -314,8 +316,9 @@ namespace QLNS_Nhom1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.GreenYellow;
-            this.ClientSize = new System.Drawing.Size(1041, 802);
+            this.ClientSize = new System.Drawing.Size(971, 565);
             this.Controls.Add(this.cbGender);
             this.Controls.Add(this.cbDepartmentId);
             this.Controls.Add(this.cbPositionId);
@@ -337,6 +340,7 @@ namespace QLNS_Nhom1
             this.Controls.Add(this.txtAddress);
             this.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "fCreateEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm Nhân Viên ";
